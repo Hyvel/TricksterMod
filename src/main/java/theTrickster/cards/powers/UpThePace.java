@@ -2,14 +2,11 @@ package theTrickster.cards.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
-import theTrickster.powers.TriedTechniquesPower;
 import theTrickster.powers.UpThePacePower;
 
 import static theTrickster.DefaultMod.makeCardPath;
@@ -43,13 +40,12 @@ public class UpThePace extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new UpThePacePower(p, CARDS_NUMBER), CARDS_NUMBER));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new UpThePacePower(p, CARDS_NUMBER), CARDS_NUMBER));
     }
 
-    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!this.upgraded) {

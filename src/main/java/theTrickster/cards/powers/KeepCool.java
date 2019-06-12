@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.powers.ArtifactPower;
 import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
-import theTrickster.powers.TriedTechniquesPower;
 
 import static theTrickster.DefaultMod.makeCardPath;
 
@@ -49,7 +48,6 @@ public class KeepCool extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Weakened"));
@@ -59,7 +57,6 @@ public class KeepCool extends AbstractDynamicCard {
                 new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
     }
 
-    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!this.upgraded) {

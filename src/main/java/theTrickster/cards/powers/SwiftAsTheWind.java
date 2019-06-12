@@ -33,7 +33,6 @@ public class SwiftAsTheWind extends AbstractDynamicCard {
     public static final CardColor COLOR = TheTrickster.Enums.COLOR_BROWN;
 
     private static final int COST = 2;
-//    private static final int UPGRADED_COST = 1;
 
     private static final int DRAW = 1;
 
@@ -57,7 +56,6 @@ public class SwiftAsTheWind extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-//            upgradeBaseCost(UPGRADED_COST);
             this.isInnate = true;
             this.rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();

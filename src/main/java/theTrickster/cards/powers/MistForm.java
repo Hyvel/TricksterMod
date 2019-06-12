@@ -9,7 +9,6 @@ import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
 import theTrickster.powers.MistFormPower;
-import theTrickster.powers.SwiftAsTheWindPower;
 
 import static theTrickster.DefaultMod.makeCardPath;
 

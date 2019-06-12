@@ -42,7 +42,8 @@ public class SkinInTheGame extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SkinInTheGamePower(p, ARTIFACT_AND_HP_LOSS), ARTIFACT_AND_HP_LOSS));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new SkinInTheGamePower(p, ARTIFACT_AND_HP_LOSS), ARTIFACT_AND_HP_LOSS));
     }
 
 

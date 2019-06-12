@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
-import theTrickster.powers.FirstAidKitPower;
 import theTrickster.powers.StopTheBleedingPower;
 
 import static theTrickster.DefaultMod.makeCardPath;

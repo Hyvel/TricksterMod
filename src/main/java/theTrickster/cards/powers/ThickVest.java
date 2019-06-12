@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
-import theTrickster.powers.SkinInTheGamePower;
 import theTrickster.powers.ThickVestPower;
 
 import static theTrickster.DefaultMod.makeCardPath;
@@ -44,7 +43,8 @@ public class ThickVest extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThickVestPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new ThickVestPower(p, magicNumber), magicNumber));
     }
 
 

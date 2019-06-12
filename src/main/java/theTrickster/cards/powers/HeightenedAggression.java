@@ -43,11 +43,9 @@ public class HeightenedAggression extends AbstractDynamicCard {
     public HeightenedAggression() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = STR_GAIN;
-//        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = STR_GAIN;
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
@@ -58,7 +56,6 @@ public class HeightenedAggression extends AbstractDynamicCard {
                 new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
     }
 
-    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

@@ -1,19 +1,14 @@
 package theTrickster.cards.powers;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theTrickster.DefaultMod;
 import theTrickster.actions.EnhancingDrugAction;
-import theTrickster.actions.UncommonPowerAction;
 import theTrickster.cards.AbstractDynamicCard;
-import theTrickster.characters.TheDefault;
 import theTrickster.characters.TheTrickster;
 
 import static theTrickster.DefaultMod.makeCardPath;
@@ -49,7 +44,6 @@ public class EnhancingDrug extends AbstractDynamicCard {
 
     }
 
-    // Actions the card should do.
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         if (energyOnUse < EnergyPanel.totalCount) {
@@ -58,7 +52,6 @@ public class EnhancingDrug extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new EnhancingDrugAction(p, m, upgraded, freeToPlayOnce, energyOnUse));
     }
 
-    //Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

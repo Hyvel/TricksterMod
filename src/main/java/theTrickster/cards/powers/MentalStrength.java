@@ -8,7 +8,6 @@ import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
 import theTrickster.powers.MentalStrengthPower;
-import theTrickster.powers.SkinInTheGamePower;
 
 import static theTrickster.DefaultMod.makeCardPath;
 
