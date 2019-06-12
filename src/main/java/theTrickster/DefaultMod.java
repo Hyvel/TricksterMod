@@ -1,7 +1,6 @@
 package theTrickster;
 
 import basemod.BaseMod;
-import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
@@ -9,16 +8,13 @@ import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
-import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
-import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import org.apache.logging.log4j.LogManager;
@@ -39,7 +35,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
-import java.util.Properties;
 
 @SpireInitializer
 public class DefaultMod implements
@@ -50,17 +45,16 @@ public class DefaultMod implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         PostDrawSubscriber {
-    // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
-    // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
+
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     private static String modID;
 
-    // Mod-settings settings. This is if you want an on/off savable button
-    public static Properties theDefaultDefaultSettings = new Properties();
-    public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
-    public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
+//    // Mod-settings settings. This is if you want an on/off savable button
+//    public static Properties theDefaultDefaultSettings = new Properties();
+//    public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
+//    public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
 
-    //This is for the in-game mod settings panel.
+    //For the in-game mod settings panel.
     private static final String MODNAME = "The Trickster";
     private static final String AUTHOR = "Hyvel";
     private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
@@ -157,18 +151,18 @@ public class DefaultMod implements
         logger.info("Done creating the color");
         
         
-        logger.info("Adding mod settings");
-        // This loads the mod settings.
-        // The actual mod Button is added below in receivePostInitialize()
-        theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
-        try {
-            SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings); // ...right here
-            // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
-            config.load(); // Load the setting and set the boolean to equal it
-            enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        logger.info("Adding mod settings");
+//        // This loads the mod settings.
+//        // The actual mod Button is added below in receivePostInitialize()
+//        theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
+//        try {
+//            SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings); // ...right here
+//            // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
+//            config.load(); // Load the setting and set the boolean to equal it
+//            enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
         logger.info("Done adding mod settings");
         
     }
@@ -235,9 +229,6 @@ public class DefaultMod implements
         
         BaseMod.addCharacter(new TheTrickster("The Trickster", TheTrickster.Enums.THE_TRICKSTER),
                 THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheTrickster.Enums.THE_TRICKSTER);
-
-//        BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_DEFAULT),
-//                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
         
         receiveEditPotions();
         logger.info("Added " + TheTrickster.Enums.THE_TRICKSTER.toString());
@@ -259,36 +250,32 @@ public class DefaultMod implements
         ModPanel settingsPanel = new ModPanel();
         
         // Create the on/off button:
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
-                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                enablePlaceholder, // Boolean it uses
-                settingsPanel, // The mod panel in which this button will be in
-                (label) -> {}, // thing??????? idk
-                (button) -> { // The actual button:
-            
-            enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
-            try {
-                // And based on that boolean, set the settings and save them
-                SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
-                config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
-                config.save();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
+//        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
+//                350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
+//                enablePlaceholder, // Boolean it uses
+//                settingsPanel, // The mod panel in which this button will be in
+//                (label) -> {}, // thing??????? idk
+//                (button) -> { // The actual button:
+//
+//            enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+//            try {
+//                // And based on that boolean, set the settings and save them
+//                SpireConfig config = new SpireConfig("defaultMod", "theDefaultConfig", theDefaultDefaultSettings);
+//                config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
+//                config.save();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        });
         
-        settingsPanel.addUIElement(enableNormalsButton); // Add the button to the settings panel. Button is a go.
+//        settingsPanel.addUIElement(enableNormalsButton); // Add the button to the settings panel. Button is a go.
         
         BaseMod.registerModBadge(badgeTexture, MODNAME, AUTHOR, DESCRIPTION, settingsPanel);
 
         
         // =============== EVENTS =================
         
-        // This event will be exclusive to the City (act 2). If you want an event that's present at any
-        // part of the game, simply don't include the dungeon ID
-        // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
-        // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
-        //BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
+        // No new events in this mod.
         
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
@@ -306,12 +293,9 @@ public class DefaultMod implements
     public void receiveEditPotions() {
         logger.info("Beginning to edit potions");
         
-        // Class Specific Potion. If you want your potion to not be class-specific,
-        // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
-        // Remember, you can press ctrl+P inside parentheses like addPotions)
-//        BaseMod.addPotion(PlaceholderPotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PlaceholderPotion.POTION_ID, TheTrickster.Enums.THE_TRICKSTER);
-
-        BaseMod.addPotion(PresciencePotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID, PLACEHOLDER_POTION_SPOTS, PresciencePotion.POTION_ID, TheTrickster.Enums.THE_TRICKSTER);
+        // Class Specific Potion.
+        BaseMod.addPotion(PresciencePotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID,
+                PLACEHOLDER_POTION_SPOTS, PresciencePotion.POTION_ID, TheTrickster.Enums.THE_TRICKSTER);
 
         logger.info("Done editing potions");
     }
@@ -325,11 +309,7 @@ public class DefaultMod implements
     public void receiveEditRelics() {
         logger.info("Adding relics");
         
-        // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
-//        BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheTrickster.Enums.COLOR_BROWN);
-//        BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheTrickster.Enums.COLOR_BROWN);
-//        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheTrickster.Enums.COLOR_BROWN);
-
+        // Character specific relic.
         BaseMod.addRelicToCustomPool(new OpticalIllusionRelic(), TheTrickster.Enums.COLOR_BROWN);
 
 
@@ -358,20 +338,6 @@ public class DefaultMod implements
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
         
         logger.info("Adding cards");
-        // Add the cards
-        
-//        BaseMod.addCard(new OrbSkill());
-//        BaseMod.addCard(new DefaultSecondMagicNumberSkill());
-//        BaseMod.addCard(new DefaultCommonAttack());
-//        BaseMod.addCard(new DefaultAttackWithVariable());
-//        BaseMod.addCard(new DefaultCommonSkill());
-//        BaseMod.addCard(new DefaultCommonPower());
-//        BaseMod.addCard(new DefaultUncommonSkill());
-//        BaseMod.addCard(new DefaultUncommonAttack());
-//        BaseMod.addCard(new DefaultUncommonPower());
-//        BaseMod.addCard(new DefaultRareAttack());
-//        BaseMod.addCard(new DefaultRareSkill());
-//        BaseMod.addCard(new DefaultRarePower());
 
         BaseMod.addCard(new Strike_Brown());
         BaseMod.addCard(new Defend_Brown());
