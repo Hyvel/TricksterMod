@@ -49,26 +49,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.Properties;
 
-//TODO: FIRST THINGS FIRST: RENAME YOUR PACKAGE AND ID NAMES FIRST-THING!!!
-// Right click the package (Open the project pane on the left. Folder with black dot on it. The name's at the very top) -> Refactor -> Rename, and name it whatever you wanna call your mod.
-// Scroll down in this file. Change the ID from "theTrickster:" to "yourModName:" or whatever your heart desires (don't use spaces). Dw, you'll see it.
-// In the JSON strings (resources>localization>eng>[all them files] make sure they all go "yourModName:" rather than "theTrickster". You can ctrl+R to replace in 1 file, or ctrl+shift+r to mass replace in specific files/directories (Be careful.).
-// Start with the DefaultCommon cards - they are the most commented cards since I don't feel it's necessary to put identical comments on every card.
-// After you sorta get the hang of how to make cards, check out the card template which will make your life easier
-
-/*
- * With that out of the way:
- * Welcome to this super over-commented Slay the Spire modding base.
- * Use it to make your own mod of any type. - If you want to add any standard in-game content (character,
- * cards, relics), this is a good starting point.
- * It features 1 character with a minimal set of things: 1 card of each type, 1 debuff, couple of relics, etc.
- * If you're new to modding, you basically *need* the BaseMod wiki for whatever you wish to add
- * https://github.com/daviscook477/BaseMod/wiki - work your way through with this base.
- * Feel free to use this in any way you like, of course. MIT licence applies. Happy modding!
- *
- * And pls. Read the comments.
- */
-
 @SpireInitializer
 public class DefaultMod implements
         EditCardsSubscriber,
@@ -90,7 +70,7 @@ public class DefaultMod implements
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "The Trickster";
-    private static final String AUTHOR = "Hyvel"; // And pretty soon - You!
+    private static final String AUTHOR = "Hyvel";
     private static final String DESCRIPTION = "A base for Slay the Spire to start your own mod from, feat. the Default.";
     
     // =============== INPUT TEXTURE LOCATION =================
@@ -380,15 +360,13 @@ public class DefaultMod implements
         //Ignore this
         pathCheck();
         // Add the Custom Dynamic Variables
-        logger.info("Add variabls");
-        // Add the Custom Dynamic variabls
+        logger.info("Add variables");
+        // Add the Custom Dynamic variables
         BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
         
         logger.info("Adding cards");
         // Add the cards
-        // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
-        // when generating card rewards/shop screen items.
         
 //        BaseMod.addCard(new OrbSkill());
 //        BaseMod.addCard(new DefaultSecondMagicNumberSkill());

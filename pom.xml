@@ -1,21 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!--Hello! You'll basically should only need to change these names and the steam path (just below)-->
     <!--The author name(s) as they appear in MTS and any other comments are in your ModTheSpire.json-->
-    <groupId>defaultmod</groupId>
-    <artifactId>DefaultMod</artifactId>
+    <groupId>trickstermod</groupId>
+    <artifactId>TricksterMod</artifactId>
     <name>The Trickster</name>
-    <version>0.0.1</version>
-    <description>A default base to start your own mod from.</description>
+    <version>0.1.0</version>
+    <description>A new playable character mod.</description>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <SlayTheSpire.version>01-23-2019</SlayTheSpire.version>
         <ModTheSpire.version>3.8.0</ModTheSpire.version>
-        <!--CHANGE THIS TO YOUR STEAM INSTALLATION-->
-        <!--Steam.path>C:/My Stuff/Games/Steam/steamapps</Steam.path-->
         <Steam.path>D:\Jeux\SteamLibrary\steamapps</Steam.path>
    </properties>
 
@@ -55,7 +52,6 @@
     </dependencies>
 
 
-    <!-- This is how your code is packaged into the jar file-->
     <build>
         <finalName>${project.artifactId}</finalName>
         <plugins>
