@@ -1,7 +1,6 @@
 package theTrickster.cards.attacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -64,17 +63,11 @@ public class StudiedSnipe extends AbstractDynamicCard {
 
         super.calculateCardDamage(m);
 
-        if (damage != DAMAGE) {
-            isDamageModified = true;
-        }
-        else {
-            isDamageModified = false;
-        }
+        isDamageModified = damage != DAMAGE;
         initializeDescription();
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
@@ -82,7 +75,6 @@ public class StudiedSnipe extends AbstractDynamicCard {
     }
 
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

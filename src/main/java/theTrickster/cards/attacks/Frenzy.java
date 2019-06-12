@@ -45,7 +45,6 @@ public class Frenzy extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if(AbstractDungeon.player.isBloodied) {

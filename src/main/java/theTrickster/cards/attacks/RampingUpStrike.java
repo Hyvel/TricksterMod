@@ -3,7 +3,6 @@ package theTrickster.cards.attacks;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,8 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
-
-import java.util.Iterator;
 
 import static theTrickster.DefaultMod.makeCardPath;
 
@@ -52,7 +49,6 @@ public class RampingUpStrike extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         //GameActionManager
@@ -65,12 +61,7 @@ public class RampingUpStrike extends AbstractDynamicCard {
 
         super.applyPowers();
 
-        if (baseDamage != DAMAGE) {
-            isDamageModified = true;
-        }
-        else {
-            isDamageModified = false;
-        }
+        isDamageModified = baseDamage != DAMAGE;
         initializeDescription();
     }
 
@@ -79,18 +70,12 @@ public class RampingUpStrike extends AbstractDynamicCard {
 
         super.calculateCardDamage(m);
 
-        if (damage != DAMAGE) {
-            isDamageModified = true;
-        }
-        else {
-            isDamageModified = false;
-        }
+        isDamageModified = damage != DAMAGE;
         initializeDescription();
     }
 
 
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

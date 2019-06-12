@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
-import theTrickster.characters.TheDefault;
 import theTrickster.characters.TheTrickster;
 
 import static theTrickster.DefaultMod.makeCardPath;
@@ -51,7 +50,6 @@ public class Strike_Brown extends AbstractDynamicCard {
         }
 
 
-        // Actions the card should do.
         @Override
         public void use(AbstractPlayer p, AbstractMonster m) {
             AbstractDungeon.actionManager.addToBottom(
@@ -59,7 +57,6 @@ public class Strike_Brown extends AbstractDynamicCard {
         }
 
 
-        // Upgraded stats.
         @Override
         public void upgrade() {
             if (!upgraded) {

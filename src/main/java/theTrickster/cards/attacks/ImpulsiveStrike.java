@@ -55,7 +55,6 @@ public class ImpulsiveStrike extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
@@ -64,38 +63,23 @@ public class ImpulsiveStrike extends AbstractDynamicCard {
 
 
     public void applyPowers() {
-        // Hack: We hijack baseDamage in order to display the correct description.
-        // (The problem is we can't use the perfected strike approach and do this directly in abstractCard methods)
         baseDamage = DAMAGE - ((GameActionManager.turn - 1) * magicNumber );
 
         super.applyPowers();
 
-        if (baseDamage != DAMAGE) {
-            isDamageModified = true;
-        }
-        else {
-            isDamageModified = false;
-        }
+        isDamageModified = baseDamage != DAMAGE;
         initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster m) {
-        // Hack: We hijack baseDamage in order to display the correct description.
-        // (The problem is we can't use the perfected strike approach and do this directly in abstractCard methods)
         baseDamage = DAMAGE - ((GameActionManager.turn - 1) * magicNumber );
 
         super.calculateCardDamage(m);
 
-        if (damage != DAMAGE) {
-            isDamageModified = true;
-        }
-        else {
-            isDamageModified = false;
-        }
+        isDamageModified = damage != DAMAGE;
         initializeDescription();
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

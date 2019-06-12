@@ -12,8 +12,6 @@ import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
 
-import javax.swing.text.html.HTMLDocument;
-
 import static theTrickster.DefaultMod.makeCardPath;
 
 public class Feint extends AbstractDynamicCard {
@@ -56,7 +54,6 @@ public class Feint extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
@@ -67,7 +64,6 @@ public class Feint extends AbstractDynamicCard {
     }
 
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

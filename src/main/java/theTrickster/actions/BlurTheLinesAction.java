@@ -43,7 +43,7 @@ public class BlurTheLinesAction extends AbstractGameAction {
         AbstractDungeon.actionManager.addToTop(rmvStr);
         AbstractDungeon.actionManager.addToTop(rmvDex);
 
-        // Adding str or dex of 0 is visually ugly.
+        // Adding str or dex of 0 is visually ugly (and useless).
         if(dex != 0) {
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(player, player, new StrengthPower(player, dex), dex));

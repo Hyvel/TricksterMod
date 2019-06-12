@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.red.PerfectedStrike;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -53,7 +52,7 @@ public class TrickyStrike extends AbstractDynamicCard {
         this.tags.add(CardTags.STRIKE);
     }
 
-    public static int countCards() {
+    private static int countDefendCards() {
         int count = 0;
         Iterator var1 = AbstractDungeon.player.hand.group.iterator();
 
@@ -86,7 +85,7 @@ public class TrickyStrike extends AbstractDynamicCard {
         return count;
     }
 
-    public static boolean isDefend(AbstractCard c) {
+    private static boolean isDefend(AbstractCard c) {
         return c.hasTag(TheTricksterTags.DEFEND);
     }
 
@@ -94,32 +93,22 @@ public class TrickyStrike extends AbstractDynamicCard {
         // TODO: Check BodySlam code
         // Hack: We hijack baseDamage in order to display the correct description.
         // (The problem is we can't use the perfected strike approach and do this directly in abstractCard methods)
-        baseDamage = DAMAGE + (magicNumber * countCards());
+        baseDamage = DAMAGE + (magicNumber * countDefendCards());
 
         super.applyPowers();
 
-        if (damage != DAMAGE) {
-            isDamageModified = true;
-        }
-        else {
-            isDamageModified = false;
-        }
+        isDamageModified = damage != DAMAGE;
         this.initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster m) {
         // Hack: We hijack baseDamage in order to display the correct description.
         // (The problem is we can't use the perfected strike approach and do this directly in abstractCard methods)
-        baseDamage = DAMAGE + (magicNumber * countCards());
+        baseDamage = DAMAGE + (magicNumber * countDefendCards());
 
         super.calculateCardDamage(m);
 
-        if (damage != DAMAGE) {
-            isDamageModified = true;
-        }
-        else {
-            isDamageModified = false;
-        }
+        isDamageModified = damage != DAMAGE;
         this.initializeDescription();
     }
 

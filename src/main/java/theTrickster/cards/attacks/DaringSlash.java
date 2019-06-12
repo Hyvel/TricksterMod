@@ -9,10 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
-import theTrickster.characters.TheDefault;
 import theTrickster.characters.TheTrickster;
 
 import static theTrickster.DefaultMod.makeCardPath;
@@ -55,7 +53,6 @@ public class DaringSlash extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, this.magicNumber, false), this.magicNumber));
@@ -65,7 +62,6 @@ public class DaringSlash extends AbstractDynamicCard {
     }
 
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
