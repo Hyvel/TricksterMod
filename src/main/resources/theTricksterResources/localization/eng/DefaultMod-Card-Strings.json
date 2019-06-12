@@ -354,7 +354,7 @@
   },
   "theTrickster:EyeForEye": {
     "NAME": "Eye For Eye",
-    "DESCRIPTION": "Deal to an enemy the damage it intends to do as Thorns damage.",
+    "DESCRIPTION": "Deal to an enemy the damage it intends to do as thetrickster:True_Damage.",
     "EXTENDED_DESCRIPTION": [
       "Deal ",
       " damage. NL ",
