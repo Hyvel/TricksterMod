@@ -1,8 +1,4 @@
 {
-  "theTrickster:PlaceholderPotion": {
-    "NAME": "Placeholder Potion",
-    "DESCRIPTIONS": ["Gain ", " At the end of your turn, lose ", " Strength."]
-  },
   "theTrickster:PresciencePotion": {
     "NAME": "Prescience Potion",
     "DESCRIPTIONS": ["Put a card from your draw pile into your hand."]

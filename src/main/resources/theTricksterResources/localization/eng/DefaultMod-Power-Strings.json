@@ -1,12 +1,4 @@
 {
-        "theTrickster:CommonPower": {
-                "NAME": "Placeholder Power",
-                "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
-        },
-        "theTrickster:RarePower": {
-                "NAME": "Placeholder Power",
-                "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
-        },
         "theTrickster:TriedTechniquesPower": {
                 "NAME": "Tried Techniques",
                 "DESCRIPTIONS": ["At the start of your turn, return ", " random cards from your discard pile to your hand."]

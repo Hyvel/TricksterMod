@@ -42,7 +42,7 @@ public class PresciencePotion extends AbstractPotion {
 
     @Override
     public AbstractPotion makeCopy() {
-        return new PlaceholderPotion();
+        return new PresciencePotion();
     }
 
     // This is your potency.

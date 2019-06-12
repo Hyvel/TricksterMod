@@ -24,12 +24,8 @@ import org.apache.logging.log4j.Logger;
 import theTrickster.DefaultMod;
 import theTrickster.cards.attacks.*;
 import theTrickster.cards.skills.*;
-import theTrickster.relics.DefaultClickableRelic;
 import theTrickster.relics.OpticalIllusionRelic;
-import theTrickster.relics.PlaceholderRelic;
-import theTrickster.relics.PlaceholderRelic2;
 
-import javax.swing.text.DefaultEditorKit;
 import java.util.ArrayList;
 
 import static theTrickster.DefaultMod.*;
