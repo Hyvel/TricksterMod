@@ -45,9 +45,14 @@ public class OpticalIllusionRelic extends CustomRelic {
             if (this.counter % 4 == 0) {
                 this.flash();
                 this.counter = 0;
-                AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                AbstractDungeon.actionManager.addToBottom(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
-                AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction((AbstractCreature)null, DamageInfo.createDamageMatrix(3, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+                AbstractDungeon.actionManager.addToBottom(
+                        new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                AbstractDungeon.actionManager.addToBottom(
+                        new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+                AbstractDungeon.actionManager.addToBottom(
+                        new DamageAllEnemiesAction((AbstractCreature)null,
+                                DamageInfo.createDamageMatrix(3, true),
+                                DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             }
     }
 
@@ -56,7 +61,6 @@ public class OpticalIllusionRelic extends CustomRelic {
         this.counter = -1;
     }
 
-    // Description
     @Override
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0];

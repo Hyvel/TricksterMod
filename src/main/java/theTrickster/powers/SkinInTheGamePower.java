@@ -45,7 +45,8 @@ public class SkinInTheGamePower extends AbstractPower {
 
     public void atStartOfTurn() {
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new ArtifactPower(owner, amount), amount));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(owner, owner, new ArtifactPower(owner, amount), amount));
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(owner, owner, amount));
     }
 }

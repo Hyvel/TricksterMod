@@ -2,7 +2,6 @@ package theTrickster.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.defect.DiscardPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -40,23 +39,8 @@ public class TriedTechniquesPower extends AbstractPower {
     }
 
     public void updateDescription() {
-/*        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[3] + this.amount + DESCRIPTIONS[4];
-        }*/
         this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
-
-//    public void atStartOfTurn() {
-//        this.flash();
-//        for (int i = 0; i < amount; i++) {
-//            if (AbstractDungeon.player.discardPile.size() > 0) {
-//                AbstractDungeon.actionManager.addToBottom(new DiscardPileToHandAction(1));
-//            }
-//        }
-//    }
-
 
     public void atStartOfTurn() {
         this.flash();
@@ -68,7 +52,6 @@ public class TriedTechniquesPower extends AbstractPower {
             }
             AbstractCard card;
 
-//            int index = player.discardPile.group.size() - 1;
             int index = AbstractDungeon.cardRandomRng.random(player.discardPile.group.size() - 1);
             card = (AbstractCard)player.discardPile.group.get(index);
             player.hand.addToHand(card);

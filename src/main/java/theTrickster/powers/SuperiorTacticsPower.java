@@ -52,7 +52,9 @@ public class SuperiorTacticsPower extends AbstractPower {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer && !AbstractDungeon.player.hand.isEmpty() && !AbstractDungeon.player.hasRelic("Runic Pyramid") && !AbstractDungeon.player.hasPower("Equilibrium")) {
+        if (isPlayer && !AbstractDungeon.player.hand.isEmpty() &&
+                !AbstractDungeon.player.hasRelic("Runic Pyramid") &&
+                !AbstractDungeon.player.hasPower("Equilibrium")) {
             AbstractDungeon.actionManager.addToBottom(new RetainCardsAction(this.owner, CARDS_TO_RETAIN));
         }
 
