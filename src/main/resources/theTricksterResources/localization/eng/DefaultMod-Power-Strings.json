@@ -1,0 +1,70 @@
+{
+        "theTrickster:CommonPower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+        },
+        "theTrickster:RarePower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+        },
+        "theTrickster:TriedTechniquesPower": {
+                "NAME": "Tried Techniques",
+                "DESCRIPTIONS": ["At the start of your turn, return ", " random cards from your discard pile to your hand."]
+        },
+        "theTrickster:SkinInTheGamePower": {
+                "NAME": "Skin In The Game",
+                "DESCRIPTIONS": ["At the start of your turn, lose #b", " HP and gain ", " Artifact"]
+        },
+        "theTrickster:UpThePacePower": {
+                "NAME": "Up The Pace",
+                "DESCRIPTIONS": ["At the start of your turn, add #b", " random 0 cost cards of any color to your hand"]
+        },
+        "theTrickster:EfficiencyPower": {
+                "NAME": "Efficiency",
+                "DESCRIPTIONS": ["Your next ", " 0 cost card this turn is played twice.", " 0 cost cards this turn are played twice."]
+        },
+        "theTrickster:MentalStrengthPower": {
+                "NAME": "Mental Strength",
+                "DESCRIPTIONS": ["Every time you gain Artifact, Gain #b", " Block."]
+        },
+        "theTrickster:FirstAidKitPower": {
+                "NAME": "First Aid Kit",
+                "DESCRIPTIONS": ["The next ", " times you should lose 2 HP or less, prevent it.", "The next time you should lose 2 HP or less, prevent it"]
+        },
+        "theTrickster:StopTheBleedingPower": {
+                "NAME": "Stop The Bleeding",
+                "DESCRIPTIONS": ["The next ", " times you should lose more than 5 HP, only lose 5 and add a Wound to your discard pile.",
+                        "The next time you should lose more than 5 HP, only lose 5 and add a Wound to your discard pile."]
+        },
+        "theTrickster:DelayedDamagePower": {
+                "NAME": "Delayed Damage",
+                "DESCRIPTIONS": ["At the end of this creature next turn, it takes #b", " damage."]
+        },
+        "theTrickster:SwiftAsTheWindPower": {
+                "NAME": "Swift As The Wind",
+                "DESCRIPTIONS": [
+                        "If you play #b",
+                        " more card this turn, draw #b",
+                        " more cards this turn, draw #b",
+                        " cards.",
+                        " card."
+                ]
+        },
+        "theTrickster:MistFormPower": {
+                "NAME": "Mist Form",
+                "DESCRIPTIONS": ["Whenever you play a 0 cost card, deal #b", " damage to all enemies."]
+        },
+        "theTrickster:ForbiddenMedicinePower": {
+                "NAME": "Forbidden Medicine",
+                "DESCRIPTIONS": ["At the start of every turn, heal #b", "HP and add a Wound to your hand.", " HP and add #b", " Wounds to your hand."]
+        },
+        "theTrickster:ThickVestPower": {
+                "NAME": "Thick Vest",
+                "DESCRIPTIONS": ["Whenever you draw a Status card, gain #b", " Block"]
+        },
+        "theTrickster:SuperiorTacticsPower": {
+                "NAME": "Superior Tactics",
+                "DESCRIPTIONS": ["At the end of this turn, retain 2 cards in your hand.",
+                        "At the end of the next #b", " turns, retain 2 cards in your hand."]
+        }
+}

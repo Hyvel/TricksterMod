@@ -1,0 +1,365 @@
+{
+  "theTrickster:DefaultCommonAttack": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
+  },
+  "theTrickster:DefaultCommonSkill": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block. NL theTrickster:Multiword_Keyword."
+  },
+  "theTrickster:DefaultCommonPower": {
+    "NAME": "Hold Place",
+    "DESCRIPTION": "Gain !M! theTrickster:Keyword.",
+    "UPGRADE_DESCRIPTION": "Gain !M! theTrickster:Keywords."
+  },
+  "theTrickster:DefaultUncommonAttack": {
+    "NAME": "Big slap",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "theTrickster:DefaultUncommonSkill": {
+    "NAME": "A Better Defend",
+    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
+  },
+  "theTrickster:DefaultUncommonPower": {
+    "NAME": "Weirdness",
+    "DESCRIPTION": "Gain X theTrickster:Keywords.",
+    "UPGRADE_DESCRIPTION": "Gain X +1 theTrickster:Keywords."
+  },
+  "theTrickster:DefaultRareAttack": {
+    "NAME": "TOUCH",
+    "DESCRIPTION": "Deal !D! Damage."
+  },
+  "theTrickster:DefaultRareSkill": {
+    "NAME": "For Each Loop x2",
+    "DESCRIPTION": "Apply !M! vulnerable to ALL enemies, 2 times.",
+    "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to ALL enemies, 3 times."
+  },
+  "theTrickster:DefaultRarePower": {
+    "NAME": "In-Progress Form",
+    "DESCRIPTION": "At the start of your turn, play a TOUCH."
+  },
+  "theTrickster:DefaultAttackWithVariable": {
+    "NAME": "Special Strike",
+    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal !theTrickster:ENERGY_DAMAGE! damage total.)"
+  },
+  "theTrickster:DefaultSecondMagicNumberSkill": {
+    "NAME": "Cool 2 Number Card",
+    "DESCRIPTION": "Apply !M! vulnerable and !theTrickster:SecondMagic! poison to an enemy."
+  },
+  "theTrickster:OrbSkill": {
+    "NAME": "Get Orb",
+    "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "theTrickster:Strike_Brown": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theTrickster:Defend_Brown": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "theTrickster:DaringSlash": {
+    "NAME": "Daring Slash",
+    "DESCRIPTION": "Gain !M! Frail. NL Deal !D! damage. NL Draw !theTrickster:SecondMagic! card."
+  },
+  "theTrickster:BackStep": {
+    "NAME": "BackStep",
+    "DESCRIPTION": "Gain !M! Weak. NL Gain !B! Block. NL Draw !theTrickster:SecondMagic! card."
+  },
+  "theTrickster:SwiftSlash": {
+    "NAME": "Swift Slash",
+    "DESCRIPTION": "Deal !D! damage to all enemies."
+  },
+  "theTrickster:IntrepidRush": {
+    "NAME": "Intrepid Rush",
+    "DESCRIPTION": "Gain !M! Vulnerable. NL Deal !D! damage."
+  },
+  "theTrickster:Gunblade": {
+    "NAME": "Gunblade",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."
+  },
+  "theTrickster:Parry": {
+    "NAME": "Parry",
+    "DESCRIPTION": "Add a Dazed to your discard pile. NL Gain !B! Block."
+  },
+  "theTrickster:Reposition": {
+    "NAME": "Reposition",
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! cards."
+  },
+  "theTrickster:Safeguard": {
+    "NAME": "Safeguard",
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Exhaust."
+  },
+  "theTrickster:HeightenedObservation": {
+    "NAME": "Better Safe",
+    "DESCRIPTION": "Gain !M! Dexterity. NL Lose 1 Strength. NL Put a copy of this card in your discard pile."
+  },
+  "theTrickster:EnhancingDrug": {
+    "NAME": "Enhancing Drug",
+    "DESCRIPTION": "Gain X Strength. NL Gain X Dexterity",
+    "UPGRADE_DESCRIPTION": "Gain X+1 Strength. NL Gain X+1 Dexterity."
+  },
+  "theTrickster:TriedTechniques": {
+    "NAME": "Tried Techniques",
+    "DESCRIPTION": "At the start of the turn, return 1 card from your discard pile to your hand.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL At the start of the turn, return a random card from your discard pile to your hand."
+  },
+  "theTrickster:RampingUpStrike": {
+    "NAME": "Ramping Up Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage per elapsed turn."
+  },
+  "theTrickster:DebilitatingShot": {
+    "NAME": "Debilitating Shot",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak."
+  },
+  "theTrickster:NickAndSkid": {
+    "NAME": "Nick And Skid",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+  },
+  "theTrickster:Feint": {
+    "NAME": "Feint",
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card."
+  },
+  "theTrickster:BladeSurge": {
+    "NAME": "Blade Surge",
+    "DESCRIPTION": "Gain !B! Block X times. NL Deal !D! damage X times."
+  },
+  "theTrickster:TacticalStrike": {
+    "NAME": "Tactical Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Lose 1 Dexterity."
+  },
+  "theTrickster:RecklessShot": {
+    "NAME": "Reckless Shot",
+    "DESCRIPTION": "Gain !M! Frail. NL Deal !D! damage."
+  },
+  "theTrickster:HandGrenade": {
+    "NAME": "Hand Grenade",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Draw !M! cards."
+  },
+  "theTrickster:HeightenedAggression": {
+    "NAME": "Kill 'Em all",
+    "DESCRIPTION": "Gain !M! Strength. NL Lose 1 Dexterity. NL Put a copy of this card in your discard pile."
+  },
+  "theTrickster:TickingPackage": {
+    "NAME": "Ticking Package",
+    "DESCRIPTION": "Target an enemy. At the end of its next turn it takes !M! damage."
+  },
+  "theTrickster:Distract": {
+    "NAME": "Distract",
+    "DESCRIPTION": "Enemy lose 1 Strength. Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Enemy lose 2 Strength. NL Exhaust."
+  },
+  "theTrickster:TacticalDefend": {
+    "NAME": "Tactical Defend",
+    "DESCRIPTION": "Gain !B! Block. NL Lose 1 Strength."
+  },
+  "theTrickster:RampingUpDefend": {
+    "NAME": "Ramping Up Defend",
+    "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block per elapsed turn."
+  },
+  "theTrickster:TrickyStrike": {
+    "NAME": "Tricky Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Defend\"."
+  },
+  "theTrickster:TrickyDefend": {
+    "NAME": "Tricky Defend",
+    "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for ALL your cards containing \"Strike\"."
+  },
+  "theTrickster:HotSteel": {
+    "NAME": "Hot Steel",
+    "DESCRIPTION": "Gain 2 Energy. NL Deal !D! damage. NL Add a Burn into your draw pile."
+  },
+  "theTrickster:Repetition": {
+    "NAME": "Repetition",
+    "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile in your hand."
+  },
+  "theTrickster:ImpulsiveStrike": {
+    "NAME": "Impulsive Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Deals 2 damage less per elapsed turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL Deal !D! damage. NL Deals !M! damage less per elapsed turn. NL Exhaust."
+  },
+  "theTrickster:ImpulsiveDefend": {
+    "NAME": "Impulsive Defend",
+    "DESCRIPTION": "Gain !B! Block. NL Gains 2 Block less per elapsed turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL Gain !B! Block. NL Gains 2 Block less per elapsed turn. NL Exhaust."
+  },
+  "theTrickster:SmokeOfConfusion": {
+    "NAME": "Smoke Of Confusion",
+    "DESCRIPTION": "Apply 1 Weak and 1 Vulnerable to ALL enemies."
+  },
+  "theTrickster:CautiousManeuver": {
+    "NAME": "Cautious Maneuver",
+    "DESCRIPTION": "Gain !B! Block. NL Gains !M! bonus Block if your HP is at or below 50%."
+  },
+  "theTrickster:Decoy": {
+    "NAME": "Decoy",
+    "DESCRIPTION": "Lose 2 HP. NL Gain !M! Artifact."
+  },
+  "theTrickster:SmokeAndMirrors": {
+    "NAME": "Smoke And Mirrors",
+    "DESCRIPTION": "Gain 2 Energy. NL Gain !B! Block. NL Add a Burn into your draw pile."
+  },
+  "theTrickster:HiddenPistol": {
+    "NAME": "Hidden Pistol",
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Artifact."
+  },
+  "theTrickster:SkinInTheGame": {
+    "NAME": "Skin In The Game",
+    "DESCRIPTION": "At the start of your turn, gain 1 Artifact and lose 1 HP."
+  },
+  "theTrickster:UpThePace": {
+    "NAME": "Up The Pace",
+    "DESCRIPTION": "At the start of your turn, add 1 random 0 cost card of any color to your hand."
+  },
+  "theTrickster:Practice": {
+    "NAME": "Practice",
+    "DESCRIPTION": "Deal !D! damage. NL Add a random 0 cost card to your discard pile. NL Exhaust."
+  },
+  "theTrickster:PistolWhip": {
+    "NAME": "Pistol Whip",
+    "DESCRIPTION": "Deal !D! damage. NL Add a random 0 cost card of any color to your hand."
+  },
+  "theTrickster:AssertiveLunge": {
+    "NAME": "Assertive Lunge",
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
+  },
+  "theTrickster:Salvage": {
+    "NAME": "Salvage",
+    "DESCRIPTION": "Exhaust a card in your hand. NL Add a random 0 cost card of any color to your hand."
+  },
+  "theTrickster:DeepPockets": {
+    "NAME": "Deep Pockets",
+    "DESCRIPTION": "Add a random colorless card to your hand. It costs 0 this turn. NL Exhaust."
+  },
+  "theTrickster:Efficiency": {
+    "NAME": "Efficiency",
+    "DESCRIPTION": "The next 0 cost card you play this turn is played twice.",
+    "UPGRADE_DESCRIPTION" : "The next !M! 0 cost cards you play this turn are played twice."
+  },
+  "theTrickster:FancyCape": {
+    "NAME": "Fancy Cape",
+    "DESCRIPTION": "Gain !M! Artifact. NL Heal 2. NL Draw !M! cards. NL Exhaust."
+  },
+  "theTrickster:Anticipation": {
+    "NAME": "Anticipation",
+    "DESCRIPTION": "If the targeted enemy intends to attack: Gain 2 Energy and draw !M! cards. Exhaust."
+  },
+  "theTrickster:MentalStrength": {
+    "NAME": "Mental Strength",
+    "DESCRIPTION": "Every time you gain Artifact also gain !M! Block."
+  },
+  "theTrickster:Firecrackers": {
+    "NAME": "Firecrackers",
+    "DESCRIPTION": "At the end of the enemies next turn, all enemies take !M! damage."
+  },
+  "theTrickster:FirstAidKit": {
+    "NAME": "First Aid Kit",
+    "DESCRIPTION": "The next !M! times you should lose 2 HP or less, prevent it."
+  },
+  "theTrickster:StopTheBleeding": {
+    "NAME": "Stop The Bleeding",
+    "DESCRIPTION": "The next !M! times you should lose more than 5 HP, only lose 5 and add a Wound to your discard pile."
+  },
+  "theTrickster:SwiftAsTheWind": {
+    "NAME": "Swift As The Wind",
+    "DESCRIPTION": "Every time you play 3 cards in a single turn, draw a card.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL Every time you play 3 cards in a single turn, draw a card."
+  },
+  "theTrickster:MistForm": {
+    "NAME": "Mist Form",
+    "DESCRIPTION": "Whenever you play a 0 cost card, deal !M! damage to all enemies."
+  },
+  "theTrickster:Frenzy": {
+    "NAME": "Frenzy",
+    "DESCRIPTION": "Deal !D! damage. NL If your HP is at or below 50%, deal !D! damage again."
+  },
+  "theTrickster:StudiedSnipe": {
+    "NAME": "Studied Snipe",
+    "DESCRIPTION": "Deal !D! damage. NL Deals 1 additional damage per card in your discard pile."
+  },
+  "theTrickster:ForbiddenMedicine": {
+    "NAME": "Forbidden Medicine",
+    "DESCRIPTION": "At the start of every turn, heal !M! HP and add a Wound to your hand."
+  },
+  "theTrickster:BulletRain": {
+    "NAME": "Bullet Rain",
+    "DESCRIPTION": "Deal !D! damage to all enemies 3 times."
+  },
+  "theTrickster:CreateAnOpening": {
+    "NAME": "Create An Opening",
+    "DESCRIPTION": "Apply !M! Vulnerable to an enemy. NL Gain !B! Block."
+  },
+  "theTrickster:Volley": {
+    "NAME": "Volley",
+    "DESCRIPTION": "Deal !D! damage 3 times."
+  },
+  "theTrickster:Audacity": {
+    "NAME": "Audacity",
+    "DESCRIPTION": "Deal !D! damage. NL Add a Wound to your hand."
+  },
+  "theTrickster:PreciseSalvo": {
+    "NAME": "Precise Salvo",
+    "DESCRIPTION": "Deal !D! damage 3 times. NL Costs 1 less for each Artifact you have."
+  },
+  "theTrickster:OminousSmile": {
+    "NAME": "Ominous Smile",
+    "DESCRIPTION": "Add a wound to your hand. Apply !M! Weak and !M! Vulnerable to ALL enemies."
+  },
+  "theTrickster:LightTrick": {
+    "NAME": "Light Trick",
+    "DESCRIPTION": "Gain !M! Dexterity. NL At the end of the turn lose !M! dexterity."
+  },
+  "theTrickster:CapriciousThrust": {
+    "NAME": "Capricious Thrust",
+    "DESCRIPTION": "Deal !D! damage. If you have a Status in your hand, deal !D! damage again."
+  },
+  "theTrickster:DivingSlice": {
+    "NAME": "Diving Slice",
+    "DESCRIPTION": "Deal !D! damage. NL Draw cards until you have !M! in hand."
+  },
+  "theTrickster:SharpBlade": {
+    "NAME": "Sharp Blade",
+    "DESCRIPTION": "Deal !D! damage. Put a random Status from you draw pile in your hand."
+  },
+  "theTrickster:ThickVest": {
+    "NAME": "Thick Vest",
+    "DESCRIPTION": "Whenever you draw a Status card, gain !M! Block."
+  },
+  "theTrickster:Handicraft": {
+    "NAME": "Handicraft",
+    "DESCRIPTION": "Upgrade a random card in your hand.",
+    "UPGRADE_DESCRIPTION" : "Upgrade a card in your hand."
+  },
+  "theTrickster:BattlePlan": {
+    "NAME": "Battle Plan",
+    "DESCRIPTION": " Gain !B! Block. Put a card from your draw pile into your hand."
+  },
+  "theTrickster:DejaVu": {
+    "NAME": "Déjà Vu",
+    "DESCRIPTION": "Block is not removed at the start of your next turn. NL Can be upgraded any number of times.",
+    "UPGRADE_DESCRIPTION": "Block is not removed at the start of your next !M! turns. NL Can be upgraded any number of times."
+  },
+  "theTrickster:SuperiorTactics": {
+    "NAME": "Superior Tactics",
+    "DESCRIPTION": "At the end of this turn, Retain 2 cards in your hand.",
+    "UPGRADE_DESCRIPTION": "At the end of this turn and the next, Retain 2 cards in your hand."
+  },
+  "theTrickster:BlurTheLines": {
+    "NAME": "Blur The Lines",
+    "DESCRIPTION": "Gain 1 Strength. Gain 1 Dexterity. NL Exchange your amounts of Strength and Dexterity."
+  },
+  "theTrickster:KeepCool": {
+    "NAME": "Keep Cool",
+    "DESCRIPTION": "Remove all of your Weak, Vulnerable and Frail. NL Gain !M! artifact."
+  },
+  "theTrickster:EyeForEye": {
+    "NAME": "Eye For Eye",
+    "DESCRIPTION": "Deal to an enemy the damage it intends to do as Thorns damage.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal ",
+      " damage. NL ",
+      " damage ",
+      " times. NL "
+    ]
+  }
+}

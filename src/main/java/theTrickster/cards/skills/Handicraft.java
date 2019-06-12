@@ -1,0 +1,76 @@
+package theTrickster.cards.skills;
+
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.UpgradeRandomCardAction;
+import com.megacrit.cardcrawl.actions.unique.ArmamentsAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theTrickster.DefaultMod;
+import theTrickster.cards.AbstractDynamicCard;
+import theTrickster.characters.TheTrickster;
+
+import java.util.Iterator;
+
+import static theTrickster.DefaultMod.makeCardPath;
+
+public class Handicraft extends AbstractDynamicCard {
+
+    // TEXT DECLARATION
+
+    public static final String ID = DefaultMod.makeID(Handicraft.class.getSimpleName());
+    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("Handicraft.png");
+    // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
+
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
+    // /TEXT DECLARATION/
+
+
+    // STAT DECLARATION
+
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardType TYPE = CardType.SKILL;
+    public static final CardColor COLOR = TheTrickster.Enums.COLOR_BROWN;
+
+    private static final int COST = 0;
+
+    // /STAT DECLARATION/
+
+
+    public Handicraft() {
+        super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+    }
+
+
+    @Override
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        if(this.upgraded) {
+            // Upgraded Handicraft works like an unupgraded armaments.
+            AbstractDungeon.actionManager.addToBottom(new ArmamentsAction(false));
+        }
+        else {
+            // Unupgraded Handicraft works like Warped Tongs.
+            AbstractDungeon.actionManager.addToBottom(new UpgradeRandomCardAction());
+        }
+    }
+
+
+    @Override
+    public void upgrade() {
+        if (!upgraded) {
+            upgradeName();
+            this.rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
+    }
+}
