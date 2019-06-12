@@ -1,9 +1,6 @@
 package theTrickster.cards.skills;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -51,7 +48,6 @@ public class TacticalDefend extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
@@ -60,7 +56,6 @@ public class TacticalDefend extends AbstractDynamicCard {
     }
 
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

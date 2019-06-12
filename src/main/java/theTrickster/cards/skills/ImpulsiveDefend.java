@@ -52,7 +52,6 @@ public class ImpulsiveDefend extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
@@ -64,16 +63,10 @@ public class ImpulsiveDefend extends AbstractDynamicCard {
 
         super.applyPowers();
 
-        if (block != BLOCK) {
-            isBlockModified = true;
-        }
-        else {
-            isBlockModified = false;
-        }
+        isBlockModified = block != BLOCK;
         initializeDescription();
     }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

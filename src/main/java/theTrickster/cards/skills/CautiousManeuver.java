@@ -46,9 +46,6 @@ public class CautiousManeuver extends AbstractDynamicCard {
 
 
     public void applyPowers() {
-        // Hack: We hijack baseDamage in order to display the correct description.
-        // (The problem is we can't use the perfected strike approach and do this directly in abstractCard methods)
-
         //Reset baseBlock
         if (upgraded) {
             baseBlock = BLOCK + UPGRADE_PLUS_BLOCK;
@@ -77,14 +74,12 @@ public class CautiousManeuver extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
 
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

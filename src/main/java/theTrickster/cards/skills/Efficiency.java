@@ -1,16 +1,11 @@
 package theTrickster.cards.skills;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DoubleTapPower;
 import theTrickster.DefaultMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
@@ -53,7 +48,6 @@ public class Efficiency extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
@@ -61,7 +55,6 @@ public class Efficiency extends AbstractDynamicCard {
     }
 
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

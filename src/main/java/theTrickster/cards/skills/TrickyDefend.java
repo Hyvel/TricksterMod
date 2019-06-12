@@ -48,7 +48,7 @@ public class TrickyDefend extends AbstractDynamicCard {
     }
 
 
-    public static int countCards() {
+    private static int countStrikeCards() {
         int count = 0;
         Iterator var1 = AbstractDungeon.player.hand.group.iterator();
 
@@ -81,36 +81,27 @@ public class TrickyDefend extends AbstractDynamicCard {
         return count;
     }
 
-    public static boolean isStrike(AbstractCard c) {
+    private static boolean isStrike(AbstractCard c) {
         return c.hasTag(CardTags.STRIKE);
     }
 
 
     public void applyPowers() {
-        // Hack: We hijack baseDamage in order to display the correct description.
-        // (The problem is we can't use the perfected strike approach and do this directly in abstractCard methods)
-        baseBlock = BLOCK + (magicNumber * countCards());
+        baseBlock = BLOCK + (magicNumber * countStrikeCards());
 
         super.applyPowers();
 
-        if (block != BLOCK) {
-            isBlockModified = true;
-        }
-        else {
-            isBlockModified = false;
-        }
+        isBlockModified = block != BLOCK;
         this.initializeDescription();
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
 
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

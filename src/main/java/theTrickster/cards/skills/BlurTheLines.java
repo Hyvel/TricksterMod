@@ -1,24 +1,15 @@
 package theTrickster.cards.skills;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theTrickster.DefaultMod;
 import theTrickster.actions.BlurTheLinesAction;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
-
-import java.util.Iterator;
 
 import static theTrickster.DefaultMod.makeCardPath;
 
@@ -59,7 +50,6 @@ public class BlurTheLines extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new DexterityPower(p, 1), 1));
         AbstractDungeon.actionManager.addToBottom(new BlurTheLinesAction(p));
-//        AbstractDungeon.actionManager.addToBottom(new ExchangeStrAndDexAction(p, p));
     }
 
 

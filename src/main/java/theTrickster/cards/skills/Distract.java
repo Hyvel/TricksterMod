@@ -49,7 +49,6 @@ public class Distract extends AbstractDynamicCard {
     }
 
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p,
@@ -57,7 +56,6 @@ public class Distract extends AbstractDynamicCard {
     }
 
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
