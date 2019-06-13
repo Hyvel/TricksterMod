@@ -48,7 +48,7 @@
         },
         "theTrickster:ForbiddenMedicinePower": {
                 "NAME": "Forbidden Medicine",
-                "DESCRIPTIONS": ["At the start of every turn, heal #b", "HP and add a Wound to your hand.", " HP and add #b", " Wounds to your hand."]
+                "DESCRIPTIONS": ["At the start of every turn, heal #b", " HP and add a Wound to your hand.", " HP and add #b", " Wounds to your hand."]
         },
         "theTrickster:ThickVestPower": {
                 "NAME": "Thick Vest",
