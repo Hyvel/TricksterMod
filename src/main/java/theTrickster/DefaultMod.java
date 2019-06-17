@@ -385,7 +385,7 @@ public class DefaultMod implements
 
         BaseMod.addCard(new Practice());
         BaseMod.addCard(new PistolWhip());
-        BaseMod.addCard(new AssertiveLunge());
+//        BaseMod.addCard(new AssertiveLunge());
         BaseMod.addCard(new Salvage());
         BaseMod.addCard(new DeepPockets());
         BaseMod.addCard(new Efficiency());
@@ -423,6 +423,7 @@ public class DefaultMod implements
         BaseMod.addCard(new KeepCool());
         BaseMod.addCard(new CapriciousThrust());
         BaseMod.addCard(new EyeForEye());
+        BaseMod.addCard(new Impale());
 
 
         logger.info("Making sure the cards are unlocked.");

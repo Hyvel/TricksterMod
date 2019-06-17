@@ -310,5 +310,9 @@
       " damage ",
       " times. NL "
     ]
+  },
+  "theTrickster:Impale": {
+    "NAME": "Impale",
+    "DESCRIPTION": "Deal !D! damage. NL Double this card damage."
   }
 }
