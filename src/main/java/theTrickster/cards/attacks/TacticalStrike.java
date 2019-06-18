@@ -35,7 +35,7 @@ public class TacticalStrike extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 13;
     private static final int UPGRADE_PLUS_DMG = 5;
 
     private static final int DEX = -1;
