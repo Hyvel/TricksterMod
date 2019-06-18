@@ -63,5 +63,20 @@
     "DESCRIPTIONS": [
       "Every time you play a card, gain #b1 Block and deal #b1 damage to ALL enemies."
     ]
+  },
+  "theTrickster:AncientPicklesRelic": {
+    "NAME": "Ancient Pickles",
+    "FLAVOR": "Sour but tasty.",
+    "DESCRIPTIONS": [
+      "Gain [E]",
+      " at the start of your turn. Start each combat with 2 Weak and 2 Frail."
+    ]
+  },
+  "theTrickster:RunicTorusRelic": {
+    "NAME": "Runic Torus",
+    "FLAVOR": "The runes are indecipherable.",
+    "DESCRIPTIONS": [
+      "Whenever you play a 0 cost card, gain 2 Block."
+    ]
   }
 }

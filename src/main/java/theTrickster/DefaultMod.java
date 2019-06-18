@@ -324,6 +324,8 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new DesertRoseRelic(), TheTrickster.Enums.COLOR_BROWN);
         BaseMod.addRelicToCustomPool(new MeteoriteRelic(), TheTrickster.Enums.COLOR_BROWN);
         BaseMod.addRelicToCustomPool(new IllusoryBannerRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new AncientPicklesRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new RunicTorusRelic(), TheTrickster.Enums.COLOR_BROWN);
 
         
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
