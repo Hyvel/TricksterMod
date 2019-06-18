@@ -10,9 +10,13 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -24,7 +28,7 @@ import theTrickster.cards.powers.*;
 import theTrickster.cards.skills.*;
 import theTrickster.characters.TheTrickster;
 import theTrickster.potions.PresciencePotion;
-import theTrickster.relics.OpticalIllusionRelic;
+import theTrickster.relics.*;
 import theTrickster.util.IDCheckDontTouchPls;
 import theTrickster.util.RandomZeroCostCardHelper;
 import theTrickster.util.TextureLoader;
@@ -44,7 +48,8 @@ public class DefaultMod implements
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
         PostInitializeSubscriber,
-        PostDrawSubscriber {
+        PostDrawSubscriber,
+        PostPowerApplySubscriber {
 
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
     private static String modID;
@@ -311,10 +316,15 @@ public class DefaultMod implements
         
         // Character specific relic.
         BaseMod.addRelicToCustomPool(new OpticalIllusionRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new StrangeDollRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new BinocularsRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new OcarinaRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new BoneWhistleRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new SnailBroochRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new DesertRoseRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new MeteoriteRelic(), TheTrickster.Enums.COLOR_BROWN);
+        BaseMod.addRelicToCustomPool(new IllusoryBannerRelic(), TheTrickster.Enums.COLOR_BROWN);
 
-
-        // This adds a relic to the Shared pool. Every character can find this relic.
-        //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
         
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
 //        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
@@ -452,6 +462,7 @@ public class DefaultMod implements
     
     // ================ /ADD CARDS/ ===================
 
+    // Thick Vest power card
     @Override
     public void receivePostDraw(AbstractCard card) {
         if(card.type != AbstractCard.CardType.STATUS) {
@@ -470,6 +481,20 @@ public class DefaultMod implements
                 AbstractDungeon.actionManager.addToBottom(new GainBlockAction(power.owner, power.owner, power.amount));
             }
         }
+    }
+
+    //Strange Doll relic
+    @Override
+    public void receivePostPowerApplySubscriber(AbstractPower var1, AbstractCreature var2, AbstractCreature var3) {
+        if (!AbstractDungeon.player.hasRelic("theTrickster:StrangeDollRelic")) {
+            return;
+        }
+        if(var1.type == AbstractPower.PowerType.DEBUFF && var2 instanceof AbstractPlayer) {
+            //TODO: Make relic flash
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        }
+
     }
 
     // ================ LOAD THE TEXT ===================

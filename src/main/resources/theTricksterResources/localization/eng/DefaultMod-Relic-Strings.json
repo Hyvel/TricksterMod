@@ -5,5 +5,63 @@
     "DESCRIPTIONS": [
       "Every time you play 4 cards in a turn, gain 3 block and deal 3 damage to all enemies."
     ]
+  },
+  "theTrickster:StrangeDollRelic": {
+    "NAME": "Strange Doll",
+    "FLAVOR": "A weirdly shaped doll. It glimmers faintly.",
+    "DESCRIPTIONS": [
+      "Whenever you get a debuff, deal 3 damage to a random enemy"
+    ]
+  },
+  "theTrickster:BinocularsRelic": {
+    "NAME": "Binoculars",
+    "FLAVOR": "Useful for scouting.",
+    "DESCRIPTIONS": [
+      "Start each combat with 3 Dexterity that is lost at the end of your turn."
+    ]
+  },
+  "theTrickster:OcarinaRelic": {
+    "NAME": "Ocarina",
+    "FLAVOR": "Comforting.",
+    "DESCRIPTIONS": [
+      "The first time you draw a Status each combat, draw 3 cards."
+    ]
+  },
+  "theTrickster:BoneWhistleRelic": {
+    "NAME": "Bone Whistle",
+    "FLAVOR": "It only makes painful sounds.",
+    "DESCRIPTIONS": [
+      "Whenever you draw a Status, deal 3 damage to a random enemy."
+    ]
+  },
+  "theTrickster:SnailBroochRelic": {
+    "NAME": "Snail Brooch",
+    "FLAVOR": "Rumored to be the creation of chronomancers.",
+    "DESCRIPTIONS": [
+      "Whenever you play 4 or less cards in a turn, gain 1 Energy at the start of your next turn."
+    ]
+  },
+  "theTrickster:DesertRoseRelic": {
+    "NAME": "Desert Rose",
+    "FLAVOR": "A beautiful rock commonly found in deserts.",
+    "DESCRIPTIONS": [
+      "Upgrade the next #b",
+      " upgradable cards you obtain.",
+      "Upgrade the next upgradable card you obtain."
+    ]
+  },
+  "theTrickster:MeteoriteRelic": {
+    "NAME": "Meteorite",
+    "FLAVOR": "Heavy and infused with power.",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain 2 Strength and lose 1 Dexterity."
+    ]
+  },
+  "theTrickster:IllusoryBannerRelic": {
+    "NAME": "Illusory Banner",
+    "FLAVOR": "Mesmerizing to all who lay eyes on it.",
+    "DESCRIPTIONS": [
+      "Every time you play a card, gain #b1 Block and deal #b1 damage to ALL enemies."
+    ]
   }
 }
