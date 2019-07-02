@@ -32,10 +32,10 @@ public class Impale extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheTrickster.Enums.COLOR_BROWN;
 
-    private static final int COST = 3;
+    private static final int COST = 2;
 
-    private static final int DAMAGE = 15;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/
 
