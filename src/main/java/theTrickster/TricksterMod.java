@@ -68,14 +68,12 @@ public class TricksterMod implements
     
     // Colors (RGB)
     // Character Color
-    public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
     public static final Color DEFAULT_BROWN = CardHelper.getColor(64.0f, 70.0f, 10.0f);
     
     // Potion Colors in RGB
-    public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
-    public static final Color PLACEHOLDER_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
-    public static final Color PLACEHOLDER_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
-    
+    public static final Color PRESCIENCE_POTION_LIQUID = CardHelper.getColor(150.0f, 75.0f, 40.0f); // Orange-ish Red
+    public static final Color PRESCIENCE_POTION_HYBRID = CardHelper.getColor(255.0f, 230.0f, 230.0f); // Near White
+    public static final Color PRESCIENCE_POTION_SPOTS = CardHelper.getColor(100.0f, 25.0f, 10.0f); // Super Dark Red/Brown
 
     private static final String ATTACK_TRICKSTER_BROWN = "theTricksterResources/images/512/bg_attack_trickster_brown.png";
     private static final String SKILL_TRICKSTER_BROWN = "theTricksterResources/images/512/bg_skill_trickster_brown.png";
@@ -218,9 +216,9 @@ public class TricksterMod implements
     
     @SuppressWarnings("unused")
     public static void initialize() {
-        logger.info("========================= Initializing Default Mod. Hi. =========================");
-        TricksterMod defaultmod = new TricksterMod();
-        logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
+        logger.info("========================= Initializing Trickster Mod. Hi. =========================");
+        TricksterMod tricksterMod = new TricksterMod();
+        logger.info("========================= /Trickster Mod Initialized. Hello World./ =========================");
     }
     
     // ============== /SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE/ =================
@@ -299,8 +297,8 @@ public class TricksterMod implements
         logger.info("Beginning to edit potions");
         
         // Class Specific Potion.
-        BaseMod.addPotion(PresciencePotion.class, PLACEHOLDER_POTION_LIQUID, PLACEHOLDER_POTION_HYBRID,
-                PLACEHOLDER_POTION_SPOTS, PresciencePotion.POTION_ID, TheTrickster.Enums.THE_TRICKSTER);
+        BaseMod.addPotion(PresciencePotion.class, PRESCIENCE_POTION_LIQUID, PRESCIENCE_POTION_HYBRID,
+                PRESCIENCE_POTION_SPOTS, PresciencePotion.POTION_ID, TheTrickster.Enums.THE_TRICKSTER);
 
         logger.info("Done editing potions");
     }
