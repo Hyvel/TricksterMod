@@ -23,8 +23,8 @@ public class MeteoriteRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("MeteoriteRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("meteorite.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("meteorite.png"));
 
     public MeteoriteRelic() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.HEAVY);

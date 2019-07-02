@@ -22,8 +22,8 @@ public class DesertRoseRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("DesertRoseRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("desert_rose.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("desert_rose.png"));
 
     public DesertRoseRelic() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);

@@ -23,8 +23,8 @@ public class RunicTorusRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("RunicTorusRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("runic_torus.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("runic_torus.png"));
 
     public RunicTorusRelic() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);

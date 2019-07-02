@@ -22,8 +22,8 @@ public class SnailBroochRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("SnailBroochRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("snail_brooch.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("snail_brooch.png"));
 
     private static final int ENERGY = 1;
     private static final int MAX_CARDS_TO_PLAY = 4;

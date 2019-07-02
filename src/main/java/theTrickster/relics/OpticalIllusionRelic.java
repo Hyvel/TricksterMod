@@ -27,8 +27,8 @@ public class OpticalIllusionRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("OpticalIllusionRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("optical_illusion.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("optical_illusion.png"));
 
     public OpticalIllusionRelic() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

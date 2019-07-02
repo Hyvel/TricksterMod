@@ -23,8 +23,8 @@ public class BoneWhistleRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("BoneWhistleRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("bone_whistle.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("bone_whistle.png"));
 
     private static final int DAMAGE = 3;
 

@@ -27,8 +27,8 @@ public class IllusoryBannerRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("IllusoryBannerRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("illusory_banner.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("illusory_banner.png"));
 
     public IllusoryBannerRelic() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.FLAT);

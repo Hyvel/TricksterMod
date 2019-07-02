@@ -22,8 +22,8 @@ public class OcarinaRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("OcarinaRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ocarina.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ocarina.png"));
 
     private static final int CARDS = 3;
     private static boolean usedThisCombat = false;

@@ -25,8 +25,8 @@ public class AncientPicklesRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("AncientPicklesRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ancient_pickles.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ancient_pickles.png"));
 
     public AncientPicklesRelic() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.SOLID);

@@ -18,8 +18,8 @@ public class StrangeDollRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("StrangeDollRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("strange_doll.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("strange_doll.png"));
 
     public StrangeDollRelic() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);

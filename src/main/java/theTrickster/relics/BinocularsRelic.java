@@ -23,8 +23,8 @@ public class BinocularsRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = TricksterMod.makeID("BinocularsRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("binoculars.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("binoculars.png"));
 
     public BinocularsRelic() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.SOLID);
