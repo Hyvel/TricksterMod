@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.util.TextureLoader;
 
-import static theTrickster.DefaultMod.makeRelicOutlinePath;
-import static theTrickster.DefaultMod.makeRelicPath;
+import static theTrickster.TricksterMod.makeRelicOutlinePath;
+import static theTrickster.TricksterMod.makeRelicPath;
 
 public class BinocularsRelic extends CustomRelic {
 
@@ -21,7 +21,7 @@ public class BinocularsRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID("BinocularsRelic");
+    public static final String ID = TricksterMod.makeID("BinocularsRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));

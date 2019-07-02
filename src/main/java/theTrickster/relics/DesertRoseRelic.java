@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.util.TextureLoader;
 
-import static theTrickster.DefaultMod.makeRelicOutlinePath;
-import static theTrickster.DefaultMod.makeRelicPath;
+import static theTrickster.TricksterMod.makeRelicOutlinePath;
+import static theTrickster.TricksterMod.makeRelicPath;
 
 public class DesertRoseRelic extends CustomRelic {
 
@@ -20,7 +20,7 @@ public class DesertRoseRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID("DesertRoseRelic");
+    public static final String ID = TricksterMod.makeID("DesertRoseRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));

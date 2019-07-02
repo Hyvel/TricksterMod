@@ -7,11 +7,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
+import theTrickster.TricksterMod;
 
 public class PresciencePotion extends AbstractPotion {
 
 
-    public static final String POTION_ID = theTrickster.DefaultMod.makeID("PresciencePotion");
+    public static final String POTION_ID = TricksterMod.makeID("PresciencePotion");
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
     public static final String NAME = potionStrings.NAME;

@@ -9,11 +9,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.util.TextureLoader;
 
-import static theTrickster.DefaultMod.makeRelicOutlinePath;
-import static theTrickster.DefaultMod.makeRelicPath;
+import static theTrickster.TricksterMod.makeRelicOutlinePath;
+import static theTrickster.TricksterMod.makeRelicPath;
 
 public class AncientPicklesRelic extends CustomRelic {
 
@@ -23,7 +23,7 @@ public class AncientPicklesRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID("AncientPicklesRelic");
+    public static final String ID = TricksterMod.makeID("AncientPicklesRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));

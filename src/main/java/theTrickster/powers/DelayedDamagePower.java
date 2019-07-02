@@ -11,13 +11,13 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.util.TextureLoader;
 
-import static theTrickster.DefaultMod.makePowerPath;
+import static theTrickster.TricksterMod.makePowerPath;
 
 public class DelayedDamagePower extends AbstractPower {
-    public static final String POWER_ID = DefaultMod.makeID("DelayedDamagePower");
+    public static final String POWER_ID = TricksterMod.makeID("DelayedDamagePower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

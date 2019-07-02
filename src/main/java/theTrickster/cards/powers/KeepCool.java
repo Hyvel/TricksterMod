@@ -8,17 +8,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
 
-import static theTrickster.DefaultMod.makeCardPath;
+import static theTrickster.TricksterMod.makeCardPath;
 
 public class KeepCool extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(KeepCool.class.getSimpleName());
+    public static final String ID = TricksterMod.makeID(KeepCool.class.getSimpleName());
     public static final String IMG = makeCardPath("Power.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

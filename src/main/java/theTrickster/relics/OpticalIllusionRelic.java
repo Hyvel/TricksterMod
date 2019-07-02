@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.util.TextureLoader;
 
-import static theTrickster.DefaultMod.makeRelicOutlinePath;
-import static theTrickster.DefaultMod.makeRelicPath;
+import static theTrickster.TricksterMod.makeRelicOutlinePath;
+import static theTrickster.TricksterMod.makeRelicPath;
 
 public class OpticalIllusionRelic extends CustomRelic {
 
@@ -25,7 +25,7 @@ public class OpticalIllusionRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID("OpticalIllusionRelic");
+    public static final String ID = TricksterMod.makeID("OpticalIllusionRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));

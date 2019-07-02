@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
 
 import java.lang.reflect.Field;
 
-import static theTrickster.DefaultMod.makeCardPath;
+import static theTrickster.TricksterMod.makeCardPath;
 
 public class EyeForEye extends AbstractDynamicCard {
 
@@ -24,7 +24,7 @@ public class EyeForEye extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(EyeForEye.class.getSimpleName());
+    public static final String ID = TricksterMod.makeID(EyeForEye.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("EyeForEye.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 

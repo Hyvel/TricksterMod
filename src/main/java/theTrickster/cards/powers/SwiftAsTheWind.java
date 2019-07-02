@@ -6,18 +6,18 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
 import theTrickster.powers.SwiftAsTheWindPower;
 
-import static theTrickster.DefaultMod.makeCardPath;
+import static theTrickster.TricksterMod.makeCardPath;
 
 public class SwiftAsTheWind extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(SwiftAsTheWind.class.getSimpleName());
+    public static final String ID = TricksterMod.makeID(SwiftAsTheWind.class.getSimpleName());
     public static final String IMG = makeCardPath("Power.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

@@ -6,18 +6,18 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.actions.EnhancingDrugAction;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
 
-import static theTrickster.DefaultMod.makeCardPath;
+import static theTrickster.TricksterMod.makeCardPath;
 
 public class EnhancingDrug extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(EnhancingDrug.class.getSimpleName());
+    public static final String ID = TricksterMod.makeID(EnhancingDrug.class.getSimpleName());
     public static final String IMG = makeCardPath("Power.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);

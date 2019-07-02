@@ -21,22 +21,22 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.cards.attacks.*;
 import theTrickster.cards.skills.*;
 import theTrickster.relics.OpticalIllusionRelic;
 
 import java.util.ArrayList;
 
-import static theTrickster.DefaultMod.*;
+import static theTrickster.TricksterMod.*;
 import static theTrickster.characters.TheTrickster.Enums.COLOR_BROWN;
 
 //Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
 //and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
-//All text (starting description and loadout, anything labeled TEXT[]) can be found in DefaultMod-character-Strings.json in the resources
+//All text (starting description and loadout, anything labeled TEXT[]) can be found in TricksterMod-character-Strings.json in the resources
 
 public class TheTrickster extends CustomPlayer {
-    public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
+    public static final Logger logger = LogManager.getLogger(TricksterMod.class.getName());
 
     // =============== CHARACTER ENUMERATORS =================
     // These are enums for your Characters color (both general color and for the card library) as well as
@@ -108,7 +108,7 @@ public class TheTrickster extends CustomPlayer {
         // =============== TEXTURES, ENERGY, LOADOUT =================
 
         initializeClass(null, // required call to load textures and setup energy/loadout.
-                // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
+                // I left these in TricksterMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
                 THE_DEFAULT_SHOULDER_1, // campfire pose
                 THE_DEFAULT_SHOULDER_2, // another campfire pose
                 THE_DEFAULT_CORPSE, // dead corpse
@@ -219,7 +219,7 @@ public class TheTrickster extends CustomPlayer {
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return theTrickster.DefaultMod.DEFAULT_BROWN;
+        return TricksterMod.DEFAULT_BROWN;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -257,14 +257,14 @@ public class TheTrickster extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return theTrickster.DefaultMod.DEFAULT_BROWN;
+        return TricksterMod.DEFAULT_BROWN;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return theTrickster.DefaultMod.DEFAULT_BROWN;
+        return TricksterMod.DEFAULT_BROWN;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects

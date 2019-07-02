@@ -6,11 +6,11 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import theTrickster.DefaultMod;
+import theTrickster.TricksterMod;
 import theTrickster.util.TextureLoader;
 
-import static theTrickster.DefaultMod.makeRelicOutlinePath;
-import static theTrickster.DefaultMod.makeRelicPath;
+import static theTrickster.TricksterMod.makeRelicOutlinePath;
+import static theTrickster.TricksterMod.makeRelicPath;
 
 public class OcarinaRelic extends CustomRelic {
 
@@ -20,7 +20,7 @@ public class OcarinaRelic extends CustomRelic {
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID("OcarinaRelic");
+    public static final String ID = TricksterMod.makeID("OcarinaRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
