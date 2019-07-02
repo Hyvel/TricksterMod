@@ -18,19 +18,19 @@ public class PresciencePotion extends AbstractPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public PresciencePotion() {
-        // The bottle shape and inside is determined by potion size and color. The actual colors are the main DefaultMod.java
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.M, PotionColor.SMOKE);
 
-        // Potency is the damage/magic number equivalent of potions.
         potency = getPotency();
 
-        // Initialize the Description
-        description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
+        if(potency == 1) {
+            description = DESCRIPTIONS[0];
+        }
+        else {
+            description = DESCRIPTIONS[1] + potency + DESCRIPTIONS[2];
+        }
 
-        // Do you throw this potion at an enemy or do you just consume it.
         isThrown = false;
 
-        // Initialize the on-hover name + description
         tips.add(new PowerTip(name, description));
 
     }
@@ -45,16 +45,8 @@ public class PresciencePotion extends AbstractPotion {
         return new PresciencePotion();
     }
 
-    // This is your potency.
     @Override
     public int getPotency(final int potency) {
         return 1;
     }
-
-//    public void upgradePotion()
-//    {
-//        potency += 1;
-//        tips.clear();
-//        tips.add(new PowerTip(name, description));
-//    }
 }

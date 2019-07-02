@@ -1,6 +1,10 @@
 {
   "theTrickster:PresciencePotion": {
     "NAME": "Prescience Potion",
-    "DESCRIPTIONS": ["Put a card from your draw pile into your hand."]
+    "DESCRIPTIONS": [
+      "Put a card from your draw pile into your hand.",
+      "Put #b",
+      " cards from your draw pile into your hand."
+    ]
   }
 }
