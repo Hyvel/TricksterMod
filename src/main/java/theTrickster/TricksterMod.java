@@ -97,9 +97,9 @@ public class TricksterMod implements
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod. //TODO
     public static final String BADGE_IMAGE = "theTricksterResources/images/Badge.png";
     
-    // Atlas and JSON files for the Animations //TODO
-    public static final String THE_DEFAULT_SKELETON_ATLAS = "theTricksterResources/images/char/defaultCharacter/skeleton.atlas";
-    public static final String THE_DEFAULT_SKELETON_JSON = "theTricksterResources/images/char/defaultCharacter/skeleton.json";
+//    // Atlas and JSON files for the Animations //TODO
+//    public static final String THE_DEFAULT_SKELETON_ATLAS = "theTricksterResources/images/char/defaultCharacter/skeleton.atlas";
+//    public static final String THE_DEFAULT_SKELETON_JSON = "theTricksterResources/images/char/defaultCharacter/skeleton.json";
     
     // =============== MAKE IMAGE PATHS =================
     

@@ -102,7 +102,7 @@ public class TheTrickster extends CustomPlayer {
         super(name, setClass, orbTextures,
                 "theTricksterResources/images/char/defaultCharacter/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "theTricksterResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                        "theTricksterResources/images/char/defaultCharacter/Spriter/theTrickster.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================
@@ -119,12 +119,12 @@ public class TheTrickster extends CustomPlayer {
 
         // =============== ANIMATIONS =================
 
-        loadAnimation(
-                THE_DEFAULT_SKELETON_ATLAS,
-                THE_DEFAULT_SKELETON_JSON,
-                1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-        e.setTime(e.getEndTime() * MathUtils.random());
+//        loadAnimation(
+//                THE_DEFAULT_SKELETON_ATLAS,
+//                THE_DEFAULT_SKELETON_JSON,
+//                1.0f);
+//        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
+//        e.setTime(e.getEndTime() * MathUtils.random());
 
         // =============== /ANIMATIONS/ =================
 
