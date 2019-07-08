@@ -16,8 +16,7 @@ public class SwiftSlash extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(SwiftSlash.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("SwiftSlash.png");
-    // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
+    public static final String IMG = makeCardPath("attacks/SwiftSlash.png");
 
 
     // /TEXT DECLARATION/

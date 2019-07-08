@@ -18,9 +18,7 @@ public class Strike_Brown extends AbstractDynamicCard {
         // TEXT DECLARATION
 
         public static final String ID = TricksterMod.makeID(Strike_Brown.class.getSimpleName());
-        public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("Strike_Brown.png");
-        // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
-
+        public static final String IMG = makeCardPath("attacks/Strike_Brown.png");
 
         // /TEXT DECLARATION/
 
