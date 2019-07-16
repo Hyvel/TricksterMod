@@ -20,9 +20,7 @@ public class SmokeOfConfusion extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(SmokeOfConfusion.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("SmokeOfConfusion.png");
-    // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
-
+    public static final String IMG = makeCardPath("skills/SmokeOfConfusion.png");
 
     // /TEXT DECLARATION/
 
