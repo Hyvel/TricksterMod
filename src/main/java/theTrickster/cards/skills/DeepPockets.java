@@ -16,9 +16,7 @@ public class DeepPockets extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(DeepPockets.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("DeepPockets.png");
-    // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
-
+    public static final String IMG = makeCardPath("skills/DeepPockets.png");
 
     // /TEXT DECLARATION/
 
