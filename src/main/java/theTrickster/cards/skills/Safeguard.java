@@ -17,9 +17,7 @@ public class Safeguard extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(Safeguard.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("Safeguard.png");
-    // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
-
+    public static final String IMG = makeCardPath("skills/Safeguard.png");
 
     // /TEXT DECLARATION/
 
