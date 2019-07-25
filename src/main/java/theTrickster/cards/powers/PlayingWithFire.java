@@ -16,7 +16,7 @@ public class PlayingWithFire extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(PlayingWithFire.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("powers/PlayingWithFire.png");
     // /TEXT DECLARATION/
 
 

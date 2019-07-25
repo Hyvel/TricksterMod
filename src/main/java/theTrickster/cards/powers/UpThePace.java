@@ -16,7 +16,7 @@ public class UpThePace extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(UpThePace.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("powers/UpThePace.png");
 
     // /TEXT DECLARATION/
 

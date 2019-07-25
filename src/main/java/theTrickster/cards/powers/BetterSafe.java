@@ -18,7 +18,7 @@ public class BetterSafe extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(BetterSafe.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("powers/BetterSafe.png");
 
     // /TEXT DECLARATION/
 

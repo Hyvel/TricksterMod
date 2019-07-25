@@ -16,7 +16,7 @@ public class FirstAidKit extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(FirstAidKit.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("powers/FirstAidKit.png");
     // /TEXT DECLARATION/
 
 
