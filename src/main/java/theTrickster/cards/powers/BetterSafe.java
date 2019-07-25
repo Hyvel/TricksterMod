@@ -13,11 +13,11 @@ import theTrickster.characters.TheTrickster;
 
 import static theTrickster.TricksterMod.makeCardPath;
 
-public class HeightenedObservation extends AbstractDynamicCard {
+public class BetterSafe extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TricksterMod.makeID(HeightenedObservation.class.getSimpleName());
+    public static final String ID = TricksterMod.makeID(BetterSafe.class.getSimpleName());
     public static final String IMG = makeCardPath("Power.png");
 
     // /TEXT DECLARATION/
@@ -38,7 +38,7 @@ public class HeightenedObservation extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
 
-    public HeightenedObservation() {
+    public BetterSafe() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = DEX_GAIN;
     }

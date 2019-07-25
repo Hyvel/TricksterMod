@@ -39,7 +39,7 @@
     "NAME": "Safeguard",
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Artifact. NL Exhaust."
   },
-  "theTrickster:HeightenedObservation": {
+  "theTrickster:BetterSafe": {
     "NAME": "Better Safe",
     "DESCRIPTION": "Gain !M! Dexterity. NL Lose 1 Strength. NL Put a copy of this card in your discard pile."
   },
@@ -85,7 +85,7 @@
     "NAME": "Hand Grenade",
     "DESCRIPTION": "Deal !D! damage to all enemies. NL Draw !M! cards."
   },
-  "theTrickster:HeightenedAggression": {
+  "theTrickster:KillThemAll": {
     "NAME": "Kill 'Em all",
     "DESCRIPTION": "Gain !M! Strength. NL Lose 1 Dexterity. NL Put a copy of this card in your discard pile."
   },
@@ -152,8 +152,8 @@
     "NAME": "Hidden Pistol",
     "DESCRIPTION": "Deal !D! damage. NL Gain 1 Artifact."
   },
-  "theTrickster:SkinInTheGame": {
-    "NAME": "Skin In The Game",
+  "theTrickster:PlayingWithFire": {
+    "NAME": "Playing With Fire",
     "DESCRIPTION": "At the start of your turn, gain 1 Artifact and lose 1 HP."
   },
   "theTrickster:UpThePace": {

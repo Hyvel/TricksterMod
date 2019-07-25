@@ -3,8 +3,8 @@
                 "NAME": "Tried Techniques",
                 "DESCRIPTIONS": ["At the start of your turn, return ", " random cards from your discard pile to your hand."]
         },
-        "theTrickster:SkinInTheGamePower": {
-                "NAME": "Skin In The Game",
+        "theTrickster:PlayingWithFirePower": {
+                "NAME": "Playing With Fire",
                 "DESCRIPTIONS": ["At the start of your turn, lose #b", " HP and gain ", " Artifact"]
         },
         "theTrickster:UpThePacePower": {

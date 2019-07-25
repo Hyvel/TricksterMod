@@ -360,7 +360,7 @@ public class TricksterMod implements
         BaseMod.addCard(new Safeguard());
         BaseMod.addCard(new Gunblade());
 
-        BaseMod.addCard(new HeightenedObservation());
+        BaseMod.addCard(new BetterSafe());
         BaseMod.addCard(new EnhancingDrug());
         BaseMod.addCard(new TriedTechniques());
         BaseMod.addCard(new RampingUpStrike());
@@ -377,7 +377,7 @@ public class TricksterMod implements
         BaseMod.addCard(new Distract());
         BaseMod.addCard(new TacticalDefend());
         BaseMod.addCard(new RampingUpDefend());
-        BaseMod.addCard(new HeightenedAggression());
+        BaseMod.addCard(new KillThemAll());
         BaseMod.addCard(new TrickyStrike());
         BaseMod.addCard(new TrickyDefend());
         BaseMod.addCard(new Repetition());
@@ -389,7 +389,7 @@ public class TricksterMod implements
         BaseMod.addCard(new CautiousManeuver());
         BaseMod.addCard(new Decoy());
         BaseMod.addCard(new SmokeAndMirrors());
-        BaseMod.addCard(new SkinInTheGame());
+        BaseMod.addCard(new PlayingWithFire());
         BaseMod.addCard(new UpThePace());
         BaseMod.addCard(new HiddenPistol());
 

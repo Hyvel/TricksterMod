@@ -13,11 +13,11 @@ import theTrickster.characters.TheTrickster;
 
 import static theTrickster.TricksterMod.makeCardPath;
 
-public class HeightenedAggression extends AbstractDynamicCard {
+public class KillThemAll extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TricksterMod.makeID(HeightenedAggression.class.getSimpleName());
+    public static final String ID = TricksterMod.makeID(KillThemAll.class.getSimpleName());
     public static final String IMG = makeCardPath("Power.png");
 
     // /TEXT DECLARATION/
@@ -38,7 +38,7 @@ public class HeightenedAggression extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
 
-    public HeightenedAggression() {
+    public KillThemAll() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = STR_GAIN;
     }

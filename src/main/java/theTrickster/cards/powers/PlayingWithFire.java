@@ -7,15 +7,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theTrickster.TricksterMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
-import theTrickster.powers.SkinInTheGamePower;
+import theTrickster.powers.PlayingWithFirePower;
 
 import static theTrickster.TricksterMod.makeCardPath;
 
-public class SkinInTheGame extends AbstractDynamicCard {
+public class PlayingWithFire extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = TricksterMod.makeID(SkinInTheGame.class.getSimpleName());
+    public static final String ID = TricksterMod.makeID(PlayingWithFire.class.getSimpleName());
     public static final String IMG = makeCardPath("Power.png");
     // /TEXT DECLARATION/
 
@@ -35,7 +35,7 @@ public class SkinInTheGame extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
 
-    public SkinInTheGame() {
+    public PlayingWithFire() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
     }
 
@@ -43,7 +43,7 @@ public class SkinInTheGame extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new SkinInTheGamePower(p, ARTIFACT_AND_HP_LOSS), ARTIFACT_AND_HP_LOSS));
+                new ApplyPowerAction(p, p, new PlayingWithFirePower(p, ARTIFACT_AND_HP_LOSS), ARTIFACT_AND_HP_LOSS));
     }
 
 

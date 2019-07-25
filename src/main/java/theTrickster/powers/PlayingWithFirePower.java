@@ -15,16 +15,16 @@ import theTrickster.util.TextureLoader;
 
 import static theTrickster.TricksterMod.makePowerPath;
 
-public class SkinInTheGamePower extends AbstractPower {
-    public static final String POWER_ID = TricksterMod.makeID("SkinInTheGamePower");
+public class PlayingWithFirePower extends AbstractPower {
+    public static final String POWER_ID = TricksterMod.makeID("PlayingWithFirePower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("skinInTheGame84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("skinInTheGame32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("playingWithFire84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("playingWithFire32.png"));
 
-    public SkinInTheGamePower(AbstractCreature owner, int amount) {
+    public PlayingWithFirePower(AbstractCreature owner, int amount) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
@@ -48,4 +48,3 @@ public class SkinInTheGamePower extends AbstractPower {
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(owner, owner, amount));
     }
 }
-
