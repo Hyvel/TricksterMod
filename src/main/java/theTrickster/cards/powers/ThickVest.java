@@ -16,7 +16,7 @@ public class ThickVest extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(ThickVest.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("powers/ThickVest.png");
     // /TEXT DECLARATION/
 
 

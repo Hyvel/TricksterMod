@@ -16,7 +16,7 @@ public class ForbiddenMedicine extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(ForbiddenMedicine.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("powers/ForbiddenMedicine.png");
     // /TEXT DECLARATION/
 
 

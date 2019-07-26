@@ -19,7 +19,7 @@ public class KeepCool extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(KeepCool.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("powers/KeepCool.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;

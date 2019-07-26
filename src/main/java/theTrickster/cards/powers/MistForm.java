@@ -17,7 +17,7 @@ public class MistForm extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = TricksterMod.makeID(MistForm.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String IMG = makeCardPath("powers/MistForm.png");
     // /TEXT DECLARATION/
 
 
