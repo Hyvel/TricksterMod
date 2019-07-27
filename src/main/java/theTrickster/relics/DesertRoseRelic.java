@@ -60,12 +60,8 @@ public class DesertRoseRelic extends CustomRelic {
         }
         this.flash();
         --this.counter;
-        if (this.counter == 0) {
-            this.setCounter(0);
-        } else {
-            c.upgrade();
-            this.setCounter(this.counter);
-        }
+        c.upgrade();
+        this.setCounter(this.counter);
     }
 
     @Override
