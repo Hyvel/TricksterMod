@@ -88,7 +88,7 @@ public class TricksterMod implements
     private static final String ENERGY_ORB_TRICKSTER_BROWN_PORTRAIT = "theTricksterResources/images/1024/card_trickster_brown_orb.png";
     
     // Character assets //TODO
-    private static final String THE_DEFAULT_BUTTON = "theTricksterResources/images/charSelect/DefaultCharacterButton.png";
+    private static final String THE_DEFAULT_BUTTON = "theTricksterResources/images/charSelect/TricksterButton.png";
     private static final String THE_DEFAULT_PORTRAIT = "theTricksterResources/images/charSelect/DefaultCharacterPortraitBG.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theTricksterResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theTricksterResources/images/char/defaultCharacter/shoulder2.png";
