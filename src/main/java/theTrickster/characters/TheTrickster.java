@@ -82,17 +82,18 @@ public class TheTrickster extends CustomPlayer {
     // =============== TEXTURES OF BIG ENERGY ORB ===============
 
     public static final String[] orbTextures = {
-            "theTricksterResources/images/char/defaultCharacter/orb/layer1.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer2.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer3.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer4.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer5.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer6.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer1d.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer2d.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer3d.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer4d.png",
-            "theTricksterResources/images/char/defaultCharacter/orb/layer5d.png",};
+            "theTricksterResources/images/char/tricksterCharacter/orb/1.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/2.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/3.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/4.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/5.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/border.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/1d.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/2d.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/3d.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/4d.png",
+            "theTricksterResources/images/char/tricksterCharacter/orb/5d.png",};
+
 
     // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
 
