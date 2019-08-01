@@ -66,7 +66,7 @@ public class ImpulsiveStrike extends AbstractDynamicCard {
 
         super.applyPowers();
 
-        isDamageModified = baseDamage != DAMAGE;
+        isDamageModified = damage != DAMAGE;
         initializeDescription();
     }
 
