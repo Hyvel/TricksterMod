@@ -4,7 +4,9 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theTrickster.TricksterMod;
 import theTrickster.cards.AbstractDynamicCard;
@@ -18,6 +20,10 @@ public class Frenzy extends AbstractDynamicCard {
 
     public static final String ID = TricksterMod.makeID(Frenzy.class.getSimpleName());
     public static final String IMG = makeCardPath("attacks/Frenzy.png");
+
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
 
     // /TEXT DECLARATION/
@@ -60,16 +66,24 @@ public class Frenzy extends AbstractDynamicCard {
     }
 
 
-    //TODO: indicate when player has less than 50% HP.
-//    public void applyPowers() {
-//        if (AbstractDungeon.player.isBloodied) {
-//
-//            initializeDescription();
-//        }
-//        else {
-//            super.applyPowers();
-//        }
-//    }
+    public void applyPowers() {
+        if (AbstractDungeon.player.isBloodied) {
+            this.rawDescription = EXTENDED_DESCRIPTION[0];
+            this.initializeDescription();
+        }
+        else {
+            this.rawDescription = DESCRIPTION;
+            this.initializeDescription();
+        }
+
+        super.applyPowers();
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        this.rawDescription = DESCRIPTION;
+        this.initializeDescription();
+    }
 
     @Override
     public void upgrade() {

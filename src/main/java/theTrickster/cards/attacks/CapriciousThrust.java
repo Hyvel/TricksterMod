@@ -5,7 +5,9 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theTrickster.TricksterMod;
 import theTrickster.cards.AbstractDynamicCard;
@@ -22,6 +24,9 @@ public class CapriciousThrust extends AbstractDynamicCard {
     public static final String ID = TricksterMod.makeID(CapriciousThrust.class.getSimpleName());
     public static final String IMG = makeCardPath("attacks/CapriciousThrust.png");
 
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String[] EXTENDED_DESCRIPTION = cardStrings.EXTENDED_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -60,12 +65,41 @@ public class CapriciousThrust extends AbstractDynamicCard {
             if (c.type == CardType.STATUS) {
                 AbstractDungeon.actionManager.addToBottom(
                         new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-                return;
+                break;
             }
         }
 
     }
 
+    public void applyPowers() {
+
+        boolean hasStatusInHand = false;
+        Iterator var4 = AbstractDungeon.player.hand.group.iterator();
+        while(var4.hasNext()) {
+            AbstractCard c = (AbstractCard)var4.next();
+            if (c.type == CardType.STATUS) {
+                hasStatusInHand = true;
+                break;
+            }
+        }
+
+        if (hasStatusInHand) {
+            this.rawDescription = EXTENDED_DESCRIPTION[0] + DESCRIPTION;
+            this.initializeDescription();
+        }
+        else {
+            this.rawDescription = DESCRIPTION;
+            this.initializeDescription();
+        }
+
+        super.applyPowers();
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        this.rawDescription = DESCRIPTION;
+        this.initializeDescription();
+    }
 
     @Override
     public void upgrade() {

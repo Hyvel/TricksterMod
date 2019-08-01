@@ -220,7 +220,10 @@
   },
   "theTrickster:Frenzy": {
     "NAME": "Frenzy",
-    "DESCRIPTION": "Deal !D! damage. NL If your HP is at or below 50%, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL If your HP is at or below 50%, deal the damage 2 times instead of once.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage 2 times. NL If your HP is at or below 50%, deal the damage 2 times instead of once."
+    ]
   },
   "theTrickster:StudiedSnipe": {
     "NAME": "Studied Snipe",
@@ -260,7 +263,10 @@
   },
   "theTrickster:CapriciousThrust": {
     "NAME": "Capricious Thrust",
-    "DESCRIPTION": "Deal !D! damage. If you have a Status in your hand, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL If you have a Status in your hand, deal the damage 2 times instead of once.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage 2 times. NL If you have a Status in your hand, deal the damage 2 times instead of once."
+      ]
   },
   "theTrickster:DivingSlice": {
     "NAME": "Diving Slice",
