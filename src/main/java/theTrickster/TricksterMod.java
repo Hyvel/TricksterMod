@@ -89,7 +89,7 @@ public class TricksterMod implements
     
     // Character assets //TODO
     private static final String THE_DEFAULT_BUTTON = "theTricksterResources/images/charSelect/TricksterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "theTricksterResources/images/charSelect/DefaultCharacterPortraitBG.png";
+    private static final String THE_DEFAULT_PORTRAIT = "theTricksterResources/images/charSelect/TricksterPortrait.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theTricksterResources/images/char/defaultCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theTricksterResources/images/char/defaultCharacter/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "theTricksterResources/images/char/defaultCharacter/corpse.png";
