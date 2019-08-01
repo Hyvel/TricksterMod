@@ -71,7 +71,6 @@ public class Frenzy extends AbstractDynamicCard {
 //        }
 //    }
 
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

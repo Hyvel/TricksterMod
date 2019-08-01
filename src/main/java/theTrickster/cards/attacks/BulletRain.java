@@ -44,8 +44,6 @@ public class BulletRain extends AbstractDynamicCard {
         this.isMultiDamage = true;
     }
 
-
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
@@ -56,8 +54,6 @@ public class BulletRain extends AbstractDynamicCard {
                 new DamageAllEnemiesAction(p, multiDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {

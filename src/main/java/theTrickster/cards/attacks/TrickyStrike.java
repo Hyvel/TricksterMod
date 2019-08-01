@@ -88,9 +88,6 @@ public class TrickyStrike extends AbstractDynamicCard {
     }
 
     public void applyPowers() {
-        // TODO: Check BodySlam code
-        // Hack: We hijack baseDamage in order to display the correct description.
-        // (The problem is we can't use the perfected strike approach and do this directly in abstractCard methods)
         baseDamage = DAMAGE + (magicNumber * countDefendCards());
 
         super.applyPowers();
@@ -100,8 +97,6 @@ public class TrickyStrike extends AbstractDynamicCard {
     }
 
     public void calculateCardDamage(AbstractMonster m) {
-        // Hack: We hijack baseDamage in order to display the correct description.
-        // (The problem is we can't use the perfected strike approach and do this directly in abstractCard methods)
         baseDamage = DAMAGE + (magicNumber * countDefendCards());
 
         super.calculateCardDamage(m);
@@ -110,15 +105,12 @@ public class TrickyStrike extends AbstractDynamicCard {
         this.initializeDescription();
     }
 
-    // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }
 
-
-    // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
