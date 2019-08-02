@@ -296,8 +296,8 @@
   },
   "theTrickster:SuperiorTactics": {
     "NAME": "Superior Tactics",
-    "DESCRIPTION": "At the end of this turn, Retain 2 cards in your hand.",
-    "UPGRADE_DESCRIPTION": "At the end of this turn and the next, Retain 2 cards in your hand."
+    "DESCRIPTION": "At the start of your next turn, draw 2 cards. NL Can be upgraded any number of times.",
+    "UPGRADE_DESCRIPTION": "At the start of your next !M! turns, draw 2 cards. NL Can be upgraded any number of times."
   },
   "theTrickster:BlurTheLines": {
     "NAME": "Blur The Lines",

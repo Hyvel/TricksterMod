@@ -56,7 +56,7 @@
         },
         "theTrickster:SuperiorTacticsPower": {
                 "NAME": "Superior Tactics",
-                "DESCRIPTIONS": ["At the end of this turn, retain 2 cards in your hand.",
-                        "At the end of the next #b", " turns, retain 2 cards in your hand."]
+                "DESCRIPTIONS": ["At the start of your next turn, draw 2 cards.",
+                        "At the start of your next #b", " turns, draw 2 cards."]
         }
 }

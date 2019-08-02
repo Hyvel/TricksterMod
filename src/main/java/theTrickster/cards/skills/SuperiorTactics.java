@@ -21,10 +21,10 @@ public class SuperiorTactics extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("skills/SuperiorTactics.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
     public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
-
 
     // STAT DECLARATION
 
@@ -46,21 +46,24 @@ public class SuperiorTactics extends AbstractDynamicCard {
         magicNumber = baseMagicNumber = TURNS_ACTIVE;
     }
 
-
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new SuperiorTacticsPower(p, magicNumber), magicNumber));
     }
 
+    public boolean canUpgrade() {
+        return true;
+    }
 
     @Override
     public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_TURNS_ACTIVE);
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-        }
+        upgradeMagicNumber(UPGRADE_PLUS_TURNS_ACTIVE);
+        this.upgraded = true;
+        ++this.timesUpgraded;
+        this.name = NAME + "+" + this.timesUpgraded;
+        this.rawDescription = UPGRADE_DESCRIPTION;
+        this.initializeTitle();
+        initializeDescription();
     }
 }

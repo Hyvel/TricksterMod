@@ -2,9 +2,9 @@ package theTrickster.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.unique.RetainCardsAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -24,7 +24,7 @@ public class SuperiorTacticsPower extends AbstractPower {
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("superiorTactics84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("superiorTactics32.png"));
 
-    private static final int CARDS_TO_RETAIN = 2;
+    private static final int DRAW = 2;
 
     public SuperiorTacticsPower(AbstractCreature owner, int cardsAmount) {
         name = NAME;
@@ -40,23 +40,18 @@ public class SuperiorTacticsPower extends AbstractPower {
         updateDescription();
     }
 
-    public void atEndOfRound() {
+    public void atStartOfTurnPostDraw() {
+        this.flash();
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, DRAW));
+
+        //Reduce amount.
         if (this.amount == 0) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner,POWER_ID ));
         } else {
             AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
         }
-
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer && !AbstractDungeon.player.hand.isEmpty() &&
-                !AbstractDungeon.player.hasRelic("Runic Pyramid") &&
-                !AbstractDungeon.player.hasPower("Equilibrium")) {
-            AbstractDungeon.actionManager.addToBottom(new RetainCardsAction(this.owner, CARDS_TO_RETAIN));
-        }
-
-    }
 
     public void updateDescription() {
         if (this.amount == 1) {
