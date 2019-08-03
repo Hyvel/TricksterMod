@@ -3,6 +3,7 @@ package theTrickster.cards.attacks;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,6 +13,7 @@ import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
 import theTrickster.util.TheTricksterTags;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import static theTrickster.TricksterMod.makeCardPath;
@@ -52,31 +54,20 @@ public class TrickyStrike extends AbstractDynamicCard {
 
     private static int countDefendCards() {
         int count = 0;
-        Iterator var1 = AbstractDungeon.player.hand.group.iterator();
-
         AbstractCard c;
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (isDefend(c)) {
-                ++count;
-            }
-        }
+        ArrayList<CardGroup> piles = new ArrayList<CardGroup>();
+        piles.add(AbstractDungeon.player.hand);
+        piles.add(AbstractDungeon.player.drawPile);
+        piles.add(AbstractDungeon.player.discardPile);
+        piles.add(AbstractDungeon.player.exhaustPile);
 
-        var1 = AbstractDungeon.player.drawPile.group.iterator();
-
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (isDefend(c)) {
-                ++count;
-            }
-        }
-
-        var1 = AbstractDungeon.player.discardPile.group.iterator();
-
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (isDefend(c)) {
-                ++count;
+        for (CardGroup pile : piles) {
+            Iterator iterator = pile.group.iterator();
+            while(iterator.hasNext()) {
+                c = (AbstractCard)iterator.next();
+                if (isDefend(c)) {
+                    ++count;
+                }
             }
         }
 

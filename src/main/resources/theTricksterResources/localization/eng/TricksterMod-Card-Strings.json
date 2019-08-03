@@ -108,11 +108,11 @@
   },
   "theTrickster:TrickyStrike": {
     "NAME": "Tricky Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Defend\"."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Defend\", even the exhausted ones."
   },
   "theTrickster:TrickyDefend": {
     "NAME": "Tricky Defend",
-    "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for ALL your cards containing \"Strike\"."
+    "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for ALL your cards containing \"Strike\", even the exhausted ones."
   },
   "theTrickster:HotSteel": {
     "NAME": "Hot Steel",

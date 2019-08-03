@@ -2,6 +2,7 @@ package theTrickster.cards.skills;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,6 +10,7 @@ import theTrickster.TricksterMod;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import static theTrickster.TricksterMod.makeCardPath;
@@ -49,31 +51,20 @@ public class TrickyDefend extends AbstractDynamicCard {
 
     private static int countStrikeCards() {
         int count = 0;
-        Iterator var1 = AbstractDungeon.player.hand.group.iterator();
-
         AbstractCard c;
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (isStrike(c)) {
-                ++count;
-            }
-        }
+        ArrayList<CardGroup> piles = new ArrayList<CardGroup>();
+        piles.add(AbstractDungeon.player.hand);
+        piles.add(AbstractDungeon.player.drawPile);
+        piles.add(AbstractDungeon.player.discardPile);
+        piles.add(AbstractDungeon.player.exhaustPile);
 
-        var1 = AbstractDungeon.player.drawPile.group.iterator();
-
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (isStrike(c)) {
-                ++count;
-            }
-        }
-
-        var1 = AbstractDungeon.player.discardPile.group.iterator();
-
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
-            if (isStrike(c)) {
-                ++count;
+        for (CardGroup pile : piles) {
+            Iterator iterator = pile.group.iterator();
+            while(iterator.hasNext()) {
+                c = (AbstractCard)iterator.next();
+                if (isStrike(c)) {
+                    ++count;
+                }
             }
         }
 
