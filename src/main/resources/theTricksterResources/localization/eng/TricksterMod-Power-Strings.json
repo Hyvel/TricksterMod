@@ -17,7 +17,7 @@
         },
         "theTrickster:MentalStrengthPower": {
                 "NAME": "Mental Strength",
-                "DESCRIPTIONS": ["Every time you gain Artifact, Gain #b", " Block."]
+                "DESCRIPTIONS": ["Every time you get a Debuff, Gain #b", " Block."]
         },
         "theTrickster:FirstAidKitPower": {
                 "NAME": "First Aid Kit",

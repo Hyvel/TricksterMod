@@ -483,10 +483,11 @@ public class TricksterMod implements
         }
     }
 
-    //Strange Doll relic
+    //Strange Doll relic and Mental Strength power
     @Override
     public void receivePostPowerApplySubscriber(AbstractPower var1, AbstractCreature var2, AbstractCreature var3) {
-        if (!AbstractDungeon.player.hasRelic("theTrickster:StrangeDollRelic")) {
+        boolean hasStrangeDollRelic = AbstractDungeon.player.hasRelic("theTrickster:StrangeDollRelic");
+        if (!hasStrangeDollRelic) {
             return;
         }
         if(var1.type == AbstractPower.PowerType.DEBUFF && var2 instanceof AbstractPlayer) {

@@ -13,6 +13,7 @@ public class StrangeDollRelic extends CustomRelic {
     /*
      * Common relic.
      * When you get debuffed, deal 3 damage to a random enemy
+     * Effect is done in the receivePostPowerApplySubscriber method in TricksterMod.java
      */
 
     // ID, images, text.

@@ -195,7 +195,7 @@
   },
   "theTrickster:MentalStrength": {
     "NAME": "Mental Strength",
-    "DESCRIPTION": "Every time you gain Artifact also gain !M! Block."
+    "DESCRIPTION": "Every time you gain a Debuff, gain !M! Block."
   },
   "theTrickster:Firecrackers": {
     "NAME": "Firecrackers",

@@ -30,7 +30,6 @@ public class MentalStrengthPower extends AbstractPower {
         type = PowerType.BUFF;
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-        //priority = 25;
 
         updateDescription();
     }
@@ -40,7 +39,7 @@ public class MentalStrengthPower extends AbstractPower {
     }
 
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.ID.equals("Artifact") && source == this.owner && target == this.owner) {
+        if (power.type == AbstractPower.PowerType.DEBUFF && target == this.owner) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new GainBlockAction(this.owner, this.owner, this.amount));
         }
