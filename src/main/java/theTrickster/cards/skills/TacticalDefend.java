@@ -32,7 +32,7 @@ public class TacticalDefend extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int BLOCK = 12;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
+    private static final int UPGRADE_PLUS_BLOCK = 4;
 
     private static final int STR = -1;
 
