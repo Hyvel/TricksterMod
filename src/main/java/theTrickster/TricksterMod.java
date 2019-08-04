@@ -87,14 +87,13 @@ public class TricksterMod implements
     private static final String POWER_TRICKSTER_BROWN_PORTRAIT = "theTricksterResources/images/1024/bg_power_trickster_brown.png";
     private static final String ENERGY_ORB_TRICKSTER_BROWN_PORTRAIT = "theTricksterResources/images/1024/card_trickster_brown_orb.png";
     
-    // Character assets //TODO
     private static final String THE_DEFAULT_BUTTON = "theTricksterResources/images/charSelect/TricksterButton.png";
     private static final String THE_DEFAULT_PORTRAIT = "theTricksterResources/images/charSelect/TricksterPortrait.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theTricksterResources/images/char/tricksterCharacter/shoulder.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theTricksterResources/images/char/tricksterCharacter/shoulder2.png";
     public static final String THE_DEFAULT_CORPSE = "theTricksterResources/images/char/tricksterCharacter/corpse.png";
     
-    //Mod Badge - A small icon that appears in the mod settings menu next to your mod. //TODO
+    //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "theTricksterResources/images/Badge.png";
 
 
