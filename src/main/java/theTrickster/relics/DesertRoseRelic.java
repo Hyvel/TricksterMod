@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import theTrickster.TricksterMod;
 import theTrickster.util.TextureLoader;
@@ -41,8 +42,7 @@ public class DesertRoseRelic extends CustomRelic {
     public void setCounter(int counter) {
         this.counter = counter;
         if (counter == 0) {
-            // todo: add used up image
-            //this.img = ImageMaster.loadImage("images/relics/usedOmamori.png");
+            this.img = ImageMaster.loadImage(makeRelicPath("used_desert_rose.png"));
             this.usedUp();
         } else if (counter == 1) {
             this.description = DESCRIPTIONS[2];
