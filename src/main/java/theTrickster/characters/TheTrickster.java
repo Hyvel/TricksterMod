@@ -150,14 +150,7 @@ public class TheTrickster extends CustomPlayer {
     // Starting Relics
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-
-//        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-/*        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);*/
-
         retVal.add(OpticalIllusionRelic.ID);
-        UnlockTracker.markRelicAsSeen(OpticalIllusionRelic.ID);
-
         return retVal;
     }
 

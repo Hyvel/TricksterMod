@@ -2,6 +2,8 @@ package theTrickster;
 
 import basemod.BaseMod;
 import basemod.ModPanel;
+import basemod.abstracts.CustomCard;
+import basemod.abstracts.CustomRelic;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -21,6 +23,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theTrickster.cards.attacks.*;
@@ -38,6 +41,8 @@ import theTrickster.variables.DefaultSecondMagicNumber;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 @SpireInitializer
@@ -308,22 +313,33 @@ public class TricksterMod implements
     public void receiveEditRelics() {
         logger.info("Adding relics");
         
-        // Character specific relic.
-        BaseMod.addRelicToCustomPool(new OpticalIllusionRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new StrangeDollRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new BinocularsRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new OcarinaRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new BoneWhistleRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new SnailBroochRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new DesertRoseRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new MeteoriteRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new IllusoryBannerRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new AncientPicklesRelic(), TheTrickster.Enums.COLOR_BROWN);
-        BaseMod.addRelicToCustomPool(new RunicTorusRelic(), TheTrickster.Enums.COLOR_BROWN);
+        ArrayList<Class> relicClasses = new ArrayList<>(Arrays.asList(
+            OpticalIllusionRelic.class,
+            StrangeDollRelic.class,
+            BinocularsRelic.class,
+            OcarinaRelic.class,
+            BoneWhistleRelic.class,
+            SnailBroochRelic.class,
+            DesertRoseRelic.class,
+            MeteoriteRelic.class,
+            IllusoryBannerRelic.class,
+            AncientPicklesRelic.class,
+            RunicTorusRelic.class
+        ));
 
-        
-        // Mark relics as seen (the others are all starters so they're marked as seen in the character file
-//        UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
+        try {
+            for(Class relicClass : relicClasses) {
+                CustomRelic relic = (CustomRelic) relicClass.newInstance();
+                // Add Character specific relic.
+                BaseMod.addRelicToCustomPool(relic, TheTrickster.Enums.COLOR_BROWN);
+                UnlockTracker.markRelicAsSeen(relic.relicId);
+            }
+        }
+        catch (IllegalAccessException | InstantiationException e) {
+            logger.error("Cannot add a relic: ", e);
+        }
+
+
         logger.info("Done adding relics!");
     }
     
@@ -345,107 +361,97 @@ public class TricksterMod implements
         
         logger.info("Adding cards");
 
-        BaseMod.addCard(new Strike_Brown());
-        BaseMod.addCard(new Defend_Brown());
-        BaseMod.addCard(new DaringSlash());
-        BaseMod.addCard(new BackStep());
-        BaseMod.addCard(new SwiftSlash());
-        BaseMod.addCard(new IntrepidRush());
-        BaseMod.addCard(new Gunblade());
-        BaseMod.addCard(new Reposition());
-        BaseMod.addCard(new Safeguard());
-        BaseMod.addCard(new Gunblade());
+        ArrayList<Class> cardClasses = new ArrayList<>(Arrays.asList(
+            EyeForEye.class,
+            Impale.class,
+            CapriciousThrust.class,
+            KeepCool.class,
+            BlurTheLines.class,
+            SuperiorTactics.class,
+            DejaVu.class,
+            BattlePlan.class,
+            BulletRain.class,
+            Audacity.class,
+            Volley.class,
+            OminousSmile.class,
+            LightTrick.class,
+            DivingSlice.class,
+            SharpBlade.class,
+            ThickVest.class,
+            Handicraft.class,
+            Strike_Brown.class,
+            Defend_Brown.class,
+            DaringSlash.class,
+            BackStep.class,
+            SwiftSlash.class,
+            IntrepidRush.class,
+            Gunblade.class,
+            Reposition.class,
+            Safeguard.class,
+            Gunblade.class,
+            BetterSafe.class,
+            EnhancingDrug.class,
+            TriedTechniques.class,
+            RampingUpStrike.class,
+            DebilitatingShot.class,
+            NickAndSkid.class,
+            Feint.class,
+            BladeSurge.class,
+            TacticalStrike.class,
+            RecklessShot.class,
+            IntrepidRush.class,
+            HandGrenade.class,
+            RampingUpDefend.class,
+            Distract.class,
+            TacticalDefend.class,
+            RampingUpDefend.class,
+            KillThemAll.class,
+            TrickyStrike.class,
+            TrickyDefend.class,
+            Repetition.class,
+            HotSteel.class,
+            ImpulsiveStrike.class,
+            ImpulsiveDefend.class,
+            SmokeOfConfusion.class,
+            CautiousManeuver.class,
+            Decoy.class,
+            SmokeAndMirrors.class,
+            PlayingWithFire.class,
+            UpThePace.class,
+            HiddenPistol.class,
+            Practice.class,
+            PistolWhip.class,
+            Salvage.class,
+            DeepPockets.class,
+            Efficiency.class,
+            FancyCape.class,
+            Anticipation.class,
+            MentalStrength.class,
+            TickingPackage.class,
+            Firecrackers.class,
+            FirstAidKit.class,
+            StopTheBleeding.class,
+            SwiftAsTheWind.class,
+            MistForm.class,
+            Parry.class,
+            StudiedSnipe.class,
+            Frenzy.class,
+            ForbiddenMedicine.class,
+            CreateAnOpening.class
+        ));
 
-        BaseMod.addCard(new BetterSafe());
-        BaseMod.addCard(new EnhancingDrug());
-        BaseMod.addCard(new TriedTechniques());
-        BaseMod.addCard(new RampingUpStrike());
-        BaseMod.addCard(new DebilitatingShot());
-        BaseMod.addCard(new NickAndSkid());
-        BaseMod.addCard(new Feint());
-        BaseMod.addCard(new BladeSurge());
-        BaseMod.addCard(new TacticalStrike());
-        BaseMod.addCard(new RecklessShot());
-
-        BaseMod.addCard(new IntrepidRush());
-        BaseMod.addCard(new HandGrenade());
-        BaseMod.addCard(new RampingUpDefend());
-        BaseMod.addCard(new Distract());
-        BaseMod.addCard(new TacticalDefend());
-        BaseMod.addCard(new RampingUpDefend());
-        BaseMod.addCard(new KillThemAll());
-        BaseMod.addCard(new TrickyStrike());
-        BaseMod.addCard(new TrickyDefend());
-        BaseMod.addCard(new Repetition());
-
-        BaseMod.addCard(new HotSteel());
-        BaseMod.addCard(new ImpulsiveStrike());
-        BaseMod.addCard(new ImpulsiveDefend());
-        BaseMod.addCard(new SmokeOfConfusion());
-        BaseMod.addCard(new CautiousManeuver());
-        BaseMod.addCard(new Decoy());
-        BaseMod.addCard(new SmokeAndMirrors());
-        BaseMod.addCard(new PlayingWithFire());
-        BaseMod.addCard(new UpThePace());
-        BaseMod.addCard(new HiddenPistol());
-
-        BaseMod.addCard(new Practice());
-        BaseMod.addCard(new PistolWhip());
-        BaseMod.addCard(new Salvage());
-        BaseMod.addCard(new DeepPockets());
-        BaseMod.addCard(new Efficiency());
-        BaseMod.addCard(new FancyCape());
-        BaseMod.addCard(new Anticipation());
-        BaseMod.addCard(new MentalStrength());
-        BaseMod.addCard(new TickingPackage());
-
-        BaseMod.addCard(new Firecrackers());
-        BaseMod.addCard(new FirstAidKit());
-        BaseMod.addCard(new StopTheBleeding());
-        BaseMod.addCard(new SwiftAsTheWind());
-        BaseMod.addCard(new MistForm());
-        BaseMod.addCard(new Parry());
-        BaseMod.addCard(new StudiedSnipe());
-        BaseMod.addCard(new Frenzy());
-        BaseMod.addCard(new ForbiddenMedicine());
-        BaseMod.addCard(new CreateAnOpening());
-
-        BaseMod.addCard(new BulletRain());
-        BaseMod.addCard(new Audacity());
-        BaseMod.addCard(new Volley());
-        BaseMod.addCard(new OminousSmile());
-        BaseMod.addCard(new LightTrick());
-        BaseMod.addCard(new DivingSlice());
-        BaseMod.addCard(new SharpBlade());
-        BaseMod.addCard(new ThickVest());
-        BaseMod.addCard(new Handicraft());
-
-        BaseMod.addCard(new BattlePlan());
-        BaseMod.addCard(new DejaVu());
-        BaseMod.addCard(new SuperiorTactics());
-        BaseMod.addCard(new BlurTheLines());
-        BaseMod.addCard(new KeepCool());
-        BaseMod.addCard(new CapriciousThrust());
-        BaseMod.addCard(new EyeForEye());
-        BaseMod.addCard(new Impale());
-
-
-        logger.info("Making sure the cards are unlocked.");
-        // Unlock the cards
-        // This is so that they are all "seen" in the library, for people who like to look at the card list
-        // before playing your mod.
-//        UnlockTracker.unlockCard(OrbSkill.ID);
-//        UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
-//        UnlockTracker.unlockCard(DefaultCommonAttack.ID);
-//        UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
-//        UnlockTracker.unlockCard(DefaultCommonSkill.ID);
-//        UnlockTracker.unlockCard(DefaultCommonPower.ID);
-//        UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
-//        UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
-//        UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-//        UnlockTracker.unlockCard(DefaultRareAttack.ID);
-//        UnlockTracker.unlockCard(DefaultRareSkill.ID);
-//        UnlockTracker.unlockCard(DefaultRarePower.ID);
+        try {
+            for(Class cardClass : cardClasses) {
+                CustomCard card = (CustomCard) cardClass.newInstance();
+                BaseMod.addCard(card);
+                // Unlock the cards so that they are all "seen" in the library, for people who like to look at the card list
+                // before playing your mod.
+                UnlockTracker.unlockCard(card.cardID);
+            }
+        }
+        catch (IllegalAccessException | InstantiationException e) {
+            logger.error("Cannot add a card: ", e);
+        }
         
         logger.info("Done adding cards!");
     }
