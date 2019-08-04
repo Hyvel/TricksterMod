@@ -1,5 +1,6 @@
 package theTrickster.characters;
 
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
@@ -13,10 +14,11 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.Prefs;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.megacrit.cardcrawl.screens.stats.CharStat;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theTrickster.TricksterMod;
@@ -111,6 +113,16 @@ public class TheTrickster extends CustomPlayer {
         dialogY = (drawY + 220.0F * Settings.scale);
 
         // =============== /TEXT BUBBLE LOCATION/ =================
+
+        //Set Ascension level to 20 to avoid grinding
+        CharStat charStat = this.getCharStat();
+        Prefs statPref = (Prefs) ReflectionHacks.getPrivate(charStat, CharStat.class, "pref");
+        if (statPref.getInteger("ASCENSION_LEVEL", 1) != 20) {
+            statPref.putInteger("ASCENSION_LEVEL", 20);
+            statPref.putInteger("LAST_ASCENSION_LEVEL", 0);
+            statPref.flush();
+            logger.info("Set max ascension level to 20 and last ascension to 0. This should be the first time the mod is launched.");
+        }
 
     }
 
