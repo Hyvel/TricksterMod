@@ -473,7 +473,7 @@ public class TricksterMod implements
         }
     }
 
-    //Strange Doll relic and Mental Strength power
+    //Strange Doll relic
     @Override
     public void receivePostPowerApplySubscriber(AbstractPower var1, AbstractCreature var2, AbstractCreature var3) {
         boolean hasStrangeDollRelic = AbstractDungeon.player.hasRelic("theTrickster:StrangeDollRelic");
@@ -481,7 +481,7 @@ public class TricksterMod implements
             return;
         }
         if(var1.type == AbstractPower.PowerType.DEBUFF && var2 instanceof AbstractPlayer) {
-            //TODO: Make relic flash
+            AbstractDungeon.player.getRelic("theTrickster:StrangeDollRelic").flash();
             AbstractDungeon.actionManager.addToBottom(
                     new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }
@@ -492,7 +492,6 @@ public class TricksterMod implements
     
     @Override
     public void receiveEditStrings() {
-        logger.info("You seeing this?");
         logger.info("Beginning to edit strings for mod with ID: " + getModID());
         
         // CardStrings
