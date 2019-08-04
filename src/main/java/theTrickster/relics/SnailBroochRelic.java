@@ -19,7 +19,6 @@ public class SnailBroochRelic extends CustomRelic {
      * Whenever you play 4 or less cards in a turn, gain 1 additional energy at the start of your next turn.
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("SnailBroochRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("snail_brooch.png"));

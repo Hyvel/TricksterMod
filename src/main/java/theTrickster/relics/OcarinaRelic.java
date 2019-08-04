@@ -19,7 +19,6 @@ public class OcarinaRelic extends CustomRelic {
      * The first time each combat you draw a Status, draw 3 cards.
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("OcarinaRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ocarina.png"));

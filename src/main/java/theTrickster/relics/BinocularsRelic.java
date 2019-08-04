@@ -20,7 +20,6 @@ public class BinocularsRelic extends CustomRelic {
      * Gain 3 Dexterity on the first turn of combat
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("BinocularsRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("binoculars.png"));

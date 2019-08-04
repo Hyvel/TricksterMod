@@ -22,7 +22,6 @@ public class AncientPicklesRelic extends CustomRelic {
      * Gain 1 energy at the start of each turn. Start each combat with 2 Weak and 2 Frail.
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("AncientPicklesRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ancient_pickles.png"));

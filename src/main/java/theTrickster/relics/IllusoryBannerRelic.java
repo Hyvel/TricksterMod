@@ -24,7 +24,6 @@ public class IllusoryBannerRelic extends CustomRelic {
      * Every card played, gain 1 block and deal 1 damage to all enemies.
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("IllusoryBannerRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("illusory_banner.png"));

@@ -16,7 +16,6 @@ public class StrangeDollRelic extends CustomRelic {
      * Effect is done in the receivePostPowerApplySubscriber method in TricksterMod.java
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("StrangeDollRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("strange_doll.png"));

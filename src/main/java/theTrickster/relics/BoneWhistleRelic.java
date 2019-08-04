@@ -20,7 +20,6 @@ public class BoneWhistleRelic extends CustomRelic {
      * Every time you draw a status, deal 3 damage to a random enemy.
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("BoneWhistleRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("bone_whistle.png"));

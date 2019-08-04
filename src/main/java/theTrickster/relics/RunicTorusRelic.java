@@ -20,7 +20,6 @@ public class RunicTorusRelic extends CustomRelic {
      * Every 0 cost card played, gain 2 block.
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("RunicTorusRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("runic_torus.png"));

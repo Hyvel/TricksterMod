@@ -4,8 +4,6 @@ import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.math.MathUtils;
-import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,19 +29,9 @@ import java.util.ArrayList;
 import static theTrickster.TricksterMod.*;
 import static theTrickster.characters.TheTrickster.Enums.COLOR_BROWN;
 
-//Wiki-page https://github.com/daviscook477/BaseMod/wiki/Custom-Characters
-//and https://github.com/daviscook477/BaseMod/wiki/Migrating-to-5.0
-//All text (starting description and loadout, anything labeled TEXT[]) can be found in TricksterMod-character-Strings.json in the resources
 
 public class TheTrickster extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(TricksterMod.class.getName());
-
-    // =============== CHARACTER ENUMERATORS =================
-    // These are enums for your Characters color (both general color and for the card library) as well as
-    // an enum for the name of the player class - IRONCLAD, THE_SILENT, DEFECT, YOUR_CLASS ...
-    // These are all necessary for creating a character. If you want to find out where and how exactly they are used
-    // in the basegame (for fun and education) Ctrl+click on the PlayerClass, CardColor and/or LibraryType below and go down the
-    // Ctrl+click rabbit hole
 
     public static class Enums {
         @SpireEnum
@@ -101,15 +89,14 @@ public class TheTrickster extends CustomPlayer {
 
     public TheTrickster(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theTricksterResources/images/char/defaultCharacter/orb/vfx.png", null,
+                "theTricksterResources/images/char/tricksterCharacter/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "theTricksterResources/images/char/defaultCharacter/Spriter/theTrickster.scml"));
+                        "theTricksterResources/images/char/tricksterCharacter/Spriter/theTrickster.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================
 
         initializeClass(null, // required call to load textures and setup energy/loadout.
-                // I left these in TricksterMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
                 THE_DEFAULT_SHOULDER_1, // campfire pose
                 THE_DEFAULT_SHOULDER_2, // another campfire pose
                 THE_DEFAULT_CORPSE, // dead corpse
@@ -118,22 +105,10 @@ public class TheTrickster extends CustomPlayer {
         // =============== /TEXTURES, ENERGY, LOADOUT/ =================
 
 
-        // =============== ANIMATIONS =================
-
-//        loadAnimation(
-//                THE_DEFAULT_SKELETON_ATLAS,
-//                THE_DEFAULT_SKELETON_JSON,
-//                1.0f);
-//        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
-//        e.setTime(e.getEndTime() * MathUtils.random());
-
-        // =============== /ANIMATIONS/ =================
-
-
         // =============== TEXT BUBBLE LOCATION =================
 
         dialogX = (drawX + 0.0F * Settings.scale); // set location for text bubbles
-        dialogY = (drawY + 220.0F * Settings.scale); // you can just copy these values
+        dialogY = (drawY + 220.0F * Settings.scale);
 
         // =============== /TEXT BUBBLE LOCATION/ =================
 
@@ -176,10 +151,6 @@ public class TheTrickster extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 
-//        retVal.add(PlaceholderRelic.ID);
-/*        retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);*/
-
 //        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
 /*        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
         UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);*/
@@ -204,8 +175,8 @@ public class TheTrickster extends CustomPlayer {
         return "ATTACK_DAGGER_1";
     }
 
-    // Should return how much HP your maximum HP reduces by when starting a run at
-    // Ascension 14 or higher. (ironclad loses 5, defect and silent lose 4 hp respectively)
+    // HP reduction when starting a run at Ascension 14 or higher.
+    // (ironclad loses 5, defect and silent lose 4 hp respectively)
     @Override
     public int getAscensionMaxHPLoss() {
         return 4;
@@ -279,9 +250,7 @@ public class TheTrickster extends CustomPlayer {
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY};
     }
 
-    // Should return a string containing what text is shown when your character is
-    // about to attack the heart. For example, the defect is "NL You charge your
-    // core to its maximum..."
+    // Text shown when the character is about to attack the heart.
     @Override
     public String getSpireHeartText() {
         return TEXT[1];

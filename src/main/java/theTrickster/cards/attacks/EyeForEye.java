@@ -61,8 +61,6 @@ public class EyeForEye extends AbstractDynamicCard {
 
     @Override
     public void calculateCardDamage (AbstractMonster mo) {
-//        super.calculateCardDamage(mo);
-
         if(mo == null) {
             this.damage = 0;
             this.rawDescription = DESCRIPTION;

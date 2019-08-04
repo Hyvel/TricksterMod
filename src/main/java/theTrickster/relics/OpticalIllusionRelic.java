@@ -24,7 +24,6 @@ public class OpticalIllusionRelic extends CustomRelic {
      * Every 3 cards played, gain 2 block and deal 2 damage to all ennemies.
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("OpticalIllusionRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("optical_illusion.png"));

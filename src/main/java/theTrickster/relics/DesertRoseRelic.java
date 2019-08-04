@@ -19,7 +19,6 @@ public class DesertRoseRelic extends CustomRelic {
      * Upgrade the next 3 upgradable cards you obtain.
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("DesertRoseRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("desert_rose.png"));

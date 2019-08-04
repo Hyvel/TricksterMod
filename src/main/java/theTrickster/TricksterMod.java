@@ -90,17 +90,14 @@ public class TricksterMod implements
     // Character assets //TODO
     private static final String THE_DEFAULT_BUTTON = "theTricksterResources/images/charSelect/TricksterButton.png";
     private static final String THE_DEFAULT_PORTRAIT = "theTricksterResources/images/charSelect/TricksterPortrait.png";
-    public static final String THE_DEFAULT_SHOULDER_1 = "theTricksterResources/images/char/defaultCharacter/shoulder.png";
-    public static final String THE_DEFAULT_SHOULDER_2 = "theTricksterResources/images/char/defaultCharacter/shoulder2.png";
-    public static final String THE_DEFAULT_CORPSE = "theTricksterResources/images/char/defaultCharacter/corpse.png";
+    public static final String THE_DEFAULT_SHOULDER_1 = "theTricksterResources/images/char/tricksterCharacter/shoulder.png";
+    public static final String THE_DEFAULT_SHOULDER_2 = "theTricksterResources/images/char/tricksterCharacter/shoulder2.png";
+    public static final String THE_DEFAULT_CORPSE = "theTricksterResources/images/char/tricksterCharacter/corpse.png";
     
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod. //TODO
     public static final String BADGE_IMAGE = "theTricksterResources/images/Badge.png";
-    
-//    // Atlas and JSON files for the Animations //TODO
-//    public static final String THE_DEFAULT_SKELETON_ATLAS = "theTricksterResources/images/char/defaultCharacter/skeleton.atlas";
-//    public static final String THE_DEFAULT_SKELETON_JSON = "theTricksterResources/images/char/defaultCharacter/skeleton.json";
-    
+
+
     // =============== MAKE IMAGE PATHS =================
     
     public static String makeCardPath(String resourcePath) {
@@ -395,7 +392,6 @@ public class TricksterMod implements
 
         BaseMod.addCard(new Practice());
         BaseMod.addCard(new PistolWhip());
-//        BaseMod.addCard(new AssertiveLunge());
         BaseMod.addCard(new Salvage());
         BaseMod.addCard(new DeepPockets());
         BaseMod.addCard(new Efficiency());
@@ -416,7 +412,6 @@ public class TricksterMod implements
         BaseMod.addCard(new CreateAnOpening());
 
         BaseMod.addCard(new BulletRain());
-//        BaseMod.addCard(new PreciseSalvo());
         BaseMod.addCard(new Audacity());
         BaseMod.addCard(new Volley());
         BaseMod.addCard(new OminousSmile());
@@ -455,11 +450,7 @@ public class TricksterMod implements
         
         logger.info("Done adding cards!");
     }
-    
-    // There are better ways to do this than listing every single individual card, but I do not want to complicate things
-    // in a "tutorial" mod. This will do and it's completely ok to use. If you ever want to clean up and
-    // shorten all the imports, go look take a look at other mods, such as Hubris.
-    
+
     // ================ /ADD CARDS/ ===================
 
     // Thick Vest power card

@@ -20,7 +20,6 @@ public class MeteoriteRelic extends CustomRelic {
      * At the start of your turn, gain 2 Strength and lose 1 Dexterity.
      */
 
-    // ID, images, text.
     public static final String ID = TricksterMod.makeID("MeteoriteRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("meteorite.png"));
