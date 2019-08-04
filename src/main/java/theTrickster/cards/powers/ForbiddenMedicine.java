@@ -40,7 +40,7 @@ public class ForbiddenMedicine extends AbstractDynamicCard {
     public ForbiddenMedicine() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = HEALING;
-        this.tags.add(CardTags.HEALING);
+        tags.add(CardTags.HEALING);
     }
 
 

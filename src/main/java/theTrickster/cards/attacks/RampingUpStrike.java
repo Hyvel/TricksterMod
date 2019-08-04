@@ -41,7 +41,7 @@ public class RampingUpStrike extends AbstractDynamicCard {
 
     public RampingUpStrike() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STRIKE);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = DAMAGE_PER_ELAPSED_TURN;
     }
@@ -49,7 +49,6 @@ public class RampingUpStrike extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //GameActionManager
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }

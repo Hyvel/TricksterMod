@@ -45,7 +45,7 @@ public class Handicraft extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if(this.upgraded) {
+        if(upgraded) {
             // Upgraded Handicraft works like an unupgraded armaments.
             AbstractDungeon.actionManager.addToBottom(new ArmamentsAction(false));
         }
@@ -60,7 +60,7 @@ public class Handicraft extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.rawDescription = UPGRADE_DESCRIPTION;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

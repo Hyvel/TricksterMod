@@ -46,7 +46,7 @@ public class Anticipation extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new AnticipationAction(m, p, ENERGY_GAIN, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new AnticipationAction(m, p, ENERGY_GAIN, magicNumber));
     }
 
 

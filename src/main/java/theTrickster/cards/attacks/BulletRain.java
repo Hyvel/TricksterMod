@@ -41,7 +41,7 @@ public class BulletRain extends AbstractDynamicCard {
     public BulletRain() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        this.isMultiDamage = true;
+        isMultiDamage = true;
     }
 
     @Override

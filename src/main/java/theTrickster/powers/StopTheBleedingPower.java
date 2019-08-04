@@ -27,29 +27,29 @@ public class StopTheBleedingPower extends AbstractPower {
     private static final int DAMAGE_THRESHOLD = 5;
 
     public StopTheBleedingPower(AbstractCreature owner, int amount) {
-        this.name = NAME;
-        this.ID = POWER_ID;
+        name = NAME;
+        ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
         type = PowerType.BUFF;
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         updateDescription();
     }
 
     public void updateDescription() {
-        if (this.amount <= 1) {
-            this.description = DESCRIPTIONS[2];
+        if (amount <= 1) {
+            description = DESCRIPTIONS[2];
         } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         }
     }
 
     public int onLoseHp(int damage) {
         if (damage > DAMAGE_THRESHOLD) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Wound(), 1));
-            AbstractDungeon.actionManager.addToTop(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
+            AbstractDungeon.actionManager.addToTop(new ReducePowerAction(owner, owner, ID, 1));
             return DAMAGE_THRESHOLD;
         }
         return damage;

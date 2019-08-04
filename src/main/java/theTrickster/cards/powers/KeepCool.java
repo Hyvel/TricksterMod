@@ -54,15 +54,15 @@ public class KeepCool extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Frail"));
         AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(p, p, "Vulnerable"));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new ArtifactPower(p, this.magicNumber), this.magicNumber));
+                new ApplyPowerAction(p, p, new ArtifactPower(p, magicNumber), magicNumber));
     }
 
     @Override
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeMagicNumber(UPGRADE_PLUS_ARTIFACT);
-            this.initializeDescription();
+        if (!upgraded) {
+            upgradeName();
+            upgradeMagicNumber(UPGRADE_PLUS_ARTIFACT);
+            initializeDescription();
         }
     }
 }

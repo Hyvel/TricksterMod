@@ -41,17 +41,17 @@ public class FancyCape extends AbstractDynamicCard {
     public FancyCape() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = ART_AND_DRAW;
-        this.tags.add(CardTags.HEALING);
+        tags.add(CardTags.HEALING);
         exhaust = true;
     }
 
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new ArtifactPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new ArtifactPower(p, magicNumber), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, HEAL));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, magicNumber));
     }
 
 

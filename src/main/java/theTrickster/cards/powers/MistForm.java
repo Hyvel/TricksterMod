@@ -39,7 +39,7 @@ public class MistForm extends AbstractDynamicCard {
     public MistForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = DAMAGE;
-        this.tags.add(BaseModCardTags.FORM);
+        tags.add(BaseModCardTags.FORM);
     }
 
 

@@ -54,8 +54,7 @@ public class BladeSurge extends AbstractDynamicCard {
             energyOnUse = EnergyPanel.totalCount;
         }
         AbstractDungeon.actionManager.addToBottom(
-                new BladeSurgeAction(p, m, this.damage, this.block, this.damageTypeForTurn,
-                        this.freeToPlayOnce, this.energyOnUse));
+                new BladeSurgeAction(p, m, damage, block, damageTypeForTurn, freeToPlayOnce, energyOnUse));
     }
 
 

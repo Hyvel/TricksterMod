@@ -46,11 +46,11 @@ public class ImpulsiveStrike extends AbstractDynamicCard {
 
     public ImpulsiveStrike() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STRIKE);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = MINUS_DAMAGE_PER_TURN;
         exhaust = true;
-        this.tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STRIKE);
     }
 
 
@@ -83,8 +83,8 @@ public class ImpulsiveStrike extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isInnate = true;
-            this.rawDescription = UPGRADE_DESCRIPTION;
+            isInnate = true;
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

@@ -51,7 +51,7 @@ public class KillThemAll extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new DexterityPower(p, DEX_GAIN), DEX_GAIN));
         AbstractDungeon.actionManager.addToBottom(
-                new MakeTempCardInDiscardAction(this.makeStatEquivalentCopy(), 1));
+                new MakeTempCardInDiscardAction(makeStatEquivalentCopy(), 1));
     }
 
     @Override

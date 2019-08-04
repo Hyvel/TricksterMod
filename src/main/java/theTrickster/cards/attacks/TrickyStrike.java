@@ -49,7 +49,7 @@ public class TrickyStrike extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = DMG_BY_DEFEND;
-        this.tags.add(CardTags.STRIKE);
+        tags.add(CardTags.STRIKE);
     }
 
     private static int countDefendCards() {
@@ -84,7 +84,7 @@ public class TrickyStrike extends AbstractDynamicCard {
         super.applyPowers();
 
         isDamageModified = damage != DAMAGE;
-        this.initializeDescription();
+        initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster m) {
@@ -93,7 +93,7 @@ public class TrickyStrike extends AbstractDynamicCard {
         super.calculateCardDamage(m);
 
         isDamageModified = damage != DAMAGE;
-        this.initializeDescription();
+        initializeDescription();
     }
 
     @Override

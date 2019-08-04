@@ -50,9 +50,9 @@ public class BackStep extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new WeakPower(p, this.magicNumber, false), this.magicNumber));
+                new ApplyPowerAction(p, p, new WeakPower(p, magicNumber, false), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.defaultSecondMagicNumber));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, defaultSecondMagicNumber));
     }
 
 

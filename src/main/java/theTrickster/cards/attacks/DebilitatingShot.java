@@ -51,7 +51,8 @@ public class DebilitatingShot extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, p, new WeakPower(p, this.magicNumber, false), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(m, p, new WeakPower(p, magicNumber, false), magicNumber));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
     }

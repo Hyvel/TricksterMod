@@ -43,7 +43,8 @@ public class MentalStrength extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new MentalStrengthPower(p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new MentalStrengthPower(p, magicNumber), magicNumber));
     }
 
 

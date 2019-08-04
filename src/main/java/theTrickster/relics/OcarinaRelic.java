@@ -33,8 +33,8 @@ public class OcarinaRelic extends CustomRelic {
 
     public void atPreBattle() {
         usedThisCombat = false;
-        this.pulse = true;
-        this.beginPulse();
+        pulse = true;
+        beginPulse();
     }
 
     public void onCardDraw(AbstractCard drawnCard) {
@@ -42,16 +42,16 @@ public class OcarinaRelic extends CustomRelic {
             return;
         }
         if(drawnCard.type == AbstractCard.CardType.STATUS) {
-            this.flash();
-            this.pulse = false;
-            AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, 3));
+            flash();
+            pulse = false;
+            AbstractDungeon.actionManager.addToTop(new DrawCardAction(AbstractDungeon.player, CARDS));
             AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             usedThisCombat = true;
         }
     }
 
     public void onVictory() {
-        this.pulse = false;
+        pulse = false;
     }
 
     @Override

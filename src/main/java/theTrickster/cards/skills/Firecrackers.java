@@ -50,8 +50,8 @@ public class Firecrackers extends AbstractDynamicCard {
 
         while(var3.hasNext()) {
             AbstractMonster mo = (AbstractMonster)var3.next();
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(mo, p,
-                    new DelayedDamagePower(mo, p, this.magicNumber), this.magicNumber));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(mo, p, new DelayedDamagePower(mo, p, magicNumber), magicNumber));
         }
     }
 

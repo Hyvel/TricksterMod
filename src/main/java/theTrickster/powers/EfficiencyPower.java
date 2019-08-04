@@ -28,23 +28,22 @@ public class EfficiencyPower  extends AbstractPower {
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("efficiency32.png"));
 
     public EfficiencyPower(AbstractCreature owner, int amount) {
-        this.name = NAME;
-        this.ID = POWER_ID;
+        name = NAME;
+        ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
         type = PowerType.BUFF;
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-        //priority = 25;
+        region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         updateDescription();
     }
 
     public void updateDescription() {
-        if (this.amount == 1) {
+        if (amount == 1) {
             this.description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
         } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
         }
 
     }
@@ -72,7 +71,7 @@ public class EfficiencyPower  extends AbstractPower {
             AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(tmp, m, card.energyOnUse));
             --this.amount;
             if (this.amount == 0) {
-                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+                AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
             }
         }
 
@@ -80,7 +79,7 @@ public class EfficiencyPower  extends AbstractPower {
 
     public void atEndOfTurn(boolean isPlayer) {
         if (isPlayer) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
         }
 
     }

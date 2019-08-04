@@ -68,12 +68,12 @@ public class Frenzy extends AbstractDynamicCard {
 
     public void applyPowers() {
         if (AbstractDungeon.player.isBloodied) {
-            this.rawDescription = EXTENDED_DESCRIPTION[0];
-            this.initializeDescription();
+            rawDescription = EXTENDED_DESCRIPTION[0];
+            initializeDescription();
         }
         else {
-            this.rawDescription = DESCRIPTION;
-            this.initializeDescription();
+            rawDescription = DESCRIPTION;
+            initializeDescription();
         }
 
         super.applyPowers();
@@ -81,8 +81,8 @@ public class Frenzy extends AbstractDynamicCard {
 
     @Override
     public void onMoveToDiscard() {
-        this.rawDescription = DESCRIPTION;
-        this.initializeDescription();
+        rawDescription = DESCRIPTION;
+        initializeDescription();
     }
 
     @Override

@@ -40,8 +40,8 @@ public class Defend_Brown extends AbstractDynamicCard {
     public Defend_Brown() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        this.tags.add(BaseModCardTags.BASIC_DEFEND);
-        this.tags.add(TheTricksterTags.DEFEND);
+        tags.add(BaseModCardTags.BASIC_DEFEND);
+        tags.add(TheTricksterTags.DEFEND);
     }
 
 

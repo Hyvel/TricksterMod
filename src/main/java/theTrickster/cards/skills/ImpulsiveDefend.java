@@ -44,7 +44,7 @@ public class ImpulsiveDefend extends AbstractDynamicCard {
 
     public ImpulsiveDefend() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.tags.add(TheTricksterTags.DEFEND);
+        tags.add(TheTricksterTags.DEFEND);
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = MINUS_BLOCK_PER_TURN;
         exhaust = true;

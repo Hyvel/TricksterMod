@@ -33,32 +33,32 @@ public class SnailBroochRelic extends CustomRelic {
     }
 
     public void atBattleStart() {
-        this.counter = 0;
-        this.firstTurn = true;
+        counter = 0;
+        firstTurn = true;
     }
 
     public void atTurnStart() {
-        if (this.counter <= MAX_CARDS_TO_PLAY && !this.firstTurn) {
+        if (counter <= MAX_CARDS_TO_PLAY && !firstTurn) {
             AbstractDungeon.actionManager.addToTop(new GainEnergyAction(ENERGY));
         } else {
-            this.firstTurn = false;
+            firstTurn = false;
         }
 
-        this.counter = 0;
-        this.beginLongPulse();
+        counter = 0;
+        beginLongPulse();
     }
 
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        ++this.counter;
-        if (this.counter > MAX_CARDS_TO_PLAY) {
-            this.stopPulse();
+        ++counter;
+        if (counter > MAX_CARDS_TO_PLAY) {
+            stopPulse();
         }
 
     }
 
     public void onVictory() {
-        this.counter = -1;
-        this.stopPulse();
+        counter = -1;
+        stopPulse();
     }
 
     @Override

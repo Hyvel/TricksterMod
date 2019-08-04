@@ -53,7 +53,7 @@ public class DivingSlice extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(new ExpertiseAction(p, this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(new ExpertiseAction(p, magicNumber));
     }
 
 

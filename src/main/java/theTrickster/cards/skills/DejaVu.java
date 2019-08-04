@@ -51,11 +51,11 @@ public class DejaVu extends AbstractDynamicCard {
     public DejaVu(int upgrades) {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = BLUR;
-        this.timesUpgraded = upgrades;
+        timesUpgraded = upgrades;
     }
 
     public AbstractCard makeCopy() {
-        return new DejaVu(this.timesUpgraded);
+        return new DejaVu(timesUpgraded);
     }
 
     @Override
@@ -70,11 +70,11 @@ public class DejaVu extends AbstractDynamicCard {
     @Override
     public void upgrade() {
         upgradeMagicNumber(UPGRADE_PLUS_BLUR);
-        this.upgraded = true;
-        ++this.timesUpgraded;
-        this.name = NAME + "+" + this.timesUpgraded;
-        this.rawDescription = UPGRADE_DESCRIPTION;
-        this.initializeTitle();
+        upgraded = true;
+        ++timesUpgraded;
+        name = NAME + "+" + timesUpgraded;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeTitle();
         initializeDescription();
     }
 }

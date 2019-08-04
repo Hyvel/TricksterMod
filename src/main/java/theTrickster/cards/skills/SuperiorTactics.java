@@ -59,11 +59,11 @@ public class SuperiorTactics extends AbstractDynamicCard {
     @Override
     public void upgrade() {
         upgradeMagicNumber(UPGRADE_PLUS_TURNS_ACTIVE);
-        this.upgraded = true;
-        ++this.timesUpgraded;
-        this.name = NAME + "+" + this.timesUpgraded;
-        this.rawDescription = UPGRADE_DESCRIPTION;
-        this.initializeTitle();
+        upgraded = true;
+        ++timesUpgraded;
+        name = NAME + "+" + timesUpgraded;
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeTitle();
         initializeDescription();
     }
 }

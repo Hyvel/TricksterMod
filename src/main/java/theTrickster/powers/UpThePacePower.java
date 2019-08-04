@@ -29,8 +29,8 @@ public class UpThePacePower extends AbstractPower {
         this.owner = owner;
         this.amount = cardsAmount;
         type = PowerType.BUFF;
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
         priority = 25;
 
         updateDescription();
@@ -40,14 +40,14 @@ public class UpThePacePower extends AbstractPower {
 
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.flash();
+            flash();
 
-            for(int i = 0; i < this.amount; ++i) {
+            for(int i = 0; i < amount; ++i) {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(
                         RandomZeroCostCardHelper.returnTrulyRandomZeroCostCardInCombat().makeCopy(), 1, false));
             }

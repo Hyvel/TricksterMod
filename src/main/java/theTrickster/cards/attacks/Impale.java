@@ -48,7 +48,7 @@ public class Impale extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(new ModifyDamageAction(this.uuid, this.baseDamage));
+        AbstractDungeon.actionManager.addToBottom(new ModifyDamageAction(uuid, baseDamage));
     }
 
 

@@ -50,7 +50,7 @@ public class Efficiency extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new EfficiencyPower(p, this.magicNumber), this.magicNumber));
+                new ApplyPowerAction(p, p, new EfficiencyPower(p, magicNumber), magicNumber));
     }
 
 
@@ -59,8 +59,8 @@ public class Efficiency extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_CARDS_PLAYED_TWICE);
-            this.rawDescription = UPGRADE_DESCRIPTION;
-            this.initializeDescription();
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

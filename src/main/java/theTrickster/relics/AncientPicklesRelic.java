@@ -49,9 +49,9 @@ public class AncientPicklesRelic extends CustomRelic {
     }
 
     public void updateDescription(AbstractPlayer.PlayerClass c) {
-        this.description = this.setDescription(c);
+        this.description = setDescription(c);
         this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(name, description));
         this.initializeTips();
     }
 

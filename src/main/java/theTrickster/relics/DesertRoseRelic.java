@@ -27,45 +27,45 @@ public class DesertRoseRelic extends CustomRelic {
 
     public DesertRoseRelic() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
-        this.counter = 3;
+        counter = 3;
         // Reinitializing the description with the correct counter.
-        this.description = this.getUpdatedDescription();
-        this.resetTips();
+        description = getUpdatedDescription();
+        resetTips();
     }
 
     public void resetTips() {
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
+        tips.clear();
+        tips.add(new PowerTip(name, description));
+        initializeTips();
     }
 
     public void setCounter(int counter) {
-        this.counter = counter;
+        counter = counter;
         if (counter == 0) {
-            this.img = ImageMaster.loadImage(makeRelicPath("used_desert_rose.png"));
-            this.usedUp();
+            img = ImageMaster.loadImage(makeRelicPath("used_desert_rose.png"));
+            usedUp();
         } else if (counter == 1) {
-            this.description = DESCRIPTIONS[2];
-            this.resetTips();
+            description = DESCRIPTIONS[2];
+            resetTips();
         } else {
-            this.description = DESCRIPTIONS[0] + this.counter + DESCRIPTIONS[1];
-            this.resetTips();
+            description = DESCRIPTIONS[0] + counter + DESCRIPTIONS[1];
+            resetTips();
         }
     }
 
     public void onObtainCard(AbstractCard c) {
-        if(!c.canUpgrade() || this.counter <= 0) {
+        if(!c.canUpgrade() || counter <= 0) {
             return;
         }
-        this.flash();
-        --this.counter;
+        flash();
+        --counter;
         c.upgrade();
-        this.setCounter(this.counter);
+        setCounter(counter);
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + this.counter + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + counter + DESCRIPTIONS[1];
     }
 
     public boolean canSpawn() {

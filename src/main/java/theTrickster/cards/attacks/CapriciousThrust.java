@@ -84,12 +84,12 @@ public class CapriciousThrust extends AbstractDynamicCard {
         }
 
         if (hasStatusInHand) {
-            this.rawDescription = EXTENDED_DESCRIPTION[0] + DESCRIPTION;
-            this.initializeDescription();
+            rawDescription = EXTENDED_DESCRIPTION[0] + DESCRIPTION;
+            initializeDescription();
         }
         else {
-            this.rawDescription = DESCRIPTION;
-            this.initializeDescription();
+            rawDescription = DESCRIPTION;
+            initializeDescription();
         }
 
         super.applyPowers();
@@ -97,8 +97,8 @@ public class CapriciousThrust extends AbstractDynamicCard {
 
     @Override
     public void onMoveToDiscard() {
-        this.rawDescription = DESCRIPTION;
-        this.initializeDescription();
+        rawDescription = DESCRIPTION;
+        initializeDescription();
     }
 
     @Override

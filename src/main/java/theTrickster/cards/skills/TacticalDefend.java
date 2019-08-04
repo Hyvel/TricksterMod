@@ -42,7 +42,7 @@ public class TacticalDefend extends AbstractDynamicCard {
     public TacticalDefend() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        this.tags.add(TheTricksterTags.DEFEND);
+        tags.add(TheTricksterTags.DEFEND);
     }
 
 

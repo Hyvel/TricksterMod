@@ -44,19 +44,19 @@ public class StudiedSnipe extends AbstractDynamicCard {
 
 
     public void applyPowers() {
-        this.baseDamage = AbstractDungeon.player.discardPile.size();
-        if (this.upgraded) {
-            this.baseDamage += UPGRADE_PLUS_DMG;
+        baseDamage = AbstractDungeon.player.discardPile.size();
+        if (upgraded) {
+            baseDamage += UPGRADE_PLUS_DMG;
         }
 
         super.applyPowers();
-        this.initializeDescription();
+        initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster m) {
         baseDamage =  AbstractDungeon.player.discardPile.size();
-        if (this.upgraded) {
-            this.baseDamage += UPGRADE_PLUS_DMG;
+        if (upgraded) {
+            baseDamage += UPGRADE_PLUS_DMG;
         }
 
         super.calculateCardDamage(m);

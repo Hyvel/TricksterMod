@@ -35,15 +35,15 @@ public class OpticalIllusionRelic extends CustomRelic {
 
     @Override
     public void atTurnStart() {
-        this.counter = 0;
+        counter = 0;
     }
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-            ++this.counter;
-            if (this.counter % 4 == 0) {
-                this.flash();
-                this.counter = 0;
+            ++counter;
+            if (counter % 4 == 0) {
+                flash();
+                counter = 0;
                 AbstractDungeon.actionManager.addToBottom(
                         new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 AbstractDungeon.actionManager.addToBottom(
@@ -57,7 +57,7 @@ public class OpticalIllusionRelic extends CustomRelic {
 
     @Override
     public void onVictory() {
-        this.counter = -1;
+        counter = -1;
     }
 
     @Override

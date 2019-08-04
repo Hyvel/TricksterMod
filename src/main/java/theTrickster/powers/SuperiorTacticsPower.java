@@ -32,33 +32,33 @@ public class SuperiorTacticsPower extends AbstractPower {
         this.owner = owner;
         this.amount = cardsAmount;
         type = PowerType.BUFF;
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
-        this.priority = 6;
+        priority = 6;
 
         updateDescription();
     }
 
     public void atStartOfTurnPostDraw() {
         this.flash();
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, DRAW));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(owner, DRAW));
 
         //Reduce amount.
-        if (this.amount == 0) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.owner,POWER_ID ));
+        if (amount == 0) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, owner,POWER_ID ));
         } else {
-            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
+            AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(owner, owner, POWER_ID, 1));
         }
     }
 
 
     public void updateDescription() {
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0];
+        if (amount == 1) {
+            description = DESCRIPTIONS[0];
         }
         else {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         }
 
     }

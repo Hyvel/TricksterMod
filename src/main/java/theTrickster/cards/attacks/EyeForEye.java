@@ -55,16 +55,16 @@ public class EyeForEye extends AbstractDynamicCard {
 
     public void update() {
         super.update();
-        this.rawDescription = DESCRIPTION;
-        this.initializeDescription();
+        rawDescription = DESCRIPTION;
+        initializeDescription();
     }
 
     @Override
     public void calculateCardDamage (AbstractMonster mo) {
         if(mo == null) {
-            this.damage = 0;
-            this.rawDescription = DESCRIPTION;
-            this.initializeDescription();
+            damage = 0;
+            rawDescription = DESCRIPTION;
+            initializeDescription();
             return;
         }
 
@@ -72,9 +72,9 @@ public class EyeForEye extends AbstractDynamicCard {
                 mo.intent != AbstractMonster.Intent.ATTACK_BUFF &&
                 mo.intent != AbstractMonster.Intent.ATTACK_DEBUFF &&
                 mo.intent != AbstractMonster.Intent.ATTACK_DEFEND) {
-            this.damage = 0;
-            this.rawDescription = EXTENDED_DESCRIPTION[0] + 0 + EXTENDED_DESCRIPTION[1] + DESCRIPTION;
-            this.initializeDescription();
+            damage = 0;
+            rawDescription = EXTENDED_DESCRIPTION[0] + 0 + EXTENDED_DESCRIPTION[1] + DESCRIPTION;
+            initializeDescription();
             return;
         }
 
@@ -100,15 +100,15 @@ public class EyeForEye extends AbstractDynamicCard {
         }
 
         if(isMultiDmg) {
-            this.damage = intentDmg;
-            this.rawDescription = EXTENDED_DESCRIPTION[0] + intentDmg + EXTENDED_DESCRIPTION[2] +
+            damage = intentDmg;
+            rawDescription = EXTENDED_DESCRIPTION[0] + intentDmg + EXTENDED_DESCRIPTION[2] +
                     intentMultiAmt + EXTENDED_DESCRIPTION[3] + DESCRIPTION;
-            this.initializeDescription();
+            initializeDescription();
         }
         else {
-            this.damage = intentDmg;
-            this.rawDescription = EXTENDED_DESCRIPTION[0] + intentDmg + EXTENDED_DESCRIPTION[1] + DESCRIPTION;
-            this.initializeDescription();
+            damage = intentDmg;
+            rawDescription = EXTENDED_DESCRIPTION[0] + intentDmg + EXTENDED_DESCRIPTION[1] + DESCRIPTION;
+            initializeDescription();
         }
     }
 
@@ -157,8 +157,8 @@ public class EyeForEye extends AbstractDynamicCard {
 
     @Override
     public void onMoveToDiscard() {
-        this.rawDescription = DESCRIPTION;
-        this.initializeDescription();
+        rawDescription = DESCRIPTION;
+        initializeDescription();
     }
 
     @Override

@@ -48,8 +48,8 @@ public class Decoy extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new LoseHPAction(p, p, HP_LOSS));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new ArtifactPower(p, this.magicNumber), this.magicNumber));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new ArtifactPower(p, magicNumber), magicNumber));
     }
 
 

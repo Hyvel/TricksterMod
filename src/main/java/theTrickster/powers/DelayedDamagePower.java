@@ -34,8 +34,8 @@ public class DelayedDamagePower extends AbstractPower {
         this.source = source;
         this.amount = amount;
         type = PowerType.DEBUFF;
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         updateDescription();
     }
@@ -47,8 +47,8 @@ public class DelayedDamagePower extends AbstractPower {
     public void atEndOfTurn(boolean isPlayer) {
         this.flash();
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.THORNS),
-                        AbstractGameAction.AttackEffect.FIRE));
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this.owner, this.source, POWER_ID));
+                new DamageAction(owner,
+                        new DamageInfo(source, amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(owner, source, POWER_ID));
     }
 }

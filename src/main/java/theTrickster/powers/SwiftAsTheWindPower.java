@@ -28,46 +28,46 @@ public class SwiftAsTheWindPower extends AbstractPower {
     public int counter;
 
     public SwiftAsTheWindPower(AbstractCreature owner, int amount) {
-        this.name = NAME;
-        this.ID = POWER_ID;
+        name = NAME;
+        ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
         type = PowerType.BUFF;
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-        this.counter = CARDS_TO_PLAY;
+        region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        counter = CARDS_TO_PLAY;
 
         updateDescription();
     }
 
     public void updateDescription() {
-        if (this.counter == 1) {
-            this.description = DESCRIPTIONS[0] + this.counter + DESCRIPTIONS[1];
+        if (counter == 1) {
+            description = DESCRIPTIONS[0] + counter + DESCRIPTIONS[1];
         } else {
-            this.description = DESCRIPTIONS[0] + this.counter + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + counter + DESCRIPTIONS[2];
         }
 
-        if(this.amount == 1) {
-            this.description += this.amount + DESCRIPTIONS[3];
+        if(amount == 1) {
+            description += amount + DESCRIPTIONS[3];
         }
         else {
-            this.description += this.amount + DESCRIPTIONS[4];
+            description += amount + DESCRIPTIONS[4];
         }
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        --this.counter;
-        if (this.counter == 0) {
-            this.counter = CARDS_TO_PLAY;
-            this.flash();
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(this.owner, this.amount));
+        --counter;
+        if (counter == 0) {
+            counter = CARDS_TO_PLAY;
+            flash();
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(owner, amount));
         }
-        this.updateDescription();
+        updateDescription();
     }
 
     public void atStartOfTurn() {
-        this.counter = CARDS_TO_PLAY;
-        this.updateDescription();
+        counter = CARDS_TO_PLAY;
+        updateDescription();
     }
 
 }

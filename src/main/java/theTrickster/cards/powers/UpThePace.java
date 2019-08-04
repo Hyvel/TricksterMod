@@ -48,10 +48,10 @@ public class UpThePace extends AbstractDynamicCard {
 
     @Override
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
+        if (!upgraded) {
+            upgradeName();
             upgradeBaseCost(UPGRADED_COST);
-            this.initializeDescription();
+            initializeDescription();
         }
     }
 }

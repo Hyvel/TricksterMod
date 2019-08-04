@@ -31,33 +31,33 @@ public class ForbiddenMedicinePower extends AbstractPower {
         ID = POWER_ID;
         this.owner = owner;
         this.amount = amount;
-        this.woundsAmount = cursesAmount;
+        woundsAmount = cursesAmount;
         type = PowerType.BUFF;
-        this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
-        this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
+        region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
+        region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         updateDescription();
     }
 
     public void stackPower(int stackAmount) {
-        this.fontScale = 8.0F;
-        this.amount += stackAmount;
-        ++this.woundsAmount;
+        fontScale = 8.0F;
+        amount += stackAmount;
+        ++woundsAmount;
     }
 
     public void updateDescription() {
-        if(this.woundsAmount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        if(woundsAmount == 1) {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         }
         else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2] + this.woundsAmount + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + woundsAmount + DESCRIPTIONS[3];
         }
     }
 
     public void atStartOfTurn() {
         this.flash();
         AbstractDungeon.actionManager.addToBottom(new HealAction(owner, owner, amount));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Wound(), this.woundsAmount));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new Wound(), woundsAmount));
     }
 }
 

@@ -32,7 +32,7 @@ public class RunicTorusRelic extends CustomRelic {
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.cost == 0) {
-            this.flash();
+            flash();
             AbstractDungeon.actionManager.addToBottom(
                     new RelicAboveCreatureAction(AbstractDungeon.player, this));
             AbstractDungeon.actionManager.addToBottom(
