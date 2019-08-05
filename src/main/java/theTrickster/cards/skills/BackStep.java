@@ -42,7 +42,6 @@ public class BackStep extends AbstractDynamicCard {
     public BackStep() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = WEAK;
-        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = DRAW;
         baseBlock = BLOCK;
     }
 
@@ -52,7 +51,7 @@ public class BackStep extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new WeakPower(p, magicNumber, false), magicNumber));
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, defaultSecondMagicNumber));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW));
     }
 
 

@@ -444,8 +444,7 @@ public class TricksterMod implements
             for(Class cardClass : cardClasses) {
                 CustomCard card = (CustomCard) cardClass.newInstance();
                 BaseMod.addCard(card);
-                // Unlock the cards so that they are all "seen" in the library, for people who like to look at the card list
-                // before playing your mod.
+                // Unlock the cards so that they are all "seen" in the library, no grinding needed.
                 UnlockTracker.unlockCard(card.cardID);
             }
         }

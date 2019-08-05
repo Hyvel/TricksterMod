@@ -47,7 +47,6 @@ public class DaringSlash extends AbstractDynamicCard {
     public DaringSlash() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = FRAIL;
-        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = DRAW;
         baseDamage = DAMAGE;
     }
 
@@ -57,7 +56,7 @@ public class DaringSlash extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FrailPower(p, magicNumber, false), magicNumber));
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, this.defaultSecondMagicNumber));
+        AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, DRAW));
     }
 
 
