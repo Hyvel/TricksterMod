@@ -40,7 +40,11 @@ public class UpThePacePower extends AbstractPower {
 
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount <= 1) {
+            description = DESCRIPTIONS[2];
+        } else {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
     }
 
     public void atStartOfTurn() {

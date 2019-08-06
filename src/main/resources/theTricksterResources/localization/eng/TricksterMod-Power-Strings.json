@@ -1,7 +1,11 @@
 {
         "theTrickster:TriedTechniquesPower": {
                 "NAME": "Tried Techniques",
-                "DESCRIPTIONS": ["At the start of your turn, return ", " random cards from your discard pile to your hand."]
+                "DESCRIPTIONS": [
+                        "At the start of your turn, return #b",
+                        " random cards from your discard pile to your hand.",
+                        "At the start of your turn, return a random card from your discard pile to your hand."
+                ]
         },
         "theTrickster:PlayingWithFirePower": {
                 "NAME": "Playing With Fire",
@@ -9,7 +13,11 @@
         },
         "theTrickster:UpThePacePower": {
                 "NAME": "Up The Pace",
-                "DESCRIPTIONS": ["At the start of your turn, add #b", " random 0 cost cards of any color to your hand"]
+                "DESCRIPTIONS": [
+                        "At the start of your turn, add #b",
+                        " random 0 cost cards of any color to your hand",
+                        "At the start of your turn, add a random 0 cost cards of any color to your hand"
+                ]
         },
         "theTrickster:EfficiencyPower": {
                 "NAME": "Efficiency",
