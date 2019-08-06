@@ -38,9 +38,9 @@ public class TheTrickster extends CustomPlayer {
     public static class Enums {
         @SpireEnum
         public static AbstractPlayer.PlayerClass THE_TRICKSTER;
-        @SpireEnum(name = "DEFAULT_BROWN_COLOR") // These two HAVE to have the same absolutely identical name.
+        @SpireEnum(name = "TRICKSTER_BROWN_COLOR") // These two HAVE to have the same absolutely identical name.
         public static AbstractCard.CardColor COLOR_BROWN;
-        @SpireEnum(name = "DEFAULT_BROWN_COLOR") @SuppressWarnings("unused")
+        @SpireEnum(name = "TRICKSTER_BROWN_COLOR") @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
