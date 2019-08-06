@@ -9,11 +9,11 @@
   },
   "theTrickster:DaringSlash": {
     "NAME": "Daring Slash",
-    "DESCRIPTION": "Gain !M! Frail. NL Deal !D! damage. NL Draw !theTrickster:SecondMagic! card."
+    "DESCRIPTION": "Gain !M! Frail. NL Deal !D! damage. NL Draw 1 card."
   },
   "theTrickster:BackStep": {
     "NAME": "BackStep",
-    "DESCRIPTION": "Gain !M! Weak. NL Gain !B! Block. NL Draw !theTrickster:SecondMagic! card."
+    "DESCRIPTION": "Gain !M! Weak. NL Gain !B! Block. NL Draw 1 card."
   },
   "theTrickster:SwiftSlash": {
     "NAME": "Swift Slash",
@@ -167,10 +167,6 @@
   "theTrickster:PistolWhip": {
     "NAME": "Pistol Whip",
     "DESCRIPTION": "Deal !D! damage. NL Add a random 0 cost card of any color to your hand."
-  },
-  "theTrickster:AssertiveLunge": {
-    "NAME": "Assertive Lunge",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
   },
   "theTrickster:Salvage": {
     "NAME": "Salvage",
