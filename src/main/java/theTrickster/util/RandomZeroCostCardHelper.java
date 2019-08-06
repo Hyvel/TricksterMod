@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import theTrickster.TricksterMod;
 import theTrickster.characters.TheTrickster;
 
 import java.util.ArrayList;
@@ -14,15 +15,15 @@ import java.util.Map;
 
 public class RandomZeroCostCardHelper {
 
-    //zeroCostCardPool has 0 cost cards of any colors.
-    //alternateZeroCostCardPool has 0 cost cards of colorless or brown (this mod) color.
+    //zeroCostCardPool has 0 cost cards of the following colors : red, blue, green, colorless, this mod color.
     public static CardGroup zeroCostCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
+    //alternateZeroCostCardPool has 0 cost cards of any color, including other mods colors.
     public static CardGroup alternateZeroCostCardPool = new CardGroup(CardGroup.CardGroupType.CARD_POOL);
 
 
 
-    private static void initStandardCardPool() {
-        zeroCostCardPool.clear();
+    private static void initAlternateCardPool() {
+        alternateZeroCostCardPool.clear();
 
         AbstractCard card = null;
         Iterator var2 = CardLibrary.cards.entrySet().iterator();
@@ -40,12 +41,12 @@ public class RandomZeroCostCardHelper {
                 } while(card.rarity == AbstractCard.CardRarity.BASIC || card.rarity == AbstractCard.CardRarity.SPECIAL);
             } while(card.type == AbstractCard.CardType.STATUS || card.cost != 0);
 
-            zeroCostCardPool.addToBottom((AbstractCard)c.getValue());
+            alternateZeroCostCardPool.addToBottom((AbstractCard)c.getValue());
         }
     }
 
-    private static void initAlternateCardPool() {
-        alternateZeroCostCardPool.clear();
+    private static void initStandardCardPool() {
+        zeroCostCardPool.clear();
 
         AbstractCard card = null;
         Iterator var2 = CardLibrary.cards.entrySet().iterator();
@@ -63,9 +64,13 @@ public class RandomZeroCostCardHelper {
                         card = (AbstractCard)c.getValue();
                     } while(card.rarity == AbstractCard.CardRarity.BASIC || card.rarity == AbstractCard.CardRarity.SPECIAL);
                 } while(card.type == AbstractCard.CardType.STATUS || card.cost != 0);
-            } while(card.color != AbstractCard.CardColor.COLORLESS && card.color != TheTrickster.Enums.COLOR_BROWN);
+            } while(card.color != AbstractCard.CardColor.COLORLESS &&
+                    card.color != TheTrickster.Enums.COLOR_BROWN &&
+                    card.color != AbstractCard.CardColor.BLUE &&
+                    card.color != AbstractCard.CardColor.RED &&
+                    card.color != AbstractCard.CardColor.GREEN);
 
-            alternateZeroCostCardPool.addToBottom((AbstractCard)c.getValue());
+            zeroCostCardPool.addToBottom((AbstractCard)c.getValue());
         }
     }
 
@@ -77,7 +82,13 @@ public class RandomZeroCostCardHelper {
 
     public static AbstractCard returnTrulyRandomZeroCostCardInCombat() {
         ArrayList<AbstractCard> list = new ArrayList();
-        Iterator var1 = zeroCostCardPool.group.iterator();
+        Iterator var1;
+        if(TricksterMod.generateCardsFromOtherMods) {
+            var1 = alternateZeroCostCardPool.group.iterator();
+        }
+        else {
+            var1 = zeroCostCardPool.group.iterator();
+        }
 
         AbstractCard c;
         while(var1.hasNext()) {
