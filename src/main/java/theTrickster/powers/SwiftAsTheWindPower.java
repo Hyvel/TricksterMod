@@ -25,48 +25,55 @@ public class SwiftAsTheWindPower extends AbstractPower {
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("swiftAsTheWind32.png"));
 
     private static final int CARDS_TO_PLAY = 3;
-    public int counter;
+    private int draw;
 
-    public SwiftAsTheWindPower(AbstractCreature owner, int amount) {
+    public SwiftAsTheWindPower(AbstractCreature owner, int draw) {
         name = NAME;
         ID = POWER_ID;
         this.owner = owner;
-        this.amount = amount;
+        this.draw = draw;
+        //We use amount as a counter, similarly to the panache power
+        amount = CARDS_TO_PLAY;
         type = PowerType.BUFF;
         region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-        counter = CARDS_TO_PLAY;
 
         updateDescription();
     }
 
     public void updateDescription() {
-        if (counter == 1) {
-            description = DESCRIPTIONS[0] + counter + DESCRIPTIONS[1];
+        if (amount == 1) {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         } else {
-            description = DESCRIPTIONS[0] + counter + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
         }
 
-        if(amount == 1) {
-            description += amount + DESCRIPTIONS[3];
+        if(draw == 1) {
+            description += draw + DESCRIPTIONS[3];
         }
         else {
-            description += amount + DESCRIPTIONS[4];
+            description += draw + DESCRIPTIONS[4];
         }
     }
 
+    public void stackPower(int stackAmount) {
+        fontScale = 8.0F;
+        draw += stackAmount;
+        updateDescription();
+    }
+
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        --counter;
-        if (counter == 0) {
-            counter = CARDS_TO_PLAY;
+        --amount;
+        if (amount == 0) {
+            amount = CARDS_TO_PLAY;
             flash();
-            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(owner, amount));
+            AbstractDungeon.actionManager.addToBottom(new DrawCardAction(owner, draw));
         }
         updateDescription();
     }
 
     public void atStartOfTurn() {
-        counter = CARDS_TO_PLAY;
+        amount = CARDS_TO_PLAY;
         updateDescription();
     }
 
