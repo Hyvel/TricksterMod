@@ -17,7 +17,7 @@
   },
   "theTrickster:SwiftSlash": {
     "NAME": "Swift Slash",
-    "DESCRIPTION": "Deal !D! damage to all enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies."
   },
   "theTrickster:IntrepidRush": {
     "NAME": "Intrepid Rush",
@@ -50,8 +50,8 @@
   },
   "theTrickster:TriedTechniques": {
     "NAME": "Tried Techniques",
-    "DESCRIPTION": "At the start of the turn, return 1 card from your discard pile to your hand.",
-    "UPGRADE_DESCRIPTION" : "Innate. NL At the start of the turn, return a random card from your discard pile to your hand."
+    "DESCRIPTION": "At the start of the turn, return 1 random card from your discard pile to your hand.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL At the start of the turn, return 1 random card from your discard pile to your hand."
   },
   "theTrickster:RampingUpStrike": {
     "NAME": "Ramping Up Strike",
@@ -83,7 +83,8 @@
   },
   "theTrickster:HandGrenade": {
     "NAME": "Hand Grenade",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! cards."
   },
   "theTrickster:KillThemAll": {
     "NAME": "Kill 'Em all",
@@ -95,8 +96,8 @@
   },
   "theTrickster:Distract": {
     "NAME": "Distract",
-    "DESCRIPTION": "Enemy lose 1 Strength. Exhaust.",
-    "UPGRADE_DESCRIPTION" : "Enemy lose 2 Strength. NL Exhaust."
+    "DESCRIPTION": "Enemy loses 1 Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Enemy loses 2 Strength. NL Exhaust."
   },
   "theTrickster:TacticalDefend": {
     "NAME": "Tactical Defend",
@@ -124,13 +125,13 @@
   },
   "theTrickster:ImpulsiveStrike": {
     "NAME": "Impulsive Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deals 2 damage less per elapsed turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION" : "Innate. NL Deal !D! damage. NL Deals !M! damage less per elapsed turn. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Deals 2 damage less for each turn that has passed this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL Deal !D! damage. NL Deals 2 damage less for each turn that has passed this combat. NL Exhaust."
   },
   "theTrickster:ImpulsiveDefend": {
     "NAME": "Impulsive Defend",
-    "DESCRIPTION": "Gain !B! Block. NL Gains 2 Block less per elapsed turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION" : "Innate. NL Gain !B! Block. NL Gains 2 Block less per elapsed turn. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Gains 2 Block less for each turn that has passed this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL Gain !B! Block. NL Gains 2 Block less for each turn that has passed this combat. NL Exhaust."
   },
   "theTrickster:SmokeOfConfusion": {
     "NAME": "Smoke Of Confusion",
@@ -191,11 +192,11 @@
   },
   "theTrickster:MentalStrength": {
     "NAME": "Mental Strength",
-    "DESCRIPTION": "Every time you gain a Debuff, gain !M! Block."
+    "DESCRIPTION": "Whenever you gain a Debuff, gain !M! Block."
   },
   "theTrickster:Firecrackers": {
     "NAME": "Firecrackers",
-    "DESCRIPTION": "At the end of the enemies next turn, all enemies take !M! damage."
+    "DESCRIPTION": "At the end of the enemies next turn, deal !M! damage to ALL enemies."
   },
   "theTrickster:FirstAidKit": {
     "NAME": "First Aid Kit",
@@ -212,7 +213,7 @@
   },
   "theTrickster:MistForm": {
     "NAME": "Mist Form",
-    "DESCRIPTION": "Whenever you play a 0 cost card, deal !M! damage to all enemies."
+    "DESCRIPTION": "Whenever you play a 0 cost card, deal !M! damage to ALL enemies."
   },
   "theTrickster:Frenzy": {
     "NAME": "Frenzy",
@@ -227,11 +228,11 @@
   },
   "theTrickster:ForbiddenMedicine": {
     "NAME": "Forbidden Medicine",
-    "DESCRIPTION": "At the start of every turn, heal !M! HP and add a Wound to your hand."
+    "DESCRIPTION": "At the start of your turn, heal !M! HP and add a Wound to your hand."
   },
   "theTrickster:BulletRain": {
     "NAME": "Bullet Rain",
-    "DESCRIPTION": "Deal !D! damage to all enemies 3 times."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies 3 times."
   },
   "theTrickster:CreateAnOpening": {
     "NAME": "Create An Opening",
