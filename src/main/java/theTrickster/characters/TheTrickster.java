@@ -120,6 +120,9 @@ public class TheTrickster extends CustomPlayer {
         if (statPref.getInteger("ASCENSION_LEVEL", 1) != 20) {
             statPref.putInteger("ASCENSION_LEVEL", 20);
             statPref.putInteger("LAST_ASCENSION_LEVEL", 0);
+            if(charStat.getVictoryCount() == 0) {
+                statPref.putInteger("WIN_COUNT", 1);
+            }
             statPref.flush();
             logger.info("Set max ascension level to 20 and last ascension to 0. This should be the first time the mod is launched.");
         }
