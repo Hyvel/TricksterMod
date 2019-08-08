@@ -116,7 +116,7 @@
   },
   "theTrickster:HotSteel": {
     "NAME": "Hot Steel",
-    "DESCRIPTION": "Gain 2 Energy. NL Deal !D! damage. NL Add a Burn into your draw pile."
+    "DESCRIPTION": "Gain 2 [E]. NL Deal !D! damage. NL Add a Burn into your draw pile."
   },
   "theTrickster:Repetition": {
     "NAME": "Repetition",
@@ -146,7 +146,7 @@
   },
   "theTrickster:SmokeAndMirrors": {
     "NAME": "Smoke And Mirrors",
-    "DESCRIPTION": "Gain 2 Energy. NL Gain !B! Block. NL Add a Burn into your draw pile."
+    "DESCRIPTION": "Gain 2 [E]. NL Gain !B! Block. NL Add a Burn into your draw pile."
   },
   "theTrickster:HiddenPistol": {
     "NAME": "Hidden Pistol",
@@ -187,7 +187,7 @@
   },
   "theTrickster:Anticipation": {
     "NAME": "Anticipation",
-    "DESCRIPTION": "If the targeted enemy intends to attack: Gain 2 Energy and draw !M! cards. Exhaust."
+    "DESCRIPTION": "If the targeted enemy intends to attack: Gain 2 [E] and draw !M! cards. Exhaust."
   },
   "theTrickster:MentalStrength": {
     "NAME": "Mental Strength",
