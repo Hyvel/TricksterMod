@@ -9,7 +9,7 @@
     <description>Adds a new character: the Trickster.
 Adds 73 cards, 11 relics and 1 potion.
 
-Some cards generate 0 cost cards from any color. What I meant by this is they can be 0 cost cards from the base game or from this mod. If you want to allow generation of cards from other mods, there is an option in the mod config. Depending on the mods, this can work well or just generate useless cards.
+Some cards generate 0 cost cards from any color. What is meant by this is that they can be 0 cost cards from the base game or from this mod. If you want to allow generation of cards from other mods, there is an option in the mod config. Depending on the mods, this can work well or just generate useless cards.
     </description>
 
     <properties>
