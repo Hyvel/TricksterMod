@@ -33,10 +33,10 @@ public class Gunblade extends AbstractDynamicCard {
 
     private static final int COST = 3;
 
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 16;
     private static final int UPGRADE_PLUS_DMG = 9;
 
-    private static final int BLOCK = 15;
+    private static final int BLOCK = 16;
     private static final int UPGRADE_PLUS_BLOCK = 9;
 
     // /STAT DECLARATION/

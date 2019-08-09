@@ -34,7 +34,7 @@ public class Audacity extends AbstractDynamicCard {
 
     private static final int COST = 2;
 
-    private static final int DAMAGE = 20;
+    private static final int DAMAGE = 22;
     private static final int UPGRADE_PLUS_DMG = 8;
 
     private static final int WOUNDS = 1;

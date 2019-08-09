@@ -31,8 +31,10 @@ public class Volley extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 2;
-    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int DAMAGE = 4;
+//    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int MULTI_ATTACK = 2;
+    private static final int UPGRADE_PLUS_MULTI_ATTACK = 1;
 
     // /STAT DECLARATION/
 
@@ -40,17 +42,16 @@ public class Volley extends AbstractDynamicCard {
     public Volley() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = MULTI_ATTACK;
     }
 
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        for(int i = 0; i < magicNumber; ++i) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
     }
 
 
@@ -58,7 +59,8 @@ public class Volley extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+//            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_PLUS_MULTI_ATTACK);
             initializeDescription();
         }
     }

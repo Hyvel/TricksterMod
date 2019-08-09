@@ -32,7 +32,7 @@ public class BulletRain extends AbstractDynamicCard {
     private static final int COST = 1;
 
 
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 3;
     private static final int UPGRADE_PLUS_DMG = 1;
 
     // /STAT DECLARATION/

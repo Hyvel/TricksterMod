@@ -25,7 +25,7 @@
         },
         "theTrickster:MentalStrengthPower": {
                 "NAME": "Mental Strength",
-                "DESCRIPTIONS": ["Every time you get a Debuff, Gain #b", " Block."]
+                "DESCRIPTIONS": ["Whenever you get a Debuff, Gain #b", " Block."]
         },
         "theTrickster:FirstAidKitPower": {
                 "NAME": "First Aid Kit",
@@ -56,7 +56,7 @@
         },
         "theTrickster:ForbiddenMedicinePower": {
                 "NAME": "Forbidden Medicine",
-                "DESCRIPTIONS": ["At the start of every turn, heal #b", " HP and add a Wound to your hand.", " HP and add #b", " Wounds to your hand."]
+                "DESCRIPTIONS": ["At the start of your turn, heal #b", " HP and add a Wound to your hand.", " HP and add #b", " Wounds to your hand."]
         },
         "theTrickster:ThickVestPower": {
                 "NAME": "Thick Vest",

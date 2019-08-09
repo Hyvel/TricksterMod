@@ -240,7 +240,7 @@
   },
   "theTrickster:Volley": {
     "NAME": "Volley",
-    "DESCRIPTION": "Deal !D! damage 3 times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "theTrickster:Audacity": {
     "NAME": "Audacity",

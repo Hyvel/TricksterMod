@@ -35,10 +35,10 @@ public class Feint extends AbstractDynamicCard {
     private static final int COST = 0;
 
     private static final int DAMAGE = 1;
-    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     private static final int BLOCK = 1;
-    private static final int UPGRADE_PLUS_BLOCK = 1;
+    private static final int UPGRADE_PLUS_BLOCK = 2;
 
     private static final int DRAW = 1;
 
