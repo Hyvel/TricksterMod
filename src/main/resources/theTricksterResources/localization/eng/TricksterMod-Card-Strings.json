@@ -92,7 +92,7 @@
   },
   "theTrickster:TickingPackage": {
     "NAME": "Ticking Package",
-    "DESCRIPTION": "Target an enemy. At the end of its next turn it takes !M! damage."
+    "DESCRIPTION": "Enemy takes !M! damage at the end of its next turn."
   },
   "theTrickster:Distract": {
     "NAME": "Distract",
@@ -109,15 +109,15 @@
   },
   "theTrickster:TrickyStrike": {
     "NAME": "Tricky Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Defend\", even the exhausted ones."
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for ALL your cards containing \"Defend\", even the Exhausted ones."
   },
   "theTrickster:TrickyDefend": {
     "NAME": "Tricky Defend",
-    "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for ALL your cards containing \"Strike\", even the exhausted ones."
+    "DESCRIPTION": "Gain !B! Block. NL Gains !M! additional Block for ALL your cards containing \"Strike\", even the Exhausted ones."
   },
   "theTrickster:HotSteel": {
     "NAME": "Hot Steel",
-    "DESCRIPTION": "Gain 2 [E]. NL Deal !D! damage. NL Add a Burn into your draw pile."
+    "DESCRIPTION": "Gain [E] [E]. NL Deal !D! damage. NL Add a Burn into your draw pile."
   },
   "theTrickster:Repetition": {
     "NAME": "Repetition",
@@ -147,7 +147,7 @@
   },
   "theTrickster:SmokeAndMirrors": {
     "NAME": "Smoke And Mirrors",
-    "DESCRIPTION": "Gain 2 [E]. NL Gain !B! Block. NL Add a Burn into your draw pile."
+    "DESCRIPTION": "Gain [E] [E]. NL Gain !B! Block. NL Add a Burn into your draw pile."
   },
   "theTrickster:HiddenPistol": {
     "NAME": "Hidden Pistol",
@@ -188,7 +188,7 @@
   },
   "theTrickster:Anticipation": {
     "NAME": "Anticipation",
-    "DESCRIPTION": "If the targeted enemy intends to attack: Gain 2 [E] and draw !M! cards. Exhaust."
+    "DESCRIPTION": "If the enemy intends to attack: Gain [E] [E] and draw !M! cards. Exhaust."
   },
   "theTrickster:MentalStrength": {
     "NAME": "Mental Strength",
@@ -217,9 +217,9 @@
   },
   "theTrickster:Frenzy": {
     "NAME": "Frenzy",
-    "DESCRIPTION": "Deal !D! damage. NL If your HP is at or below 50%, deal the damage 2 times instead of once.",
+    "DESCRIPTION": "Deal !D! damage. NL If your HP is at or below 50%, deal the damage twice instead of once.",
     "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage 2 times. NL If your HP is at or below 50%, deal the damage 2 times instead of once."
+      "Deal !D! damage twice. NL If your HP is at or below 50%, deal the damage twice instead of once."
     ]
   },
   "theTrickster:StudiedSnipe": {
@@ -236,7 +236,7 @@
   },
   "theTrickster:CreateAnOpening": {
     "NAME": "Create An Opening",
-    "DESCRIPTION": "Apply !M! Vulnerable to an enemy. NL Gain !B! Block."
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Gain !B! Block."
   },
   "theTrickster:Volley": {
     "NAME": "Volley",
@@ -252,17 +252,17 @@
   },
   "theTrickster:OminousSmile": {
     "NAME": "Ominous Smile",
-    "DESCRIPTION": "Add a wound to your hand. Apply !M! Weak and !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "Add a Wound to your hand. Apply !M! Weak and !M! Vulnerable to ALL enemies."
   },
   "theTrickster:LightTrick": {
     "NAME": "Light Trick",
-    "DESCRIPTION": "Gain !M! Dexterity. NL At the end of the turn lose !M! dexterity."
+    "DESCRIPTION": "Gain !M! Dexterity. NL At the end of the turn lose !M! Dexterity."
   },
   "theTrickster:CapriciousThrust": {
     "NAME": "Capricious Thrust",
-    "DESCRIPTION": "Deal !D! damage. NL If you have a Status in your hand, deal the damage 2 times instead of once.",
+    "DESCRIPTION": "Deal !D! damage. NL If you have a Status in your hand, deal the damage twice instead of once.",
     "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage 2 times. NL If you have a Status in your hand, deal the damage 2 times instead of once."
+      "Deal !D! damage twice. NL If you have a Status in your hand, deal the damage twice instead of once."
       ]
   },
   "theTrickster:DivingSlice": {
@@ -271,7 +271,7 @@
   },
   "theTrickster:SharpBlade": {
     "NAME": "Sharp Blade",
-    "DESCRIPTION": "Deal !D! damage. Put a random Status from you draw pile in your hand."
+    "DESCRIPTION": "Deal !D! damage. Put a random Status from your draw pile in your hand."
   },
   "theTrickster:ThickVest": {
     "NAME": "Thick Vest",
@@ -302,7 +302,7 @@
   },
   "theTrickster:KeepCool": {
     "NAME": "Keep Cool",
-    "DESCRIPTION": "Remove all of your Weak, Vulnerable and Frail. NL Gain !M! artifact."
+    "DESCRIPTION": "Remove all of your Weak, Vulnerable and Frail. NL Gain !M! Artifact."
   },
   "theTrickster:EyeForEye": {
     "NAME": "Eye For Eye",
@@ -316,6 +316,6 @@
   },
   "theTrickster:Impale": {
     "NAME": "Impale",
-    "DESCRIPTION": "Deal !D! damage. NL Double this card damage."
+    "DESCRIPTION": "Deal !D! damage. NL Double this card damage this combat."
   }
 }
