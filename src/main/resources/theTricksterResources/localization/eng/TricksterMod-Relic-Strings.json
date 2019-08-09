@@ -61,6 +61,7 @@
     "NAME": "Illusory Banner",
     "FLAVOR": "Mesmerizing to all who lay eyes on it.",
     "DESCRIPTIONS": [
+      "Replaces Optical Illusion. ",
       "Every time you play a card, gain #b1 Block and deal #b1 damage to ALL enemies."
     ]
   },
