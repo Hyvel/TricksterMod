@@ -46,7 +46,7 @@ public class MistFormPower extends AbstractPower {
     }
 
     public void onAfterCardPlayed(AbstractCard card) {
-        if(card.cost == 0) {
+        if(card.cost == 0 || card.costForTurn == 0) {
             flash();
             AbstractDungeon.actionManager.addToBottom(new SFXAction("ATTACK_HEAVY"));
             if (Settings.FAST_MODE) {

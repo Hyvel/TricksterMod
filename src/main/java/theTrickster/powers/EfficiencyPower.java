@@ -49,7 +49,8 @@ public class EfficiencyPower  extends AbstractPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && card.cost == 0 && this.amount > 0) {
+        boolean isZeroCost = card.cost == 0 || card.costForTurn == 0;
+        if (!card.purgeOnUse && isZeroCost && this.amount > 0) {
             this.flash();
             AbstractMonster m = null;
             if (action.target != null) {
