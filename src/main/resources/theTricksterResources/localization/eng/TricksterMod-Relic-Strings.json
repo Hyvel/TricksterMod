@@ -1,44 +1,44 @@
 {
   "theTrickster:OpticalIllusionRelic": {
     "NAME": "Optical Illusion",
-    "FLAVOR": "A strange pattern, midly hypnotising to monsters and humans alike",
+    "FLAVOR": "A strange pattern, mildly hypnotising to monsters and humans alike",
     "DESCRIPTIONS": [
-      "Every time you play 4 cards in a turn, gain 3 block and deal 3 damage to all enemies."
+      "Every time you play #b4 cards in a turn, gain #b3 #yBlock and deal #b3 damage to all enemies."
     ]
   },
   "theTrickster:StrangeDollRelic": {
     "NAME": "Strange Doll",
     "FLAVOR": "A weirdly shaped doll. It glimmers faintly.",
     "DESCRIPTIONS": [
-      "Whenever you get a debuff, deal 3 damage to a random enemy"
+      "Whenever you get a debuff, deal #b3 damage to a random enemy"
     ]
   },
   "theTrickster:BinocularsRelic": {
     "NAME": "Binoculars",
     "FLAVOR": "Useful for scouting.",
     "DESCRIPTIONS": [
-      "Start each combat with 3 Dexterity that is lost at the end of your turn."
+      "Start each combat with #b3 #yDexterity that is lost at the end of your turn."
     ]
   },
   "theTrickster:OcarinaRelic": {
     "NAME": "Ocarina",
     "FLAVOR": "Comforting.",
     "DESCRIPTIONS": [
-      "The first time you draw a Status each combat, draw 3 cards."
+      "The first time you draw a #yStatus each combat, draw #b3 cards."
     ]
   },
   "theTrickster:BoneWhistleRelic": {
     "NAME": "Bone Whistle",
     "FLAVOR": "It only makes painful sounds.",
     "DESCRIPTIONS": [
-      "Whenever you draw a Status, deal 3 damage to a random enemy."
+      "Whenever you draw a #yStatus, deal #b3 damage to a random enemy."
     ]
   },
   "theTrickster:SnailBroochRelic": {
     "NAME": "Snail Brooch",
     "FLAVOR": "Rumored to be the creation of chronomancers.",
     "DESCRIPTIONS": [
-      "Whenever you play 4 or less cards in a turn, gain 1 Energy at the start of your next turn."
+      "Whenever you play #b4 or less cards in a turn, gain [E] at the start of your next turn."
     ]
   },
   "theTrickster:DesertRoseRelic": {
@@ -54,7 +54,7 @@
     "NAME": "Meteorite",
     "FLAVOR": "Heavy and infused with power.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain 2 Strength and lose 1 Dexterity."
+      "At the start of your turn, gain #b2 #yStrength and lose #b1 #yDexterity."
     ]
   },
   "theTrickster:IllusoryBannerRelic": {
@@ -62,7 +62,7 @@
     "FLAVOR": "Mesmerizing to all who lay eyes on it.",
     "DESCRIPTIONS": [
       "Replaces Optical Illusion. ",
-      "Every time you play a card, gain #b1 Block and deal #b1 damage to ALL enemies."
+      "Every time you play a card, gain #b1 #yBlock and deal #b1 damage to ALL enemies."
     ]
   },
   "theTrickster:AncientPicklesRelic": {
@@ -70,14 +70,14 @@
     "FLAVOR": "Sour but tasty.",
     "DESCRIPTIONS": [
       "Gain [E]",
-      " at the start of your turn. Start each combat with 2 Weak and 2 Frail."
+      " at the start of your turn. Start each combat with #b2 #yWeak and #b2 #yFrail."
     ]
   },
   "theTrickster:RunicTorusRelic": {
     "NAME": "Runic Torus",
     "FLAVOR": "The runes are indecipherable.",
     "DESCRIPTIONS": [
-      "Whenever you play a 0 cost card, gain 2 Block."
+      "Whenever you play a 0 cost card, gain #b2 #yBlock."
     ]
   }
 }
