@@ -33,7 +33,7 @@ public class RampingUpStrike extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 3;
+    private static final int DAMAGE = 1;
     private static final int DAMAGE_PER_ELAPSED_TURN = 2;
 
     // /STAT DECLARATION/

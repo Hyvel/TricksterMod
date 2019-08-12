@@ -10,7 +10,7 @@
     "NAME": "Strange Doll",
     "FLAVOR": "A weirdly shaped doll. It glimmers faintly.",
     "DESCRIPTIONS": [
-      "Whenever you get a debuff, deal #b3 damage to a random enemy"
+      "Whenever you get a debuff, deal #b3 damage to a random enemy."
     ]
   },
   "theTrickster:BinocularsRelic": {

@@ -34,7 +34,7 @@ public class RampingUpDefend extends AbstractDynamicCard {
     private static final int UPGRADED_COST = 0;
 
     private static final int BLOCK = 1;
-    private static final int BLOCK_PER_ELAPSED_TURN = 2;
+    private static final int BLOCK_PER_ELAPSED_TURN = 1;
 
     // /STAT DECLARATION/
 
