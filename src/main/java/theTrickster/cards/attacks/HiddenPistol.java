@@ -34,8 +34,8 @@ public class HiddenPistol extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private static final int DAMAGE = 3;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 6;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     private static final int ARTIFACT = 1;
 
@@ -45,6 +45,7 @@ public class HiddenPistol extends AbstractDynamicCard {
     public HiddenPistol() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        exhaust = true;
     }
 
 

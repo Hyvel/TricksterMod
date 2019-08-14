@@ -151,7 +151,7 @@
   },
   "theTrickster:HiddenPistol": {
     "NAME": "Hidden Pistol",
-    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Artifact."
+    "DESCRIPTION": "Deal !D! damage. NL Gain 1 Artifact. NL Exhaust."
   },
   "theTrickster:PlayingWithFire": {
     "NAME": "Playing With Fire",
