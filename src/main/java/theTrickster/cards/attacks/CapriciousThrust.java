@@ -84,7 +84,7 @@ public class CapriciousThrust extends AbstractDynamicCard {
         }
 
         if (hasStatusInHand) {
-            rawDescription = EXTENDED_DESCRIPTION[0] + DESCRIPTION;
+            rawDescription = EXTENDED_DESCRIPTION[0];
             initializeDescription();
         }
         else {
