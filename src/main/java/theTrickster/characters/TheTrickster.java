@@ -99,9 +99,9 @@ public class TheTrickster extends CustomPlayer {
         // =============== TEXTURES, ENERGY, LOADOUT =================
 
         initializeClass(null, // required call to load textures and setup energy/loadout.
-                THE_DEFAULT_SHOULDER_2, // campfire pose
-                THE_DEFAULT_SHOULDER_1, // another campfire pose
-                THE_DEFAULT_CORPSE, // dead corpse
+                THE_TRICKSTER_SHOULDER_2, // campfire pose
+                THE_TRICKSTER_SHOULDER_1, // another campfire pose
+                THE_TRICKSTER_CORPSE, // dead corpse
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN)); // energy manager
 
         // =============== /TEXTURES, ENERGY, LOADOUT/ =================
@@ -199,7 +199,7 @@ public class TheTrickster extends CustomPlayer {
     // Should return a color object to be used to color the trail of moving cards
     @Override
     public Color getCardTrailColor() {
-        return TricksterMod.DEFAULT_BROWN;
+        return TricksterMod.TRICKSTER_BROWN;
     }
 
     // Should return a BitmapFont object that you can use to customize how your
@@ -237,14 +237,14 @@ public class TheTrickster extends CustomPlayer {
     // Should return a Color object to be used to color the miniature card images in run history.
     @Override
     public Color getCardRenderColor() {
-        return TricksterMod.DEFAULT_BROWN;
+        return TricksterMod.TRICKSTER_BROWN;
     }
 
     // Should return a Color object to be used as screen tint effect when your
     // character attacks the heart.
     @Override
     public Color getSlashAttackColor() {
-        return TricksterMod.DEFAULT_BROWN;
+        return TricksterMod.TRICKSTER_BROWN;
     }
 
     // Should return an AttackEffect array of any size greater than 0. These effects

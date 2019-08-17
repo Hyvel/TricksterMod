@@ -78,7 +78,7 @@ public class TricksterMod implements
     
     // Colors (RGB)
     // Character Color
-    public static final Color DEFAULT_BROWN = CardHelper.getColor(64.0f, 70.0f, 10.0f);
+    public static final Color TRICKSTER_BROWN = CardHelper.getColor(64.0f, 70.0f, 10.0f);
     
     // Potion Colors in RGB
     public static final Color PRESCIENCE_POTION_LIQUID = CardHelper.getColor(150.0f, 75.0f, 40.0f); // Orange-ish Red
@@ -97,11 +97,11 @@ public class TricksterMod implements
     private static final String POWER_TRICKSTER_BROWN_PORTRAIT = "theTricksterResources/images/1024/bg_power_trickster_brown.png";
     private static final String ENERGY_ORB_TRICKSTER_BROWN_PORTRAIT = "theTricksterResources/images/1024/card_trickster_brown_orb.png";
     
-    private static final String THE_DEFAULT_BUTTON = "theTricksterResources/images/charSelect/TricksterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "theTricksterResources/images/charSelect/TricksterPortrait.png";
-    public static final String THE_DEFAULT_SHOULDER_1 = "theTricksterResources/images/char/tricksterCharacter/shoulder.png";
-    public static final String THE_DEFAULT_SHOULDER_2 = "theTricksterResources/images/char/tricksterCharacter/shoulder2.png";
-    public static final String THE_DEFAULT_CORPSE = "theTricksterResources/images/char/tricksterCharacter/corpse.png";
+    private static final String THE_TRICKSTER_BUTTON = "theTricksterResources/images/charSelect/TricksterButton.png";
+    private static final String THE_TRICKSTER_PORTRAIT = "theTricksterResources/images/charSelect/TricksterPortrait.png";
+    public static final String THE_TRICKSTER_SHOULDER_1 = "theTricksterResources/images/char/tricksterCharacter/shoulder.png";
+    public static final String THE_TRICKSTER_SHOULDER_2 = "theTricksterResources/images/char/tricksterCharacter/shoulder2.png";
+    public static final String THE_TRICKSTER_CORPSE = "theTricksterResources/images/char/tricksterCharacter/corpse.png";
     
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "theTricksterResources/images/Badge.png";
@@ -151,8 +151,8 @@ public class TricksterMod implements
         
         logger.info("Creating the color " + TheTrickster.Enums.COLOR_BROWN.toString());
         
-        BaseMod.addColor(TheTrickster.Enums.COLOR_BROWN, DEFAULT_BROWN, DEFAULT_BROWN, DEFAULT_BROWN,
-                DEFAULT_BROWN, DEFAULT_BROWN, DEFAULT_BROWN, DEFAULT_BROWN,
+        BaseMod.addColor(TheTrickster.Enums.COLOR_BROWN, TRICKSTER_BROWN, TRICKSTER_BROWN, TRICKSTER_BROWN,
+                TRICKSTER_BROWN, TRICKSTER_BROWN, TRICKSTER_BROWN, TRICKSTER_BROWN,
                 ATTACK_TRICKSTER_BROWN, SKILL_TRICKSTER_BROWN, POWER_TRICKSTER_BROWN, ENERGY_ORB_TRICKSTER_BROWN,
                 ATTACK_TRICKSTER_BROWN_PORTRAIT, SKILL_TRICKSTER_BROWN_PORTRAIT, POWER_TRICKSTER_BROWN_PORTRAIT,
                 ENERGY_ORB_TRICKSTER_BROWN_PORTRAIT, CARD_ENERGY_ORB_BROWN);
@@ -236,7 +236,7 @@ public class TricksterMod implements
         logger.info("Beginning to edit characters. " + "Add " + TheTrickster.Enums.THE_TRICKSTER.toString());
         
         BaseMod.addCharacter(new TheTrickster("The Trickster", TheTrickster.Enums.THE_TRICKSTER),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheTrickster.Enums.THE_TRICKSTER);
+                THE_TRICKSTER_BUTTON, THE_TRICKSTER_PORTRAIT, TheTrickster.Enums.THE_TRICKSTER);
         
         receiveEditPotions();
         logger.info("Added " + TheTrickster.Enums.THE_TRICKSTER.toString());
