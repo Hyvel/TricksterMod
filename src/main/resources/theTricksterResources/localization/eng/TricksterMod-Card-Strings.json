@@ -125,13 +125,13 @@
   },
   "theTrickster:ImpulsiveStrike": {
     "NAME": "Impulsive Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Deals 2 damage less for each turn that has passed this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION" : "Innate. NL Deal !D! damage. NL Deals 2 damage less for each turn that has passed this combat. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Deals 2 damage less for each completed turn this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL Deal !D! damage. NL Deals 2 damage less for each completed turn this combat. NL Exhaust."
   },
   "theTrickster:ImpulsiveDefend": {
     "NAME": "Impulsive Defend",
-    "DESCRIPTION": "Gain !B! Block. NL Gains 2 Block less for each turn that has passed this combat. NL Exhaust.",
-    "UPGRADE_DESCRIPTION" : "Innate. NL Gain !B! Block. NL Gains 2 Block less for each turn that has passed this combat. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Gains 2 Block less for each completed turn this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION" : "Innate. NL Gain !B! Block. NL Gains 2 Block less for each completed turn this combat. NL Exhaust."
   },
   "theTrickster:SmokeOfConfusion": {
     "NAME": "Smoke Of Confusion",
