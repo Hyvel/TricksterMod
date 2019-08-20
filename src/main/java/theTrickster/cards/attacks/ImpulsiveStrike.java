@@ -63,20 +63,20 @@ public class ImpulsiveStrike extends AbstractDynamicCard {
 
     public void applyPowers() {
         baseDamage = DAMAGE - ((GameActionManager.turn - 1) * magicNumber );
-
         super.applyPowers();
 
+        //reset the base damage (necessary as when isDamageModified is false, the damage is set to baseDamage)
+        baseDamage = DAMAGE;
         isDamageModified = damage != DAMAGE;
-        initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster m) {
         baseDamage = DAMAGE - ((GameActionManager.turn - 1) * magicNumber );
-
         super.calculateCardDamage(m);
 
+        //reset the base damage (necessary as when isDamageModified is false, the damage is set to baseDamage)
+        baseDamage = DAMAGE;
         isDamageModified = damage != DAMAGE;
-        initializeDescription();
     }
 
     @Override

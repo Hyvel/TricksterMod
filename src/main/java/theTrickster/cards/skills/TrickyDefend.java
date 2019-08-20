@@ -78,13 +78,21 @@ public class TrickyDefend extends AbstractDynamicCard {
 
     public void applyPowers() {
         baseBlock = BLOCK + (magicNumber * countStrikeCards());
-
         super.applyPowers();
 
-        isBlockModified = block != BLOCK;
-        this.initializeDescription();
+        //reset baseBlock (necessary as when isBlockModified is false, block is set to baseBlock)
+        baseBlock = BLOCK;
+        isBlockModified = block != baseBlock;
     }
 
+    public void calculateCardDamage(AbstractMonster m) {
+        baseBlock = BLOCK + (magicNumber * countStrikeCards());
+        super.applyPowers();
+
+        //reset baseBlock (necessary as when isBlockModified is false, block is set to baseBlock)
+        baseBlock = BLOCK;
+        isBlockModified = block != baseBlock;
+    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -62,8 +62,19 @@ public class ImpulsiveDefend extends AbstractDynamicCard {
 
         super.applyPowers();
 
+        //reset baseBlock (necessary as when isBlockModified is false, block is set to baseBlock)
+        baseBlock = BLOCK;
         isBlockModified = block != BLOCK;
-        initializeDescription();
+    }
+
+    public void calculateCardDamage(AbstractMonster m) {
+        baseBlock = BLOCK - ((GameActionManager.turn - 1) * magicNumber );
+
+        super.applyPowers();
+
+        //reset baseBlock (necessary as when isBlockModified is false, block is set to baseBlock)
+        baseBlock = BLOCK;
+        isBlockModified = block != BLOCK;
     }
 
     @Override

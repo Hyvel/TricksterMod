@@ -45,33 +45,44 @@ public class CautiousManeuver extends AbstractDynamicCard {
 
 
     public void applyPowers() {
-        //Reset baseBlock
-        if (upgraded) {
-            baseBlock = BLOCK + UPGRADE_PLUS_BLOCK;
-        }
-        else {
-            baseBlock = BLOCK;
-        }
+//        if (upgraded) {
+//            baseBlock = BLOCK + UPGRADE_PLUS_BLOCK;
+//        }
+//        else {
+//            baseBlock = BLOCK;
+//        }
 
         if (AbstractDungeon.player.isBloodied) {
+            int realBaseBlock = baseBlock;
             // Add bonus block.
             baseBlock += BONUS_BLOCK;
-
             super.applyPowers();
 
-            if ( (upgraded && baseBlock != BLOCK) || (!upgraded && baseBlock != BLOCK + UPGRADE_PLUS_BLOCK)) {
-                isBlockModified = true;
-            }
-            else {
-                isBlockModified = false;
-            }
-            initializeDescription();
+            //reset baseBlock (necessary as when isBlockModified is false, block is set to baseBlock)
+            baseBlock = realBaseBlock;
+            isBlockModified = block != BLOCK;
         }
         else {
             super.applyPowers();
         }
     }
 
+
+    public void calculateCardDamage(AbstractMonster m) {
+        if (AbstractDungeon.player.isBloodied) {
+            int realBaseBlock = baseBlock;
+            // Add bonus block.
+            baseBlock += BONUS_BLOCK;
+            super.calculateCardDamage(m);
+
+            //reset baseBlock (necessary as when isBlockModified is false, block is set to baseBlock)
+            baseBlock = realBaseBlock;
+            isBlockModified = block != BLOCK;
+        }
+        else {
+            super.calculateCardDamage(m);
+        }
+    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

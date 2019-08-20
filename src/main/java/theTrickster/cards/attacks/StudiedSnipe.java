@@ -50,7 +50,6 @@ public class StudiedSnipe extends AbstractDynamicCard {
         }
 
         super.applyPowers();
-        initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster m) {
@@ -60,9 +59,6 @@ public class StudiedSnipe extends AbstractDynamicCard {
         }
 
         super.calculateCardDamage(m);
-
-        isDamageModified = damage != DAMAGE;
-        initializeDescription();
     }
 
 

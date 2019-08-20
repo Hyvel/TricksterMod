@@ -55,20 +55,20 @@ public class RampingUpStrike extends AbstractDynamicCard {
 
     public void applyPowers() {
         baseDamage = DAMAGE + (magicNumber * (GameActionManager.turn - 1));
-
         super.applyPowers();
 
-        isDamageModified = damage != DAMAGE;
-        initializeDescription();
+        //reset the base damage (necessary as when isDamageModified is false, the damage is set to baseDamage)
+        baseDamage = DAMAGE;
+        isDamageModified = damage != baseDamage;
     }
 
     public void calculateCardDamage(AbstractMonster m) {
         baseDamage = DAMAGE + (magicNumber * (GameActionManager.turn - 1));
-
         super.calculateCardDamage(m);
 
-        isDamageModified = damage != DAMAGE;
-        initializeDescription();
+        //reset the base damage (necessary as when isDamageModified is false, the damage is set to baseDamage)
+        baseDamage = DAMAGE;
+        isDamageModified = damage != baseDamage;
     }
 
 
