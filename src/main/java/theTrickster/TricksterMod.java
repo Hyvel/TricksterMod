@@ -78,7 +78,7 @@ public class TricksterMod implements
     
     // Colors (RGB)
     // Character Color
-    public static final Color TRICKSTER_BROWN = CardHelper.getColor(64.0f, 70.0f, 10.0f);
+    public static final Color TRICKSTER_BROWN = CardHelper.getColor(132.0f, 103.0f, 17.0f);
     
     // Potion Colors in RGB
     public static final Color PRESCIENCE_POTION_LIQUID = CardHelper.getColor(150.0f, 75.0f, 40.0f); // Orange-ish Red
