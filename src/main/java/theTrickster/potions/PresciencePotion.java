@@ -47,7 +47,7 @@ public class PresciencePotion extends AbstractPotion {
     }
 
     @Override
-    public int getPotency(final int potency) {
+    public int getPotency(final int ascensionLevel) {
         return 1;
     }
 }

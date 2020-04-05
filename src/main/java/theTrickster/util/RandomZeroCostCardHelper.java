@@ -1,11 +1,10 @@
 package theTrickster.util;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theTrickster.TricksterMod;
 import theTrickster.characters.TheTrickster;
 
@@ -25,7 +24,7 @@ public class RandomZeroCostCardHelper {
     private static void initAlternateCardPool() {
         alternateZeroCostCardPool.clear();
 
-        AbstractCard card = null;
+        AbstractCard card;
         Iterator var2 = CardLibrary.cards.entrySet().iterator();
 
         while(true) {
@@ -64,11 +63,7 @@ public class RandomZeroCostCardHelper {
                         card = (AbstractCard)c.getValue();
                     } while(card.rarity == AbstractCard.CardRarity.BASIC || card.rarity == AbstractCard.CardRarity.SPECIAL);
                 } while(card.type == AbstractCard.CardType.STATUS || card.cost != 0);
-            } while(card.color != AbstractCard.CardColor.COLORLESS &&
-                    card.color != TheTrickster.Enums.COLOR_BROWN &&
-                    card.color != AbstractCard.CardColor.BLUE &&
-                    card.color != AbstractCard.CardColor.RED &&
-                    card.color != AbstractCard.CardColor.GREEN);
+            } while(!BaseMod.isBaseGameCardColor(card.color) && card.color != TheTrickster.Enums.COLOR_BROWN);
 
             zeroCostCardPool.addToBottom((AbstractCard)c.getValue());
         }
@@ -81,7 +76,7 @@ public class RandomZeroCostCardHelper {
 
 
     public static AbstractCard returnTrulyRandomZeroCostCardInCombat() {
-        ArrayList<AbstractCard> list = new ArrayList();
+        ArrayList<AbstractCard> list = new ArrayList<>();
         Iterator var1;
         if(TricksterMod.generateCardsFromOtherMods) {
             var1 = alternateZeroCostCardPool.group.iterator();
@@ -98,6 +93,6 @@ public class RandomZeroCostCardHelper {
             }
         }
 
-        return (AbstractCard)list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
+        return list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
     }
 }
