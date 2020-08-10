@@ -20,20 +20,19 @@ public class PresciencePotion extends AbstractPotion {
 
     public PresciencePotion() {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.M, PotionColor.SMOKE);
+        isThrown = false;
+    }
 
+    @Override
+    public void initializeData() {
         potency = getPotency();
-
         if(potency == 1) {
             description = DESCRIPTIONS[0];
         }
         else {
             description = DESCRIPTIONS[1] + potency + DESCRIPTIONS[2];
         }
-
-        isThrown = false;
-
         tips.add(new PowerTip(name, description));
-
     }
 
     @Override

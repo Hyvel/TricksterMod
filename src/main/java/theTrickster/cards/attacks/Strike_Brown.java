@@ -44,6 +44,7 @@ public class Strike_Brown extends AbstractDynamicCard {
             baseDamage = DAMAGE;
             tags.add(BaseModCardTags.BASIC_STRIKE);
             tags.add(CardTags.STRIKE);
+            tags.add(CardTags.STARTER_STRIKE);
         }
 
 
