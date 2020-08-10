@@ -29,7 +29,7 @@
   },
   "theTrickster:Parry": {
     "NAME": "Parry",
-    "DESCRIPTION": "Add a Dazed to your discard pile. NL Gain !B! Block."
+    "DESCRIPTION": "Add a *Dazed to your discard pile. NL Gain !B! Block."
   },
   "theTrickster:Reposition": {
     "NAME": "Reposition",
@@ -117,7 +117,7 @@
   },
   "theTrickster:HotSteel": {
     "NAME": "Hot Steel",
-    "DESCRIPTION": "Gain [E] [E]. NL Deal !D! damage. NL Add a Burn into your draw pile."
+    "DESCRIPTION": "Gain [E] [E]. NL Deal !D! damage. NL Add a *Burn into your draw pile."
   },
   "theTrickster:Repetition": {
     "NAME": "Repetition",
@@ -147,7 +147,7 @@
   },
   "theTrickster:SmokeAndMirrors": {
     "NAME": "Smoke And Mirrors",
-    "DESCRIPTION": "Gain [E] [E]. NL Gain !B! Block. NL Add a Burn into your draw pile."
+    "DESCRIPTION": "Gain [E] [E]. NL Gain !B! Block. NL Add a *Burn into your draw pile."
   },
   "theTrickster:HiddenPistol": {
     "NAME": "Hidden Pistol",
@@ -204,7 +204,7 @@
   },
   "theTrickster:StopTheBleeding": {
     "NAME": "Stop The Bleeding",
-    "DESCRIPTION": "The next !M! times you should lose more than 5 HP, only lose 5 and add a Wound to your discard pile."
+    "DESCRIPTION": "The next !M! times you should lose more than 5 HP, only lose 5 and add a *Wound to your discard pile."
   },
   "theTrickster:SwiftAsTheWind": {
     "NAME": "Swift As The Wind",
@@ -228,7 +228,7 @@
   },
   "theTrickster:ForbiddenMedicine": {
     "NAME": "Forbidden Medicine",
-    "DESCRIPTION": "At the start of your turn, heal !M! HP and add a Wound to your hand."
+    "DESCRIPTION": "At the start of your turn, heal !M! HP and add a *Wound to your hand."
   },
   "theTrickster:BulletRain": {
     "NAME": "Bullet Rain",
@@ -244,7 +244,7 @@
   },
   "theTrickster:Audacity": {
     "NAME": "Audacity",
-    "DESCRIPTION": "Deal !D! damage. NL Add a Wound to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Wound to your hand."
   },
   "theTrickster:PreciseSalvo": {
     "NAME": "Precise Salvo",
@@ -252,7 +252,7 @@
   },
   "theTrickster:OminousSmile": {
     "NAME": "Ominous Smile",
-    "DESCRIPTION": "Add a Wound to your hand. Apply !M! Weak and !M! Vulnerable to ALL enemies."
+    "DESCRIPTION": "Add a *Wound to your hand. Apply !M! Weak and !M! Vulnerable to ALL enemies."
   },
   "theTrickster:LightTrick": {
     "NAME": "Light Trick",

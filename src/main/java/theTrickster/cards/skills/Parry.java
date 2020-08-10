@@ -42,6 +42,7 @@ public class Parry extends AbstractDynamicCard {
     public Parry() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        this.cardsToPreview = new Dazed();
     }
 
 

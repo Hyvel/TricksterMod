@@ -44,6 +44,7 @@ public class OminousSmile extends AbstractDynamicCard {
     public OminousSmile() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = DEBUFF;
+        this.cardsToPreview = new Wound();
     }
 
 

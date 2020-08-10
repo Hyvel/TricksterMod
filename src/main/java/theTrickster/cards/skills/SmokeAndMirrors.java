@@ -45,6 +45,7 @@ public class SmokeAndMirrors extends AbstractDynamicCard {
     public SmokeAndMirrors() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        this.cardsToPreview = new Burn();
     }
 
 

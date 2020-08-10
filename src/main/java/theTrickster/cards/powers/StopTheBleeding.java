@@ -1,6 +1,7 @@
 package theTrickster.cards.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -38,6 +39,7 @@ public class StopTheBleeding extends AbstractDynamicCard {
     public StopTheBleeding() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = CHARGES;
+        this.cardsToPreview = new Wound();
     }
 
 

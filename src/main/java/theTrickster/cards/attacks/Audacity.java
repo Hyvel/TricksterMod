@@ -45,6 +45,7 @@ public class Audacity extends AbstractDynamicCard {
     public Audacity() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        this.cardsToPreview = new Wound();
     }
 
 
