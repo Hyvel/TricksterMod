@@ -5,7 +5,7 @@
     <groupId>trickstermod</groupId>
     <artifactId>TricksterMod</artifactId>
     <name>The Trickster</name>
-    <version>1.0.7</version>
+    <version>1.1.0</version>
     <description>Adds a new character: the Trickster.
 Adds 73 cards, 11 relics and 1 potion.
 
@@ -15,8 +15,8 @@ Some cards generate 0 cost cards from any color. What is meant by this is that t
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <SlayTheSpire.version>01-23-2019</SlayTheSpire.version>
-        <ModTheSpire.version>3.8.0</ModTheSpire.version>
+        <SlayTheSpire.version>07-30-2020</SlayTheSpire.version>
+        <ModTheSpire.version>3.16.0</ModTheSpire.version>
         <Steam.path>D:\Jeux\SteamLibrary\steamapps</Steam.path>
    </properties>
 
