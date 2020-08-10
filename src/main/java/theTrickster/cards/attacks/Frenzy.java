@@ -2,6 +2,7 @@ package theTrickster.cards.attacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -63,6 +64,11 @@ public class Frenzy extends AbstractDynamicCard {
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
 
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player.isBloodied ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
 

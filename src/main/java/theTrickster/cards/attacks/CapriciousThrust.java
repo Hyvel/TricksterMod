@@ -60,28 +60,16 @@ public class CapriciousThrust extends AbstractDynamicCard {
         //Eventual bonus damage.
         Iterator var4 = p.hand.group.iterator();
 
-        while(var4.hasNext()) {
-            AbstractCard c = (AbstractCard)var4.next();
-            if (c.type == CardType.STATUS) {
-                AbstractDungeon.actionManager.addToBottom(
-                        new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-                break;
-            }
+        if(hasStatusInHand()) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
 
     }
 
     public void applyPowers() {
 
-        boolean hasStatusInHand = false;
-        Iterator var4 = AbstractDungeon.player.hand.group.iterator();
-        while(var4.hasNext()) {
-            AbstractCard c = (AbstractCard)var4.next();
-            if (c.type == CardType.STATUS) {
-                hasStatusInHand = true;
-                break;
-            }
-        }
+        boolean hasStatusInHand = this.hasStatusInHand();
 
         if (hasStatusInHand) {
             rawDescription = EXTENDED_DESCRIPTION[0];
@@ -94,6 +82,25 @@ public class CapriciousThrust extends AbstractDynamicCard {
 
         super.applyPowers();
     }
+
+    private boolean hasStatusInHand() {
+        boolean hasStatusInHand = false;
+        Iterator var4 = AbstractDungeon.player.hand.group.iterator();
+        while(var4.hasNext()) {
+            AbstractCard c = (AbstractCard)var4.next();
+            if (c.type == CardType.STATUS) {
+                hasStatusInHand = true;
+                break;
+            }
+        }
+        return hasStatusInHand;
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = hasStatusInHand() ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+    }
+
 
     @Override
     public void onMoveToDiscard() {

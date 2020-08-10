@@ -3,6 +3,7 @@ package theTrickster.cards.attacks;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -56,6 +57,10 @@ public class DivingSlice extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new ExpertiseAction(p, magicNumber));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player.hand.size() < magicNumber + 1 ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+    }
 
     @Override
     public void upgrade() {

@@ -1,5 +1,6 @@
 package theTrickster.cards.skills;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -7,6 +8,8 @@ import theTrickster.TricksterMod;
 import theTrickster.actions.AnticipationAction;
 import theTrickster.cards.AbstractDynamicCard;
 import theTrickster.characters.TheTrickster;
+
+import java.util.Iterator;
 
 import static theTrickster.TricksterMod.makeCardPath;
 
@@ -49,6 +52,18 @@ public class Anticipation extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new AnticipationAction(m, p, ENERGY_GAIN, magicNumber));
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+        while(var1.hasNext()) {
+            AbstractMonster m = (AbstractMonster)var1.next();
+            if (!m.isDeadOrEscaped() && (m.intent == AbstractMonster.Intent.ATTACK || m.intent == AbstractMonster.Intent.ATTACK_BUFF || m.intent == AbstractMonster.Intent.ATTACK_DEBUFF || m.intent == AbstractMonster.Intent.ATTACK_DEFEND)) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                break;
+            }
+        }
+    }
 
     @Override
     public void upgrade() {

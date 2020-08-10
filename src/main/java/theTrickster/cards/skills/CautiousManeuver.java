@@ -1,6 +1,7 @@
 package theTrickster.cards.skills;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -89,6 +90,10 @@ public class CautiousManeuver extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
     }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractDungeon.player.isBloodied ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+    }
 
     @Override
     public void upgrade() {
